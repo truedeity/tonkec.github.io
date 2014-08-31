@@ -65,7 +65,6 @@ section#skills h3, section#skills h1, section#skills hr {
 	color: #4edec2;
 }
 
-
 section#skills h3 {
 	text-align: left;
 	margin-bottom: 20px;
@@ -78,6 +77,15 @@ section#about h2 {
 
 section#contact h1 {
 	color: #4edec2;
+}
+
+h4 {
+	text-align: center;
+	margin-bottom: 20px;
+	font-weight: normal;
+	letter-spacing: 2px;
+	font-size: 20px;
+	margin: 20px 0;
 }
 
 /* Global styles */
@@ -163,4 +171,62 @@ input.form-control {
 
 input.form-control textarea#textarea.form-control {
 	font-size: 18px;
+}
+
+.btn-info {
+	height: 50px;
+	float: none;
+	width: 400px;
+	font-size: 24px;
+	letter-spacing: 2px;
+	background: #ff7878;
+}
+
+.btn-info:hover {
+	background: #4edec2;
+}
+
+footer {
+	background: #334657;
+	color: #fff;
+	padding: 40px 0;
+}
+
+.col-lg-4 {
+	margin-top: 20px;
+}
+
+.col-lg-4 span {
+	color: #ff7878;
+}
+
+.btn-github, .btn-twitter, .btn-facebook {
+	background: #ff7878;
+	color: #fff;
+	font-size: 30px;
+	width: 60px;
+	border-radius: 30px;
+	position: relative;
+
+} 
+
+.btn-twitter, .btn-facebook {
+	margin-left: 30px;
+}
+
+.btn-github:hover, .btn-twitter:hover, .btn-facebook:hover {
+	background: #4edec2;
+	color: #fff;
+	top: -5px;
+}
+/* Media Queries */
+
+@media (max-width: 768px) {
+	.form-control {
+		width: 300px;
+	}
+
+	.btn-info {
+		width: 300px;
+	}
 }
