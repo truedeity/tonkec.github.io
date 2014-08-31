@@ -72,9 +72,12 @@ section#skills h3 {
 	margin-top: 20px;
 }
 
-
 section#about h2 {
 	text-align: left;
+}
+
+section#contact h1 {
+	color: #4edec2;
 }
 
 /* Global styles */
@@ -113,7 +116,7 @@ div.progress-bar {
 /* Layout */
 
 header {
-	padding: 80px 0;
+	padding: 80px 0px;
 	background: #4edec2;
 } 
 
@@ -125,6 +128,10 @@ header .heart {
 	color: #ff7878;
 }
 
+.section {
+	padding: 60px 0;
+}
+
 img {
 	margin: 100px auto 50px;
 	height: 200px;
@@ -132,12 +139,28 @@ img {
 	border: 1px solid #fff;
 }
 
-section#skills {
-	padding: 80px 0 50px;
-}
-
 section#about {
 	background: #4edec2;
 	color: #fff;
-	padding: 80px 0 50px;
+}
+
+section#contact hr {
+	border-color: #4edec2;
+}
+
+.form-horizontal {
+	margin-top: 20px;
+}
+
+.form-control {
+	width: 400px;
+	margin: 0 auto;
+}
+
+input.form-control {
+	height: 70px;
+}
+
+input.form-control textarea#textarea.form-control {
+	font-size: 18px;
 }
