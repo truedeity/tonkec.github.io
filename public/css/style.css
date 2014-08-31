@@ -61,6 +61,22 @@ h3 {
 	letter-spacing:1px;	
 }
 
+section#skills h3, section#skills h1, section#skills hr {
+	color: #4edec2;
+}
+
+
+section#skills h3 {
+	text-align: left;
+	margin-bottom: 20px;
+	margin-top: 20px;
+}
+
+
+section#about h2 {
+	text-align: left;
+}
+
 /* Global styles */
 
 hr {
@@ -72,10 +88,26 @@ hr {
 	font-size: 3em;
 	position: relative;
 	top: -42px;
+	color: #ff7878;
 }
 
 .col-lg-12 {
 	text-align: center;
+}
+
+.progress {
+	height: 50px;
+}
+
+.progress-bar {
+	background: #ff7878;
+	background-image: none;
+}
+
+div.progress-bar {
+	font-size: 25px;
+	color: #fff;
+	padding-top: 13px;
 }
 
 /* Layout */
@@ -85,13 +117,6 @@ header {
 	background: #4edec2;
 } 
 
-img {
-	margin: 100px auto 50px;
-	height: 200px;
-	width: 200px;
-	border: 1px solid #fff;
-}
-
 header hr {
 	color: #fff;
 }
@@ -100,5 +125,19 @@ header .heart {
 	color: #ff7878;
 }
 
+img {
+	margin: 100px auto 50px;
+	height: 200px;
+	width: 200px;
+	border: 1px solid #fff;
+}
 
+section#skills {
+	padding: 80px 0 50px;
+}
 
+section#about {
+	background: #4edec2;
+	color: #fff;
+	padding: 80px 0 50px;
+}
