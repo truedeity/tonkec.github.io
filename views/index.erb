@@ -45,7 +45,7 @@
 
             </button>
 
-            <a data-srcoll href="#top" class="navbar-brand">Antonija</a>
+            <a data-scroll href="#top" class="navbar-brand">Antonija</a>
 
           </div><!--navbar-header-->
 
@@ -53,9 +53,9 @@
             
             <ul class="nav navbar-nav navbar-right">
               
-              <li><a href="#skills">skills</a></li>
-              <li><a href="#about">about</a></li>
-              <li><a href="#contact">contact</a></li>
+              <li><a data-scroll href="#skills">skills</a></li>
+              <li><a data-scroll href="#about">about</a></li>
+              <li><a data-scroll href="#contact">contact</a></li>
 
             </ul>
 
@@ -313,6 +313,19 @@
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
     <script src="js/bootstrap-progressbar.min.js"></script>
 
+    <script src="js/bind-polyfill.min.js"></script>
+    <script src="js/smooth-scroll.min.js"></script>
+
     <script src="js/Tonkec.js"></script>
+
+    <script>
+    smoothScroll.init({
+      speed: 2000,
+      easing: 'easeInOutQuad',
+      updateURL: false,
+      offset: 70
+    })
+
+    </script>
   </body>
 </html>
