@@ -1,0 +1,42 @@
+/* Navigation */
+
+nav.navbar.navbar-default {
+	background: #ff7878;
+	padding: 20px 0;
+	text-transform: uppercase;
+}
+
+.navbar-default .navbar-brand {
+	color: #fff;
+	position: relative;
+}
+
+a.navbar-brand {
+	font-size: 24px;
+}
+
+.navbar-default .navbar-brand:hover {
+	color: #4edec2;
+	top: -3px;
+}
+
+.navbar-default .navbar-nav>li>a {
+	color: #fff;
+	font-size: 14px;
+}
+
+.navbar-default .navbar-nav>li>a:hover {
+	color: #4edec2;
+	top: -3px;
+}
+
+/* Typography */
+
+body {
+	font-family: 'Arimo', sans-serif;
+}
+
+.navbar {
+	font-weight: 700;
+	letter-spacing: 3px;
+}
