@@ -38,5 +38,9 @@ $(document).ready(function(){
         });
     }); 
 
+    $('#singlebutton').click(function(e) {
+    	e.preventDefault();
+    });
+
 
 })
