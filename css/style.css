@@ -81,11 +81,15 @@ section#contact h1 {
 
 h4 {
 	text-align: center;
-	margin-bottom: 20px;
 	font-weight: normal;
 	letter-spacing: 2px;
 	font-size: 20px;
 	margin: 20px 0;
+}
+
+h5 {
+	text-align: center;
+	font-size: 14px;
 }
 
 a {
@@ -128,6 +132,10 @@ div.progress-bar {
 	font-size: 25px;
 	color: #fff;
 	padding-top: 13px;
+}
+
+span.glyphicon.glyphicon-map-marker {
+	color: #fff;
 }
 
 /* Layout */
