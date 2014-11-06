@@ -88,6 +88,15 @@ h4 {
 	margin: 20px 0;
 }
 
+a {
+	color: #fff;
+}
+
+a:hover {
+	text-decoration: none;
+	color: #ff7878;
+}
+
 /* Global styles */
 
 hr {

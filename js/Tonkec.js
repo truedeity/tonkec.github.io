@@ -22,6 +22,7 @@ $(document).ready(function(){
 
 	animateMe('h1', 'animated bounce');
 	animateMe('.col-lg-4 span', 'animated shake');
+	animateMe('.col-lg-12 a', 'animated shake');
 
 	$(window).scroll(function () {
         var topOfWindow = $(window).scrollTop(),
