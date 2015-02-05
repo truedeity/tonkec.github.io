@@ -24,21 +24,6 @@ $(document).ready(function(){
 	animateMe('.col-lg-4 span', 'animated shake');
 	animateMe('.col-lg-12 a', 'animated shake');
 
-	$(window).scroll(function () {
-        var topOfWindow = $(window).scrollTop(),
-            bottomOfWindow = topOfWindow + $(window).height();
-
-        $('.progress .progress-bar').each(function () {
-            var elPosition = $(this).offset().top;
-
-            if(elPosition <= bottomOfWindow && elPosition >= topOfWindow){
-                $(this).progressbar({
-                	display_text: 'fill'
-                });
-            }
-        });
-    }); 
-
     $('#singlebutton').click(function(e) {
     	e.preventDefault();
     });

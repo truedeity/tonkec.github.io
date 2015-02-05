@@ -1,7 +1,7 @@
 /* Navigation */
 .navbar-default {
 	background: #ff7878;
-	padding: 20px 0;
+	padding: 50px;
 	text-transform: uppercase;
 }
 
@@ -52,7 +52,7 @@ h1 {
 	}
 }
 
-.white_text {
+.text_white {
 	color: #fff
 }
 
@@ -113,12 +113,8 @@ hr {
 	vertical-align: middle;
 }
 
-.col-lg-12 {
+.col-sm-12 {
 	text-align: center;
-}
-
-.progress {
-	height: 50px;
 }
 
 .progress-bar {
@@ -136,6 +132,15 @@ html, body {
 	padding: 0;
 }
 
+.container {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	margin: 0 auto;
+	left: 0;
+	right: 0;
+}
+
 header {
 	background: #4edec2;
 } 
@@ -149,7 +154,9 @@ header .heart {
 }
 
 .section {
-	padding: 60px 0;
+	height: 100%;
+	padding: 30px 0;
+	position: relative;
 }
 
 img {
@@ -168,10 +175,18 @@ img {
 	border-color: #4edec2;
 }
 
+.mail {
+	top: 50%;
+	position: relative;
+	transform: translateY(50%);
+}
+
 footer {
 	background: #334657;
 	color: #fff;
 	padding: 40px 0;
+	position: relative;
+	height: 25%;
 }
 
 footer .heart {

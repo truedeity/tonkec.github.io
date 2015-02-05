@@ -58,15 +58,15 @@
         <div class="row">
           <div class="col-md-12">
             <img src="img/antonija.png" alt="me" class="img-circle img-responsive">
-            <h1 class="white_text">My name is Antonija</h1>
-          </div><!--col-lg-12-->
+            <h1 class="text_white">My name is Antonija</h1>
+          </div><!--col-md-12-->
           <div class="col-md-12 text-center">
             <hr>
             <span class="glyphicon glyphicon-heart heart"></span>
             <hr>
           </div>
           <div class="col-md-12 text-center">
-            <h3>I am a front-end developer &amp; web designer</h3>
+            <h3  class="text_white">I am a front-end developer &amp; web designer</h3>
           </div>
         </div><!--row-->
       </div><!--container-->
@@ -75,44 +75,43 @@
     <section class="section" id="skills">
       <div class="container">
         <div class="row">
+
           <div class="col-md-12">
             <h1 class="light_blue">Skills</h1>
-          </div>
+          </div><!--col-md-12-->
+
            <div class="col-md-12 text-center">
             <hr class="light_blue">
             <span class="glyphicon glyphicon-heart heart"></span>
             <hr class="light_blue">
-          </div>
+          </div><!--col-md-12-->
+
+          <div class="col-md-12">
+
            <h3 class="light_blue">HTML</h3>
             <div class="progress">
-              <div class="progress-bar progress-bar-primary" role="progressbar" data-transitiongoal="90">
+              <div class="progress-bar progress-bar-primary" role="progressbar" data-transitiongoal="95">
               </div><!--progress-bar-primary-->
             </div><!--progress-->
 
             <h3 class="light_blue">CSS</h3>
             <div class="progress">  
-              <div class="progress-bar progress-bar-primary" role="progressbar" data-transitiongoal="80">
-              </div><!--progress-bar-primary-->
-            </div><!--progress-->
-
-            <h3 class="light_blue">Bootstrap</h3>
-            <div class="progress">
-              <div class="progress-bar progress-bar-primary" role="progressbar" data-transitiongoal="80">
+              <div class="progress-bar progress-bar-primary" role="progressbar" data-transitiongoal="90">
               </div><!--progress-bar-primary-->
             </div><!--progress-->
 
             <h3 class="light_blue">Javascript</h3>
             <div class="progress">
-              <div class="progress-bar progress-bar-primary" role="progressbar" data-transitiongoal="60">
+              <div class="progress-bar progress-bar-primary" role="progressbar" data-transitiongoal="55">
               </div><!--progress-bar-primary-->
             </div><!--progress-->
 
             <h3 class="light_blue">jQuery</h3>
             <div class="progress">
-              <div class="progress-bar progress-bar-primary" role="progressbar" data-transitiongoal="60">
+              <div class="progress-bar progress-bar-primary" role="progressbar" data-transitiongoal="50">
               </div><!--progress-bar-primary-->
             </div><!--progress-->
-          </div><!--col-lg-12-->
+            </div>
         </div><!--row-->
       </div><!--container-->
     </section><!--skills-->
@@ -142,7 +141,7 @@
         <div class="row text-center">  
           <div class="col-md-12">        
             <h1 class="light_blue">Have a project for me?</h1>
-          </div><!--col-lg-12-->
+          </div><!--col-md-12-->
 
           <div class="col-md-12 text-center">
             <hr>
@@ -150,7 +149,7 @@
             <hr>
           </div>
 
-          <div class="col-md-12 text-center">
+          <div class="col-md-12 text-center mail">
             <a href="mailto:antonija1023@gmail.com" target="_top"><i class="fa fa-envelope"></i></a>
           </div>  
         </div><!--row-->
@@ -178,6 +177,11 @@
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
     <script src="js/bootstrap-progressbar.min.js"></script>
+    <script>
+    $(document).ready(function() {
+    $('.progress .progress-bar').progressbar();
+});
+    </script>
 
     <script src="js/bind-polyfill.min.js"></script>
     <script src="js/smooth-scroll.min.js"></script>
