@@ -1,7 +1,7 @@
 /* Navigation */
 .navbar-default {
 	background: #ff7878;
-	padding: 50px;
+	padding: 25px 5px;
 	text-transform: uppercase;
 }
 
@@ -57,8 +57,9 @@ h1 {
 }
 
 h3 {
-	font-size: 3em;
+	font-size: 2.5em;
 	letter-spacing:1px;	
+	margin: 0 auto;
 }
 
 .light_blue {
@@ -132,7 +133,7 @@ html, body {
 	padding: 0;
 }
 
-.container {
+.container_verticaly_centered {
 	position: absolute;
 	top: 50%;
 	transform: translateY(-50%);
@@ -161,7 +162,6 @@ header .heart {
 
 img {
 	margin: 100px auto 50px;
-	height: 200px;
 	width: 200px;
 	border: 1px solid #fff;
 }
