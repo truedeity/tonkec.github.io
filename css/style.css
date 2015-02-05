@@ -1,6 +1,5 @@
 /* Navigation */
-
-nav.navbar.navbar-default {
+.navbar-default {
 	background: #ff7878;
 	padding: 20px 0;
 	text-transform: uppercase;
@@ -9,9 +8,6 @@ nav.navbar.navbar-default {
 .navbar-default .navbar-brand {
 	color: #fff;
 	position: relative;
-}
-
-a.navbar-brand {
 	font-size: 2em;
 }
 
@@ -22,7 +18,7 @@ a.navbar-brand {
 
 .navbar-default .navbar-nav>li>a {
 	color: #fff;
-	font-size: 14px;
+	font-size: 1.5em;
 }
 
 .navbar-default .navbar-nav>li>a:hover {
@@ -56,52 +52,39 @@ h1 {
 	}
 }
 
-header h1 {
+.white_text {
 	color: #fff
 }
 
 h3 {
-	color: #fff;
-	margin-top: -20px;
 	font-size: 3em;
 	letter-spacing:1px;	
 }
 
-section#skills h3, section#skills h1, section#skills hr {
+.light_blue {
 	color: #4edec2;
 }
 
-section#skills h3 {
+#skills h3 {
 	text-align: left;
-	margin-bottom: 20px;
-	margin-top: 20px;
+	margin: 20px 0;
 }
 
 section#about h2 {
 	text-align: left;
 }
 
-section#contact h1 {
-	color: #4edec2;
-}
-
-section#contact h3 {
-	color: #4edec2;
-	margin-top: -20px;
-	margin-bottom: 20px;
-} 
-
 h4 {
 	text-align: center;
 	font-weight: normal;
 	letter-spacing: 2px;
-	font-size: 1.5em;
+	font-size: 2em;
 	margin: 20px 0;
 }
 
 h5 {
 	text-align: center;
-	font-size: 1em;
+	font-size: 1.5em;
 }
 
 a {
@@ -138,19 +121,17 @@ hr {
 .progress-bar {
 	background: #ff7878;
 	background-image: none;
-}
-
-div.progress-bar {
 	font-size: 2em;
 	color: #fff;
 	padding-top: 13px;
 }
 
-span.glyphicon.glyphicon-map-marker {
-	color: #fff;
-}
-
 /* Layout */
+html, body {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
 
 header {
 	background: #4edec2;
@@ -175,15 +156,14 @@ img {
 	border: 1px solid #fff;
 }
 
-section#about {
+#about {
 	background: #4edec2;
 	color: #fff;
 }
 
-section#contact hr {
+#contact hr {
 	border-color: #4edec2;
 }
-
 
 footer {
 	background: #334657;
@@ -202,12 +182,10 @@ footer {
 .fa {
 	color: #ff7878;
 	position: relative;
-	font-size: 130px;
-
+	font-size: 12em;
 } 
 
 .fa:hover {
 	color: #4edec2;
 	top: -5px;
 }
-/* Media Queries */
