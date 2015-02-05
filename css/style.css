@@ -101,13 +101,16 @@ a:hover {
 hr {
 	max-width: 450px;
 	border: 2px solid;
+	display: inline-block;
+	width: 33%;
+	vertical-align: middle;
 }
 
 .heart {
 	font-size: 3em;
-	position: relative;
-	top: -42px;
 	color: #ff7878;
+	display: inline-block;
+	vertical-align: middle;
 }
 
 .col-lg-12 {
@@ -171,12 +174,15 @@ footer {
 	padding: 40px 0;
 }
 
-.col-lg-4 {
-	margin-top: 50px;
+footer .heart {
+	color: #ff7878;
+	font-size: 2em;
+	vertical-align: baseline;
+	font-size: 1em;
 }
 
-.col-lg-6 span {
-	color: #ff7878;
+.col-lg-4 {
+	margin-top: 50px;
 }
 
 .fa {
