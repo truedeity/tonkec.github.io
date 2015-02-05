@@ -12,7 +12,7 @@ nav.navbar.navbar-default {
 }
 
 a.navbar-brand {
-	font-size: 24px;
+	font-size: 2em;
 }
 
 .navbar-default .navbar-brand:hover {
@@ -45,9 +45,15 @@ h1 {
 	text-align: center;
 	letter-spacing: 2px;
 	text-transform: uppercase;
-	font-size: 60px;
 	font-weight: 600;
+	font-size: 5em;
 	margin-bottom: 50px;
+}
+
+@media(min-width: 1200px) {
+	h1 {
+		font-size: 5em;
+	}
 }
 
 header h1 {
@@ -57,7 +63,7 @@ header h1 {
 h3 {
 	color: #fff;
 	margin-top: -20px;
-	font-size: 30px;
+	font-size: 3em;
 	letter-spacing:1px;	
 }
 
@@ -89,13 +95,13 @@ h4 {
 	text-align: center;
 	font-weight: normal;
 	letter-spacing: 2px;
-	font-size: 20px;
+	font-size: 1.5em;
 	margin: 20px 0;
 }
 
 h5 {
 	text-align: center;
-	font-size: 14px;
+	font-size: 1em;
 }
 
 a {
@@ -135,7 +141,7 @@ hr {
 }
 
 div.progress-bar {
-	font-size: 25px;
+	font-size: 2em;
 	color: #fff;
 	padding-top: 13px;
 }
@@ -202,16 +208,6 @@ footer {
 
 .fa:hover {
 	color: #4edec2;
-	;
 	top: -5px;
 }
 /* Media Queries */
-
-@media (min-width: 980px) {
-	i.fa {
-		width: 2.5em;
-		height: 2.5em;
-	}
-
-
-}

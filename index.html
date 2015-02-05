@@ -31,223 +31,135 @@
   </head>
   <body>
     <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-      
-      <div class="container">
-        
-        <div class="container-fluid">
-          
-          <div class="navbar-header" id="navbar">
-            
+      <div class="container"> 
+        <div class="container-fluid">  
+          <div class="navbar-header" id="navbar"> 
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-              
               <span class="sr-only"></span>
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
-
             </button>
-
             <a data-scroll href="#top" class="navbar-brand">Antonija</a>
-
           </div><!--navbar-header-->
-
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            
-            <ul class="nav navbar-nav navbar-right">
-              
+            <ul class="nav navbar-nav navbar-right">      
               <li><a data-scroll href="#skills">skills</a></li>
               <li><a data-scroll href="#about">about</a></li>
               <li><a data-scroll href="#contact">contact</a></li>
-
             </ul>
-
           </div><!--collapse navbar-collapse-->
-
         </div><!--container-fluid-->
-
       </div><!--container-->
-
     </nav>
 
-    <header id="top" class="section">
-      
+    <header id="top" class="section">  
       <div class="container">
-        
         <div class="row">
-          
           <div class="col-lg-12">
-            
             <img src="img/antonija.png" alt="me" class="img-circle img-responsive">
-
             <h1>My name is Antonija</h1>
-
             <hr>
-
             <span class="glyphicon glyphicon-heart heart"></span>
-
             <h3>I am a front-end developer &amp; web designer</h3>
-
           </div><!--col-lg-12-->
-
         </div><!--row-->
-
       </div><!--container-->
-
     </header>
 
     <section class="section" id="skills">
-      
       <div class="container">
-        
         <div class="row">
-          
           <div class="col-lg-12">
-            
             <h1>Skills</h1>
-
             <hr>
-
             <span class="glyphicon glyphicon-heart heart"></span>
-
             <h3>HTML</h3>
-
             <div class="progress">
-              
               <div class="progress-bar progress-bar-primary" role="progressbar" data-transitiongoal="90">
               </div><!--progress-bar-primary-->
-
             </div><!--progress-->
 
             <h3>CSS</h3>
-
-            <div class="progress">
-              
+            <div class="progress">  
               <div class="progress-bar progress-bar-primary" role="progressbar" data-transitiongoal="80">
               </div><!--progress-bar-primary-->
-
             </div><!--progress-->
 
             <h3>Bootstrap</h3>
-
             <div class="progress">
-              
               <div class="progress-bar progress-bar-primary" role="progressbar" data-transitiongoal="80">
               </div><!--progress-bar-primary-->
-
             </div><!--progress-->
 
             <h3>Javascript</h3>
-
             <div class="progress">
-              
               <div class="progress-bar progress-bar-primary" role="progressbar" data-transitiongoal="60">
               </div><!--progress-bar-primary-->
-
             </div><!--progress-->
 
             <h3>jQuery</h3>
-
             <div class="progress">
-              
               <div class="progress-bar progress-bar-primary" role="progressbar" data-transitiongoal="60">
               </div><!--progress-bar-primary-->
-
             </div><!--progress-->
-
           </div><!--col-lg-12-->
-
         </div><!--row-->
-
       </div><!--container-->
 
     </section><!--skills-->
 
     <section class="section" id="about">
-      
       <div class="container">
-        
         <div class="row text-center">
-
           <div>
-
             <h1>About</h1>
-
             <hr>
-
             <span class="glyphicon glyphicon-heart heart"></span>
-
           </div>
-          
-           
-          <div class="col-md-6">
-            
+        
+          <div class="col-md-6">    
             <h3> Hi, my name is Antonija and I am front-end developer from Samobor. Check the code of this site <a href="https://github.com/tonkec/tonkec.github.io" target="_blank">here.</a></h3>
-
           </div>
 
           <div class="col-md-6">
-            
             <h3>In my free time I'm a football player, yoga enthusiast and black tea fan. </h3>
-
           </div>
-
         </div><!--row-->
-
       </div><!--container-->
-
     </section><!--about-->
 
     <section class="section" id="contact">
-      
       <div class="container">
-        
-        <div class="row text-center">
-          
-          <div class="col-lg-12">
-            
+        <div class="row text-center">  
+          <div class="col-lg-12">        
             <h1>Have a project for me?</h1>
-
             <hr>
-
             <span class="glyphicon glyphicon-heart heart"></span>
-
           </div><!--col-lg-12-->
 
           <div class="col-md-12 text-center">
             <a href="mailto:antonija1023@gmail.com" target="_top"><i class="fa fa-envelope"></i></a>
           </div>  
-
         </div><!--row-->
-
       </div><!--container-->
-
     </section><!--contact-->
 
     <footer>
-      
       <div class="container">
-        
         <div class="row">
-          
           <div class="col-lg-6 text-left">
-
             <h4>Location</h4>
-            
             <h5>Samobor, Croatia</h5>
-
           </div><!--col-lg-6-->  
 
           <div class="col-lg-6">
-
             <h4>Coded with <span class="glyphicon glyphicon-heart"></span> by Antonija</h4>
-            
           </div><!--col-lg-6-->
-
         </div><!--row-->
-
       </div><!--container-->
-
     </footer>
+    </body>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
@@ -269,5 +181,12 @@
     });
 
     </script>
-  </body>
+
+    <script src="js/flowtype.js"></script>
+    <script>
+      $('body').flowtype({
+        minumum: 200,
+        maximum: 400
+      });
+    </script>
 </html>
