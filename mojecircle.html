@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<style>
+	 .circle {
+  width:60px;
+  height:60px;
+  border-radius:50%;
+  position: absolute;
+  right: 50%;
+  margin-right: 0px;
+  bottom: 10px;
+  -webkit-transition:all 0.2s linear;
+  -moz-transition:all 0.2s linear;
+  -ms-transition:all 0.2s linear;
+  transition:all 0.2s linear;
+}
+
+.container-circle
+{
+  height: 70px;
+  width: 60px;
+}
+
+.container-circle:hover .third_circle
+{
+  box-shadow: 2px 2px 8px #999999;
+  bottom:140px;
+}
+
+.container-circle:hover .second_circle
+{
+  box-shadow: 2px 2px 8px #999999;
+  bottom:75px;
+}
+.first_circle
+{
+  background-color:#db4531;
+  box-shadow: 2px 2px 8px #999999; 
+ 
+}
+.second_circle
+{
+  background-size: cover;
+  background: red
+}
+.third_circle
+{
+  z-index: 3;
+  background-size: cover;
+}
+</style>
+<body>
+	<div class="container-circle">
+		<div class="circle first_circle"></div>
+		<div class="circle second_circle"></div>
+		<div class="circle third_circle"></div>
+
+	</div>
+</body>
+</html>
