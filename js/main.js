@@ -1,6 +1,24 @@
 $(window).load(function(){
  $('#preloader').delay(1000).fadeOut('slow'); 
  $('body').delay(350).css({'overflow':'visible'});
+
+   var mySwiper = new Swiper ('.swiper-container', {
+    // Optional parameters
+    direction: 'horizontal',
+    loop: true,
+    keyboardControl: true,
+    
+    // If we need pagination
+    pagination: '.swiper-pagination',
+    
+    // Navigation arrows
+    nextButton: '.swiper-button-next',
+    prevButton: '.swiper-button-prev',
+    
+    // And if we need scrollbar
+    scrollbar: '.swiper-scrollbar',
+  })   
+
  var buttonCircles = $(".nav-circle");
  
  $(".btn-floating").click(function(){

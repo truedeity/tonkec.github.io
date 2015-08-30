@@ -163,11 +163,6 @@ section,
 	z-index: 1;
 }
 
-.visible {
-	visibility: visible;
-}
-
-
 .fixed-container {
 	position: fixed;
 	z-index: 99999;
@@ -274,4 +269,64 @@ section,
 
 .about-peaks {
 	background-color: #231F20;
+}
+
+.about-peaks-title {
+	color: #fff;
+	font-size: 5em;
+	margin-top: 50px;
+}
+
+.about-list {
+	margin-left: 20px;
+	list-style-type: disc !important;
+	color: gre;
+}
+
+.about-item {
+	color: #fff;
+	font-size: 2em;
+	line-height: 1.6em;
+	font-weight: 300;
+}
+
+.list-title {
+	font-size: 2em;
+	color: #FFF;
+	margin-left: 20px;
+}
+
+.about-peaks-info {
+	color: #FFF;
+	font-size: 1.5em;
+	font-weight: 300;
+}
+
+.about-peaks-anchor {
+	color: #039be5;
+	font-weight: 300;
+}
+
+.about-peaks-info {
+	color: #FFF;
+	font-size: 2.2em;
+	font-weight: 300;
+	line-height: 1.2em;
+}
+
+.about-peaks-subinfo {
+	color: #FFF;
+	font-size: 1.7em;
+	font-weight: 300;
+	line-height: 1.2em;
+}
+
+.portfolio-text-row {
+	position: relative;
+	top: 25%;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+	color: #FFF;
 }
