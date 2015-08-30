@@ -83,6 +83,7 @@ section,
 	        background-size: cover;
 	overflow: hidden;
 	position: relative;
+	height: 100% !important;
 }
 
 .home-row {
@@ -213,13 +214,7 @@ section,
 	background-size: cover;
 }
 
-.first-swiper-slide {
-	background-image: url(http://herbadmother.com/wp-content/themes/thesis_18/custom/rotator/sample-1.jpg);
-}
 
-.second-swiper-slide {
-	
-}
 @media (max-width: 768px) {
 	.home-title {
 		font-size: 3em;
@@ -232,4 +227,67 @@ section,
 
 .portfolio-image {
 	width: 100%;
+}
+
+.portfolio-peaks {
+		background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.3));
+		position: relative;
+}
+
+.portfolio-title {
+	color: #FFF;
+	text-align: center;
+	font-size: 4em;
+}
+
+.portfolio-row {
+	position: relative;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	   -moz-transform: translateY(-50%);
+	    -ms-transform: translateY(-50%);
+	     -o-transform: translateY(-50%);
+	        transform: translateY(-50%);
+}
+
+.portfolio-round-circle {
+	position: absolute;
+	top: 300px;
+	border: 1px solid #fff;
+	background: transparent;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	z-index: 99999;
+}
+
+.portfolio-round-circle:hover {
+	background: #Fff;
+	-webkit-transition: background .5s ease;
+	-moz-transition: background .5s ease;
+	-ms-transition: background .5s ease;
+	-o-transition: background .5s ease;
+	transition: background .5s ease;
+	opacity: 0.6
+}
+
+.fa-angle-double-down {
+	font-size: 3em;
+	color: #fff;
+	margin-top: 6px;
+	font-weight: 300;
+	opacity: 0.7;
+}
+
+.fa-angle-double-down:hover {
+	color: #000;
+	-webkit-transition: color .5a ease;
+	   -moz-transition: color .5a ease;
+	    -ms-transition: color .5a ease;
+	     -o-transition: color .5a ease;
+	        transition: color .5a ease;
+}
+
+.about-peaks {
+	background-color: #231F20;
 }
