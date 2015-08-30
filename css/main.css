@@ -123,6 +123,7 @@ section,
 	left: 20px;
 	top: 20px;
 	background-color: #67809F !important;
+	z-index: 9999;
 }
 
 .fa-plus {
@@ -134,13 +135,12 @@ section,
 	background-color: #FFF; 
 	width: 55.5px;
     height: 55.5px;
-    position:relative;
-  	top: 20px;
+    position:absolute;
+	top: 20px;
   	text-align: center;
 }
 
 .circle-container {
-	top: 20px;
 	visibility: hidden;
 	position: absolute;
 	height: 400px;
@@ -148,19 +148,19 @@ section,
 }
 
 .first-circle {
-	top: 70px;
+	z-index: 4;
 }
 
 .second-circle {
-	top: 90px;
+	z-index: 3;
 }
 
 .third-circle {
-	top: 110px;
+	z-index: 2;
 }
 
 .forth-circle {
-	top: 130px;
+	z-index: 1;
 }
 
 .visible {
@@ -170,6 +170,7 @@ section,
 
 .fixed-container {
 	position: fixed;
+	z-index: 99999;
 }
 
 .fa-nav {
@@ -178,35 +179,6 @@ section,
 	margin-top: 14px;
 }
 
-@keyframes slideInDown {
-  from {
-    transform: translate3d(0, -10%, 0);
-    visibility: visible;
-  }
-
-  to {
-    transform: translate3d(0, 0, 0);
-  }
-}
-
-.slideInDown {
-  animation-name: slideInDown;
-}
-
-@keyframes slideInUp {
-  from {
-    transform: translate3d(0, 0%, 0);
-    visibility: visible;
-  }
-
-  to {
-    transform: translate3d(0, -17%, 0);
-  }
-}
-
-.slideInUp {
-  animation-name: slideInUp;
-}
 
 .swiper-slide {
 	background-position: center center;
@@ -241,6 +213,11 @@ section,
 }
 
 .portfolio-row {
+	display: block;
+    height: 100%;
+}
+
+.portfolio-col {
 	position: relative;
 	top: 50%;
 	-webkit-transform: translateY(-50%);
@@ -263,14 +240,25 @@ section,
 
 .portfolio-round-circle:hover {
 	background: #Fff;
-	-webkit-transition: background .5s ease;
-	-moz-transition: background .5s ease;
-	-ms-transition: background .5s ease;
-	-o-transition: background .5s ease;
-	transition: background .5s ease;
+	border: 2px solid #000;
+	-webkit-transition: background .9s ease, border .9s ease;
+	-moz-transition: background .9s ease, border .9s ease;
+	-ms-transition: background .9s ease, border .9s ease;
+	-o-transition: background .9s ease, border .9s ease;
+	transition: background .9s ease, border .9s ease;
 	opacity: 0.6
+	
 }
 
+
+.portfolio-round-circle:hover > .fa {
+	color: #000;
+	-webkit-transition: color .9s ease;
+	   -moz-transition: color .9s ease;
+	    -ms-transition: color .9s ease;
+	     -o-transition: color .9s ease;
+	        transition: color .9s ease;
+}
 .fa-angle-double-down {
 	font-size: 3em;
 	color: #fff;
@@ -279,13 +267,9 @@ section,
 	opacity: 0.7;
 }
 
-.fa-angle-double-down:hover {
-	color: #000;
-	-webkit-transition: color .5a ease;
-	   -moz-transition: color .5a ease;
-	    -ms-transition: color .5a ease;
-	     -o-transition: color .5a ease;
-	        transition: color .5a ease;
+.peaks-anchor {
+	position: relative;
+	height: 100%;
 }
 
 .about-peaks {
