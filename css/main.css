@@ -377,11 +377,32 @@ section,
 
 .contact {
 	height: 50%;
-    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7));
     background-color: #000;
 }
 
 .contact-row {
 	top: 50%;
 	position: relative;
+}
+
+footer {
+	height: 10%;
+	background: #000;
+	border-top: 1px solid rgba(255,255,255,0.25);
+	position: relative;
+}
+
+.footer-link {
+	color: #039be5;
+	display: block;
+	position: absolute;
+	left: 20px;
+}
+
+.twitter {
+	bottom: 20px;
+}
+
+.mail {
+	bottom: 50px;
 }
