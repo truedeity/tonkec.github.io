@@ -1,7 +1,7 @@
 $(window).load(function(){
  $('#preloader').delay(1000).fadeOut('slow'); 
- $('body').delay(350).css({'overflow':'visible'});
-
+ $('body').delay(500).css({'overflow':'visible'});
+ $(".fixed-container, .btn-more").css("display", "block");
    var mySwiper = new Swiper ('.swiper-container', {
     direction: 'horizontal',
     loop: true,
@@ -62,4 +62,28 @@ function slideUp () {
   $(".modal-close").click(function(event){
     event.preventDefault();
   });
+
+  $('.tooltipped').tooltip({delay: 50});
+
+  /*function animateMe(el, animation) {
+    $(window).scroll(function (){
+
+      var topOfWindow = $(window).scrollTop(),
+        bottomOfWindow = topOfWindow + $(window).height();
+
+        $(el).each(function(){
+
+          var elPosition = $(this).offset().top;
+
+          if (elPosition <= bottomOfWindow && elPosition >= topOfWindow) {
+            $(this).addClass(animation);
+          } else {
+            $(this).removeClass(animation);
+          }
+
+        }); 
+    });
+  };
+
+  animateMe('.fa-skill', 'animated fadeInUpBig');*/
 });

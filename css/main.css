@@ -2,13 +2,17 @@
 html,
 body,
 main,
-section,
 .swiper-wrapper,
 .swiper-container,
 .swiper-slide {
 	height: 100%;
 	width: 100%;
 	font-family: "Source Sans Pro";
+}
+
+section {
+	height: 120%;
+	width: 100%;
 }
 
 /* preloader animation*/
@@ -97,25 +101,45 @@ section,
 	color: #FFF;
 	display: block;
 	font-family: "Source Sans Pro";
-	font-size: 5em;
+	font-size: 4.8em;
 	text-align: center;
 	font-weight: 600;
+	margin: 0 auto;
 }
 
 .home-subtitle {
-	font-size: 3em;
+	font-size: 2.5em;
 	color: #FFF;
 	text-align: center;
+	margin-top: 10px;
 }
 
-.title {
-	position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+.skill-title {
+	font-size: 5em;
+	font-weight: 700;
+	margin-bottom: 30px;
+	margin-top: 0;
 }
 
-.skill {
-	font-family: "Source Sans Pro";
+.skills-info {
+	font-size: 1.4em;
+	line-height: 1.6em;
+	font-weight: 300;
+	text-align: justify;
+}
+
+.skill-span {
+	font-weight: 700;
+}
+
+.skill-anchor:hover {
+	text-decoration: underline;
+	color: #e57373;
+}
+
+.help-span {
+	font-weight: 700;
+	color: #e57373;
 }
 
 .skills-row {
@@ -126,6 +150,12 @@ section,
 	    -ms-transform: translateY(-50%);
 	     -o-transform: translateY(-50%);
 	        transform: translateY(-50%);
+}
+
+.extra-skill {
+	display: block;
+	margin-bottom: 10px;
+    font-size: 2.2em
 }
 
 .btn-nav {
@@ -149,6 +179,11 @@ section,
     position:absolute;
 	top: 20px;
   	text-align: center;
+}
+
+.round-circle > a {
+	height: 55.5px;
+	width: 55.5px;
 }
 
 .circle-container {
@@ -177,6 +212,7 @@ section,
 .fixed-container {
 	position: fixed;
 	z-index: 99999;
+	display: none;
 }
 
 .fa-nav {
@@ -185,22 +221,10 @@ section,
 	margin-top: 14px;
 }
 
-
 .swiper-slide {
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-size: cover;
-}
-
-
-@media (max-width: 768px) {
-	.home-title {
-		font-size: 3em;
-	}
-
-	.home-subtitle {
-		font-size: 2em;
-	}
 }
 
 .portfolio-image {
@@ -215,7 +239,7 @@ section,
 .portfolio-title {
 	color: #FFF;
 	text-align: center;
-	font-size: 6em;
+	font-size: 5em;
 }
 
 .portfolio-row {
@@ -249,6 +273,7 @@ section,
     color: #fff;
     font-weight: 300;
     opacity: 0.7;
+    z-index: 999;
 }
 
 .peaks-anchor {
@@ -257,39 +282,33 @@ section,
 }
 
 .about-peaks {
-	background-color: #231F20;
+	background-color: #fff;
 }
 
 .about-peaks-title {
-	color: #fff;
+	color: #000;
 	font-size: 5em;
 	margin-top: 50px;
 }
 
-.about-list {
-	margin-left: 20px;
-	list-style-type: disc !important;
-	color: gre;
-}
 
 .about-item {
-	color: #fff;
+	color: #000;
 	font-size: 2em;
 	line-height: 1.6em;
 	font-weight: 300;
 }
 
-.list-title {
-	font-size: 2em;
-	color: #FFF;
-	margin-left: 20px;
-}
 
 .about-peaks-info {
-	color: #FFF;
-	font-size: 2.2em;
+	color: #000;
+	font-size: 2em;
 	font-weight: 300;
 	line-height: 1.6em;
+}
+
+.peaks-problems {
+	font-size:1.5em;
 }
 
 .about-peaks-anchor {
@@ -298,7 +317,7 @@ section,
 }
 
 .about-peaks-subinfo {
-	color: #FFF;
+	color: #000;
 	font-size: 1.7em;
 	font-weight: 300;
 	line-height: 1.2em;
@@ -306,7 +325,7 @@ section,
 
 .portfolio-text-row {
 	position: relative;
-	top: 25%;
+	top: 400px;
 }
 
 .swiper-button-next,
@@ -325,23 +344,34 @@ section,
 .btn-arrow {
 	position: static;
 	background-color: transparent !important;
-    border: 1px solid;
+    border: 1px solid rgba(255,255,255,0.75);
 }
 
 .btn-more {
-	background-color: transparent !important;
-    border: 1px solid;
+    position: absolute;
+    display: none;
+    bottom: 80px;
+    background-color: transparent !important;
+    z-index: 99999;
+    width: 80%;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    margin-bottom: 20px;
+    border: 1px solid rgba(255,255,255,.75);
 }
 
 .portfolio-bottom-row {
-	    position: absolute;
+	position: absolute;
     bottom: 0;
     text-align: center;
     width: 100%;
+    z-index: 9999;
 }
 
 .portfolio-modal {
 	height: 60%;
+	z-index: 99999 !important;
 }
 
 .modal-content {
@@ -406,3 +436,109 @@ footer {
 .mail {
 	bottom: 50px;
 }
+
+.btn-contact {
+	width: 55px !important;
+    height: 55px !important;
+    line-height: 55px !important;
+}
+
+.btn-contact i {
+	line-height:55px !important;
+	font-size: 1.5em;
+}
+
+@media (min-width: 480px) {
+	.skills-info {
+		font-size: 1.8em;
+	}
+
+	.peaks-problems {
+		font-size: 1.8em;
+	}
+
+	.btn-contact {
+		width: 100px !important;
+    height: 100px !important;
+    line-height: 100px !important;
+	}
+
+	.btn-contact i {
+	line-height: 100px !important;
+	font-size: 3em;
+}
+
+}
+@media (min-width: 768px) {
+	.specail-row {
+		top: 100%;
+	}
+	.home-title {
+		font-size: 7em;
+	}
+
+	.peaks-problems {
+		font-size: 2.2em;
+	}
+
+	.portfolio-title {
+		font-size: 6em;
+	}
+
+	.skills-info {
+		font-size: 2.3em;
+	}
+
+	.btn-more {
+		right: 20px;
+		bottom: 20px;
+		width: 20%;
+		left: auto;
+		margin: 0;
+	}
+}
+/*
+@media (min-width: 980px) {
+	.home-title
+	.portoflio-title {
+		font-size: 5.2em;
+	}
+
+	.skills-info {
+		font-size: 2.3em;
+	}
+
+	.about-peaks-title {
+		font-size: 4.5em;
+	}
+
+	.about-peaks-info {
+		font-size: 2.2em;
+	}
+}*/
+
+@media (min-width: 1200px) {
+	.home-title,
+	.portoflio-title {
+		font-size: 7em;
+	}
+	.home-subtitle {
+		font-size: 3em;
+	}
+	.skills-info {
+		font-size: 2.7em;
+	}
+
+	.about-peaks-title {
+		font-size: 5em;
+	}
+
+	.about-peaks-info {
+		font-size: 2.2em;
+	}
+}
+
+.special-row {
+	top: 240px;
+}
+
