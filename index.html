@@ -19,7 +19,7 @@
       </div><!--status-->
     </div><!--preloader-->
     <div class="fixed-container">
-     <a class="btn-floating btn-large waves-effect waves-light circle"><i class="fa fa-plus"></i></a>
+     <a class="btn-floating btn-large waves-effect waves-light circle btn-nav"><i class="fa fa-plus"></i></a>
      <div class="circle-container">
       <div class="round-circle nav-circle waves-effect waves-teal first-circle">
        <i class="fa fa-nav fa-home"></i>
@@ -64,23 +64,21 @@
 <section class="portfolio-peaks parallax-window second-parallax-window"  data-parallax="scroll" data-image-src="img/peaks5.jpg" data-natural-width="150" data-position-x="top">
   
     <!-- Modal Trigger -->
-  <button data-target="modal1" class="btn modal-trigger">Modal</button>
+  <button data-target="modal1" class="btn modal-trigger waves-effect btn-more">Looking for more?</button>
 
   <!-- Modal Structure -->
-  <div id="modal1" class="modal">
-    <div class="modal-content">
-      <h4>Modal Header</h4>
-      <p>A bunch of text</p>
+  <div id="modal1" class="modal portfolio-modal">
+    <div class="modal-content center-align">
+      <h4 class="modal-title">Looking for more?</h4>
+      <p class="modal-paragraph">If you are looking for more of my work, please do not hesitate to contact me. I can show you two more works which are not yet officially published.</p>
+      <a class="waves-effect waves-light btn btn-modal" href="mailto:antonija1023@gmail.com"><i class="fa fa-envelope-o"></i></a>
+      
     </div>
     <div class="modal-footer">
-      <a href="#" class=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+      <a href="#" class=" modal-action modal-close waves-effect waves-teal btn-flat">Close</a>
     </div>
   </div>
 
-
-  <a class="round-circle portfolio-round-circle" href="#about-peaks">
-    <i class="fa fa-angle-double-down"></i>
-  </a>
   <a href="http://supersuperstudio.com/peaks" target="_blank" class="peaks-anchor">
     <span class="row portfolio-row">
       <span class="col s8 offset-s2 portfolio-col">
@@ -88,6 +86,12 @@
      </span>
    </span>
  </a>
+
+ <div class="row portfolio-bottom-row">
+    <a class="btn-floating btn-large waves-effect waves-light red btn-arrow z-depth-3" href="#about-peaks">
+      <i class="fa fa-arrow-down"></i>
+    </a>
+ </div>
 </section>  
 
 
@@ -164,15 +168,8 @@
       </div>
     </div><!--swiper-slide-->
   </div><!--swiper-wrapper-->
-  <!-- If we need pagination -->
-  <div class="swiper-pagination"></div>
-
-  <!-- If we need navigation buttons -->
   <div class="swiper-button-prev"></div>
   <div class="swiper-button-next"></div>
-
-  <!-- If we need scrollbar -->
-  <div class="swiper-scrollbar"></div>
 </div><!--swiper-con-->
 </section>
 

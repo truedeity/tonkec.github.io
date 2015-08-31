@@ -109,13 +109,23 @@ section,
 }
 
 .title {
-	    position: absolute;
+	position: absolute;
     top: 50%;
     transform: translateY(-50%);
 }
 
 .skill {
 	font-family: "Source Sans Pro";
+}
+
+.skills-row {
+	top: 45%;
+	position: relative;
+	-webkit-transform: translateY(-50%);
+	   -moz-transform: translateY(-50%);
+	    -ms-transform: translateY(-50%);
+	     -o-transform: translateY(-50%);
+	        transform: translateY(-50%);
 }
 
 .btn-floating {
@@ -132,6 +142,7 @@ section,
 
 .round-circle {
 	border-radius: 50%;
+	border: 2px solid #67809F; 
 	background-color: #FFF; 
 	width: 55.5px;
     height: 55.5px;
@@ -141,7 +152,7 @@ section,
 }
 
 .circle-container {
-	visibility: hidden;
+	visibility: visible;
 	position: absolute;
 	height: 400px;
 	left: 20px;
@@ -204,7 +215,7 @@ section,
 .portfolio-title {
 	color: #FFF;
 	text-align: center;
-	font-size: 4em;
+	font-size: 6em;
 }
 
 .portfolio-row {
@@ -224,42 +235,20 @@ section,
 
 .portfolio-round-circle {
 	position: absolute;
-	top: 300px;
-	border: 1px solid #fff;
-	background: transparent;
-	left: 0;
-	right: 0;
-	margin: 0 auto;
-	z-index: 99999;
+    bottom: 0;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    border-radius: 50%;
+    width: 55.5px;
+    height: 55.5px;
+	bottom: 20px;	
 }
 
-.portfolio-round-circle:hover {
-	background: #Fff;
-	border: 2px solid #000;
-	-webkit-transition: background .9s ease, border .9s ease;
-	-moz-transition: background .9s ease, border .9s ease;
-	-ms-transition: background .9s ease, border .9s ease;
-	-o-transition: background .9s ease, border .9s ease;
-	transition: background .9s ease, border .9s ease;
-	opacity: 0.6
-	
-}
-
-
-.portfolio-round-circle:hover > .fa {
-	color: #000;
-	-webkit-transition: color .9s ease;
-	   -moz-transition: color .9s ease;
-	    -ms-transition: color .9s ease;
-	     -o-transition: color .9s ease;
-	        transition: color .9s ease;
-}
-.fa-angle-double-down {
-	font-size: 3em;
-	color: #fff;
-	margin-top: 6px;
-	font-weight: 300;
-	opacity: 0.7;
+.fa-arrow-down {
+    color: #fff;
+    font-weight: 300;
+    opacity: 0.7;
 }
 
 .peaks-anchor {
@@ -329,4 +318,65 @@ section,
 .swiper-button-next,
 .swiper-button-prev {
 	color: #FFF;
+}
+
+.modal-trigger {
+	position: absolute;
+	right: 20px;
+	bottom: 20px;
+	background-color: #67809F !important;
+	z-index: 99999;
+}
+
+.btn-arrow {
+	position: static;
+	background-color: transparent !important;
+    border: 1px solid;
+}
+
+.btn-more {
+	background-color: transparent !important;
+    border: 1px solid;
+}
+
+.portfolio-bottom-row {
+	    position: absolute;
+    bottom: 0;
+    text-align: center;
+    width: 100%;
+}
+
+.portfolio-modal {
+	height: 60%;
+}
+
+.modal-content {
+	height: 80%;
+}
+
+.modal-close {
+	position: absolute;
+    right: 0;
+    bottom: 20px;
+}
+
+.modal-title {
+	font-size: 3em;
+}
+
+.modal-paragraph {
+	font-size: 2.4em;
+    margin-top: 70px;
+    font-weight: 300;
+}
+
+.btn-modal {
+	width: 50%;
+    margin-top: 90px;
+    height: 70px;
+}
+
+.fa-envelope-o {
+	font-size: 3em !important;
+    margin-top: 14px;
 }

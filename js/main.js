@@ -3,25 +3,16 @@ $(window).load(function(){
  $('body').delay(350).css({'overflow':'visible'});
 
    var mySwiper = new Swiper ('.swiper-container', {
-    // Optional parameters
     direction: 'horizontal',
     loop: true,
-    keyboardControl: true,
-    
-    // If we need pagination
-    pagination: '.swiper-pagination',
-    
-    // Navigation arrows
+    keyboardControl: true,    
     nextButton: '.swiper-button-next',
     prevButton: '.swiper-button-prev',
-    
-    // And if we need scrollbar
-    scrollbar: '.swiper-scrollbar',
-  })   
+  });   
 
  var buttonCircles = $(".nav-circle");
  
- $(".btn-floating").click(function(){
+ $(".btn-nav").click(function(){
     $(".circle-container").css("visibility", "visible")
     $(this).toggleClass("closed-nav")
   
