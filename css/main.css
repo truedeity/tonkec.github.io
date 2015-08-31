@@ -128,7 +128,7 @@ section,
 	        transform: translateY(-50%);
 }
 
-.btn-floating {
+.btn-nav {
 	position: absolute;
 	left: 20px;
 	top: 20px;
@@ -287,20 +287,14 @@ section,
 
 .about-peaks-info {
 	color: #FFF;
-	font-size: 1.5em;
+	font-size: 2.2em;
 	font-weight: 300;
+	line-height: 1.6em;
 }
 
 .about-peaks-anchor {
 	color: #039be5;
 	font-weight: 300;
-}
-
-.about-peaks-info {
-	color: #FFF;
-	font-size: 2.2em;
-	font-weight: 300;
-	line-height: 1.2em;
 }
 
 .about-peaks-subinfo {
@@ -379,4 +373,15 @@ section,
 .fa-envelope-o {
 	font-size: 3em !important;
     margin-top: 14px;
+}
+
+.contact {
+	height: 50%;
+    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7));
+    background-color: #000;
+}
+
+.contact-row {
+	top: 50%;
+	position: relative;
 }

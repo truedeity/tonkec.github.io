@@ -22,20 +22,20 @@
      <a class="btn-floating btn-large waves-effect waves-light circle btn-nav"><i class="fa fa-plus"></i></a>
      <div class="circle-container">
       <div class="round-circle nav-circle waves-effect waves-teal first-circle">
-       <i class="fa fa-nav fa-home"></i>
+       <a href="#home"><i class="fa fa-nav fa-home"></i></a>
      </div>
      <div class="round-circle nav-circle waves-effect waves-red second-circle">
-       <i class="fa fa-nav fa-rocket"></i>
+       <a href="#skills"><i class="fa fa-nav fa-rocket"></i></a>
      </div>
      <div class="round-circle nav-circle waves-effect waves-red third-circle">
-       <i class="fa fa-nav fa-trophy"></i>
+       <a href="#portfolio"><i class="fa fa-nav fa-trophy"></i></a>
      </div>
      <div class="round-circle nav-circle waves-effect waves-red forth-circle">
-      <i class="fa fa-nav fa-beer"></i>
+      <a href="#contact"><i class="fa fa-nav fa-beer"></i></a>
     </div>
   </div>
 </div>
-<section class="parallax-container home" data-parallax="scroll" data-image-src="img/city_lights.jpg">
+<section class="parallax-container home" data-parallax="scroll" data-image-src="img/city_lights.jpg" id="home">
  <div class="row home-row">
   <div class="col s8 offset-s2">
    <h1 class="home-title">My name is Antonija</h1>
@@ -43,7 +43,7 @@
  </div>
 </div>
 </section>
-<section class="skills">
+<section class="skills" id="skills">
  <div class="row skills-row">
   <div class="col s3 center-align">
    <h3 class="skill">HTML</h3>
@@ -61,7 +61,7 @@
 </div>
 </section>
 
-<section class="portfolio-peaks parallax-window second-parallax-window"  data-parallax="scroll" data-image-src="img/peaks5.jpg" data-natural-width="150" data-position-x="top">
+<section class="portfolio-peaks parallax-window second-parallax-window"  data-parallax="scroll" data-image-src="img/peaks5.jpg" data-natural-width="150" data-position-x="top" id="portfolio">
   
     <!-- Modal Trigger -->
   <button data-target="modal1" class="btn modal-trigger waves-effect btn-more">Looking for more?</button>
@@ -173,7 +173,25 @@
 </div><!--swiper-con-->
 </section>
 
-<section class="contact"></section>
+<section class="contact" id="contact">
+  <div class="row contact-row">
+    <div class="col s4 center-align">
+      <a class="btn-floating btn-large waves-effect waves-light red" href="mailto:antonija1023@gmail.com">
+        <i class="fa fa-envelope"></i>
+      </a>
+    </div>
+    <div class="col s4 center-align">
+      <a class="btn-floating btn-large waves-effect waves-light red" href="https://github.com/tonkec" target="_blank">
+        <i class="fa fa-codepen"></i>
+      </a>
+    </div>
+    <div class="col s4 center-align">
+      <a class="btn-floating btn-large waves-effect waves-light red" href="https://github.com/tonkec" target="_blank">
+        <i class="fa fa-github-alt"></i>
+      </a>
+    </div>
+  </div>
+</section>
 </main>	
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
@@ -181,9 +199,6 @@
 <script src="js/parallax.min.js"></script>
 <script src="js/swiper.min.js"></script>
 <script src="js/main.js"></script>
-<script>
-	/*$('.parallax-window').parallax({imageSrc: 'img/city_lights.jpg', position: "bottom"});
-  $(".second-parallax-window").parallax({imageSrc: ""})*/
-</script>
+
 </body>
 </html>
