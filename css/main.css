@@ -11,7 +11,7 @@ main,
 }
 
 section {
-	height: 120%;
+	height: 100%;
 	width: 100%;
 }
 
@@ -80,21 +80,7 @@ section {
 
 .home {
 	background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.5));
-	background-position: center center;
-	background-repeat: no-repeat;
-	-webkit-background-size: cover;
-	     -o-background-size: cover;
-	        background-size: cover;
-	overflow: hidden;
-	position: relative;
 	height: 100% !important;
-}
-
-.home-row {
-	  position: absolute;
-    width: 100%;
-    top: 50%;
-    transform: translateY(-50%);
 }
 
 .home-title {
@@ -118,7 +104,7 @@ section {
 	font-size: 5em;
 	font-weight: 700;
 	margin-bottom: 30px;
-	margin-top: 0;
+	margin-top: -10px;
 }
 
 .skills-info {
@@ -142,20 +128,22 @@ section {
 	color: #e57373;
 }
 
-.skills-row {
-	top: 45%;
-	position: relative;
-	-webkit-transform: translateY(-50%);
-	   -moz-transform: translateY(-50%);
-	    -ms-transform: translateY(-50%);
-	     -o-transform: translateY(-50%);
-	        transform: translateY(-50%);
+.skills,.home, .portfolio-peaks, .portfolio-about-slide {
+	display: table;
 }
 
-.extra-skill {
-	display: block;
-	margin-bottom: 10px;
-    font-size: 2.2em
+.skills {
+	padding: 100px 0;
+}
+
+.portfolio-about-slide {
+	padding: 50px 0;
+}
+
+.skills-row, .home-row, .portfolio-about-row {
+	height: auto;
+	display: table-cell;
+	vertical-align: middle;
 }
 
 .btn-nav {
@@ -221,19 +209,14 @@ section {
 	margin-top: 14px;
 }
 
-.swiper-slide {
-	background-position: center center;
-	background-repeat: no-repeat;
-	background-size: cover;
-}
 
 .portfolio-image {
 	width: 100%;
 }
 
 .portfolio-peaks {
-		background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.3));
-		position: relative;
+	background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.3));
+	position: relative;
 }
 
 .portfolio-title {
@@ -247,15 +230,6 @@ section {
     height: 100%;
 }
 
-.portfolio-col {
-	position: relative;
-	top: 50%;
-	-webkit-transform: translateY(-50%);
-	   -moz-transform: translateY(-50%);
-	    -ms-transform: translateY(-50%);
-	     -o-transform: translateY(-50%);
-	        transform: translateY(-50%);
-}
 
 .portfolio-round-circle {
 	position: absolute;
@@ -277,60 +251,58 @@ section {
 }
 
 .peaks-anchor {
-	position: relative;
-	height: 100%;
+	display: table-cell;
+	width: 100%;
+	vertical-align: middle;
+	text-align: center;
 }
 
 .about-peaks {
 	background-color: #fff;
-}
-
-.about-peaks-title {
-	color: #000;
-	font-size: 5em;
-	margin-top: 50px;
-}
-
-
-.about-item {
-	color: #000;
-	font-size: 2em;
-	line-height: 1.6em;
-	font-weight: 300;
-}
-
-
-.about-peaks-info {
-	color: #000;
-	font-size: 2em;
-	font-weight: 300;
-	line-height: 1.6em;
-}
-
-.peaks-problems {
-	font-size:1.5em;
+	height: auto;
 }
 
 .about-peaks-anchor {
-	color: #039be5;
-	font-weight: 300;
-}
-
-.about-peaks-subinfo {
 	color: #000;
-	font-size: 1.7em;
+	text-decoration: underline;
+	margin-bottom: 10px;
+}
+
+.about-peaks-anchor:hover {
+	text-decoration: underline;
+	color: #039be5;
+}
+
+.fa-external-link {
+	font-size: 0.5em;
+}
+
+.about-title-anchor {
+	margin-left: 5px;
+	color: #000;
+}
+
+.about-title-anchor:hover {
+	color: #039be5;
+}
+
+.about-paragraph {
+	font-size: 1.5em;
 	font-weight: 300;
-	line-height: 1.2em;
+	line-height: 1.6em;
+	text-align: justify;
 }
 
-.portfolio-text-row {
-	position: relative;
-	top: 400px;
+.about-paragraph-anchor {
+	text-align: center;
+	margin-bottom: 15px;
 }
 
-.swiper-button-next,
-.swiper-button-prev {
-	color: #FFF;
+.about-title {
+	font-size: 2em;
+	text-align: center;
+	font-weight: 700;	
+	margin-bottom: 40px;
 }
 
 .modal-trigger {
@@ -342,9 +314,13 @@ section {
 }
 
 .btn-arrow {
-	position: static;
+	position: absolute;
 	background-color: transparent !important;
     border: 1px solid rgba(255,255,255,0.75);
+    bottom: 20px;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
 }
 
 .btn-more {
@@ -361,13 +337,6 @@ section {
     border: 1px solid rgba(255,255,255,.75);
 }
 
-.portfolio-bottom-row {
-	position: absolute;
-    bottom: 0;
-    text-align: center;
-    width: 100%;
-    z-index: 9999;
-}
 
 .portfolio-modal {
 	height: 60%;
@@ -406,13 +375,33 @@ section {
 }
 
 .contact {
-	height: 50%;
+	height: auto;
+	padding: 100px 0;
     background-color: #000;
+    display:table;
 }
 
 .contact-row {
-	top: 50%;
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.fa-contact {
+	color: #FFF;
 	position: relative;
+	line-height:55px !important;
+	font-size: 1.5em;
+	margin-bottom: 70px;
+}
+
+.fa-contact:hover {
+	color: #039be5;
+	top: 2px;
+	-webkit-transition: top .3s ease;
+	   -moz-transition: top .3s ease;
+	    -ms-transition: top .3s ease;
+	     -o-transition: top .3s ease;
+	        transition: top .3s ease;
 }
 
 footer {
@@ -441,11 +430,7 @@ footer {
 	width: 55px !important;
     height: 55px !important;
     line-height: 55px !important;
-}
-
-.btn-contact i {
-	line-height:55px !important;
-	font-size: 1.5em;
+    font-size: 3em;
 }
 
 @media (min-width: 480px) {
@@ -453,32 +438,19 @@ footer {
 		font-size: 1.8em;
 	}
 
-	.peaks-problems {
-		font-size: 1.8em;
+}
+@media (min-width: 600px) {
+	.fa-contact {
+		margin: 0 auto;
 	}
-
-	.btn-contact {
-		width: 100px !important;
-    height: 100px !important;
-    line-height: 100px !important;
-	}
-
-	.btn-contact i {
-	line-height: 100px !important;
-	font-size: 3em;
 }
 
-}
 @media (min-width: 768px) {
-	.specail-row {
-		top: 100%;
+	.about-paragraph {
+		font-size: 1.8em;
 	}
 	.home-title {
 		font-size: 7em;
-	}
-
-	.peaks-problems {
-		font-size: 2.2em;
 	}
 
 	.portfolio-title {
@@ -497,26 +469,16 @@ footer {
 		margin: 0;
 	}
 }
-/*
-@media (min-width: 980px) {
-	.home-title
-	.portoflio-title {
-		font-size: 5.2em;
+
+@media (min-width: 980px;) {
+	.about-paragraph {
+		font-size: 2em;
 	}
 
-	.skills-info {
-		font-size: 2.3em;
+	.about-title {
+		font-size: 3em;
 	}
-
-	.about-peaks-title {
-		font-size: 4.5em;
-	}
-
-	.about-peaks-info {
-		font-size: 2.2em;
-	}
-}*/
-
+}
 @media (min-width: 1200px) {
 	.home-title,
 	.portoflio-title {
@@ -526,19 +488,18 @@ footer {
 		font-size: 3em;
 	}
 	.skills-info {
-		font-size: 2.7em;
-	}
-
-	.about-peaks-title {
-		font-size: 5em;
-	}
-
-	.about-peaks-info {
 		font-size: 2.2em;
 	}
-}
 
-.special-row {
-	top: 240px;
-}
+	.about-paragraph {
+		font-size: 2.2em;
+	}
 
+	.portfolio-about-slide {
+		padding: 250px 0;
+	}
+
+	.about-title {
+		font-size: 4em;
+	}
+}
