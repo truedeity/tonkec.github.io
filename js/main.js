@@ -11,71 +11,65 @@ $(window).load(function(){
     prevButton: '.swiper-button-prev',
   });   
 
- var buttonCircles = $(".nav-circle");
- 
- $(".btn-nav").on("click", function(){
+  var buttonCircles = $(".nav-circle");
+
+$(window).width() < 1200? buttonOnSmallScreen() : buttonOnLargeScreen();
+
+function buttonOnSmallScreen () {
+  $(".btn-nav").on("tap click", function(){
     $(this).toggleClass("closed-nav")
     if ($(this).hasClass("closed-nav")) {
-        slideDown();
+      slideDown();
     } else {
-        slideUp()
+      slideUp()
     }
- });
+  });
+};
 
- $(".btn-nav").hover(function(){
+function buttonOnLargeScreen () {
+ 
+
+$(".btn-nav").on("mouseenter",function(){
   slideDown();
- }, function(){
+});
+
+ $(".circle-container").on("mouseleave",function(){
   slideUp();
- })
+});
 
-  function slideDown () {
-    changeIcon();
-  var topMargin = 20
-  for (i = 0; i < buttonCircles.length; i++) { 
-      topMargin += 82
-      $(buttonCircles[i]).animate({
-        top: topMargin
-    }, function(){
-      $(".btn-nav").removeClass("rubberBand");
-       $(".circle-container, .round-circle").css("visibility", "visible")
+ $(".round-circle, .round-circle > a").click(function(){
+  slideUp();
+ });
+ 
+};
+
+
+function slideDown() {
+ 
+ var topMargin = 20
+ for (i = 0; i < buttonCircles.length; i++) {
+  topMargin += 75
+  $(buttonCircles[i]).animate({
+    top: topMargin
+  }, function() {
+    $(".circle-container, .round-circle").css("visibility", "visible");
+    $(".fa-plus").addClass("rotateIcon").removeClass("unRotateIcon");
+  })
+}
+}
+
+function slideUp() {
+
+  var resetTop = 20
+  for (i = 0; i < buttonCircles.length; i++) {
+    $(buttonCircles[i]).animate({
+      top: resetTop
+    },500, function() {
+      $(".circle-container, .round-circle").css("visibility", "hidden");
+      $(".fa-plus").addClass("unRotateIcon").removeClass("rotateIcon");
     })
   }
 }
-
-function slideUp () {
-  unchangeIcon()
-    for (i = 0; i < buttonCircles.length; i++) {
-      $(buttonCircles[i]).animate({
-        top: "20px"
-    }, 500, function(){
-         $(".circle-container, .round-circle").css("visibility", "hidden");
-         $(".btn-nav").addClass("rubberBand");
-    })
-  }
-}
-
-function changeIcon () {
-  var iconElement = document.getElementById('icon');
-    var options = {
-        from: 'fa-plus',
-        to: 'fa-bars',
-        animation: 'rotateClockwise'
-    };
-
-    iconate(iconElement, options);
-}
-
-function unchangeIcon () {
-  var iconElement = document.getElementById('icon');
-    var options = {
-        from: 'fa-bars',
-        to: 'fa-plus',
-        animation: 'rotateAntiClockwise'
-    };
-
-    iconate(iconElement, options);
-}
-    
 
  $(function() {
   $('a[href*=#]:not([href=#])').click(function() {
@@ -97,10 +91,9 @@ function unchangeIcon () {
   });
 
    function type() {
-    console.log("asfg")
      $(function(){
     $(".element").typed({
-      strings: ['My name is Antonija and I am <span class="skill-span">front-end developer</span>. My skillset mainly consists of <span class="skill-span">HTML</span>, <span class="skill-span">CSS3</span> and <span class="skill-span">jQuery</span>. My biggest passion are <span class="skill-span">jQuery/CSS animations</span>. Front-end frameworks, such as <span class="skill-span">Bootstrap</span> and<span class="skill-span"> Materializecss</span> help me speed up my workflow. Compiling <span class="skill-span">SASS</span> with <span class="skill-span">Gulp</span> is must-have. I am working in <span class="skill-span">Linux Mint</span> and writing code with <span class="skill-span">SublimeText</span> and <span class="skill-span">Emmet</span>. I am currenty learning <span class="skill-span">Ruby on Rails</span> so <a href="mailto:antonija1023@gmail.com" class="skill-anchor"><span class="help-span"> I am looking  for RoR internship </span></a>.'],
+      strings: ['My name is Antonija and I am <span class="skill-span">front-end developer</span>. My skillset mainly consists of <span class="skill-span">HTML</span>, <span class="skill-span">CSS3</span> and <span class="skill-span">jQuery</span>. My biggest passion are <span class="skill-span">jQuery/CSS animations</span>. Front-end frameworks, such as <span class="skill-span">Bootstrap</span> and<span class="skill-span"> Materializecss</span> help me speed up my workflow. Compiling <span class="skill-span">SASS</span> with <span class="skill-span">Gulp</span> is must-have. I am working in <span class="skill-span">Linux Mint</span> and writing code with <span class="skill-span">SublimeText</span> and <span class="skill-span">Emmet</span>. I am currentyl learning <span class="skill-span">Ruby on Rails</span> so <a href="mailto:antonija1023@gmail.com" class="skill-anchor"><span class="help-span"> I am looking  for RoR internship </span></a>.'],
       typeSpeed: 1,
       contentType: 'html',
   
