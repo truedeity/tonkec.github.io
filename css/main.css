@@ -11,6 +11,22 @@ main,
   font-family: "Source Sans Pro";
 }
 
+main, .parallax-mirror {
+  visibility: hidden;
+}
+
+.parallax-mirror {
+  visibility: hidden !important;
+}
+
+.show-mirror {
+  visibility: visible !important;
+}
+
+html, body{
+  overflow: hidden;
+}
+
 section {
   height: 100%;
   width: 100%;
@@ -19,11 +35,28 @@ section {
   height: auto;
 }
 
-.skills,.home, .portfolio-peaks, .portfolio-about-slide {
+.skills,.home, .portfolio-peaks, .portfolio-about-slide, .work {
    display: flex;
   justify-content: center;
   align-items: center;
 }
+
+.skills {
+  position: relative;
+}
+
+.skills-row {
+  z-index: 9999;
+}
+
+.video-overlay {
+  top: 0;
+    bottom: 0;
+      position: absolute;
+      left: 0;
+    right: 0;
+    }
+}   
 
 /* preloader */
 #preloader {
@@ -355,6 +388,8 @@ section {
   font-size: 3.8em;
   font-weight: 700;
   margin-bottom: 30px;
+  color: #FFF;
+  text-align: center;
 }
 
 .skills-info {
@@ -362,6 +397,7 @@ section {
   line-height: 1.6em;
   font-weight: 300;
   text-align: justify;
+  color: #FFF;
 }
 
 .skill-span {
@@ -449,7 +485,7 @@ section {
   position: absolute;
   background-color: transparent !important;
     border: 1px solid rgba(255,255,255,0.75);
-    bottom: 20px;
+    bottom:-100px;
     margin: 0 auto;
     left: 0;
     right: 0;
@@ -663,6 +699,14 @@ footer {
     100% { opacity:1; }
 }
 
+.hire-me {
+  font-size: 3em;
+}
+
+.work-title {
+  font-size: 4em;
+}
+
 /* responsive */
 @media (min-width: 480px) {
 	.skills-info {
@@ -757,12 +801,16 @@ footer {
 	.about-title {
 		font-size: 4em;
 	}
+
+  .hidden-on-large {
+    display: none;
+  }
 }
 @media (max-height: 700px) {
   .skill-title {
-    font-size: 2.2em;
+    font-size: 2.4em;
   }
   .skills-info {
-    font-size: 1.1em;
+    font-size: 1.8em;
   }
 }

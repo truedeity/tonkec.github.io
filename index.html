@@ -10,13 +10,44 @@
   <link rel="stylesheet" href="css/swiper.css">
   <link rel="stylesheet" href="css/main.css">
 </head>
+
+<style>
+  #video {
+        position: absolute;
+    right: 0;
+    bottom: 0;
+    width: auto;
+    min-width: 100%;
+    height: auto;
+    min-height: 100%;
+    z-index: -100;
+    background-image:url(img/mac.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    top: 0;
+  }
+
+  .video-layer {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    width: auto;
+    min-width: 100%;
+    height: auto;
+    min-height: 100%;
+    z-index: -100;
+    background-image:linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5));
+  }
+</style>
 <body>
-  <main>
-    <div id="preloader">
+ <div id="preloader">
       <div id="status">
         <div id="loader"></div><!--loader-->
       </div><!--status-->
     </div><!--preloader-->
+  <main>
+   
     <div class="fixed-container">
      <a class="btn-floating btn-large waves-effect waves-light circle btn-nav"><i id="icon" class="fa fa-plus"></i></a>
      <div class="circle-container">
@@ -34,21 +65,82 @@
     </div>
   </div>
 </div>
-<section class="parallax-container home" data-parallax="scroll" data-image-src="img/city_lights.jpg" id="home">
+<!--<section class="parallax-container parallax-window home" data-parallax="scroll" data-image-src="http://www.solidbackgrounds.com/images/1920x1080/1920x1080-white-solid-color-background.jpg" data-natural-width="150" data-position-x="top" id="home">
  <div class="row home-row">
   <div class="col s10 offset-s1 m8 offset-m2 center-align">
    <h1 class="home-title">My name is Antonija</h1>
    <h2 class="home-subtitle">I am front-end developer</h2>
  </div>
 </div>
-</section>
-<section class="skills" id="skills">
+</section>-->
+<section class="skills" id="skills" class="parallax-container parallax-window home" data-parallax="scroll" data-image-src="img/mac.png" data-natural-width="150" data-position-x="top">
  <div class="row skills-row center-align">
   <div class="col s8 offset-s2 center-align">
-    <h2 class="skill-title">Hello!</h2>
-   <p class="skills-info element flow-text"></p>
-  </div>
-</div>
+
+   <p class="skills-info element hide-on-med-and-down flow-text">
+   <h2 class="skill-title hidden-on-large">Hello!</h2>
+   <p class="skills-info hidden-on-large flow-text">
+     My name is Antonija and I am <span class="skill-span">front-end developer</span>. My skillset mainly consists of <span class="skill-span">HTML</span>, <span class="skill-span">CSS3</span> and <span class="skill-span">jQuery</span>. Compiling <span class="skill-span">SASS</span> with <span class="skill-span">Gulp</span> and versioning with<span class="skill-span">Git</span> is must-have. My biggest passions are <span class="skill-span">jQuery/CSS animations</span> and one pages. Front-end frameworks, such as <span class="skill-span">Bootstrap</span> and<span class="skill-span"> Materializecss</span> help me speed up my workflow. I code in <span class="skill-span">Linux Mint</span> and <span class="skill-span">SublimeText</span> equipped with <span class="skill-span">Emmet</span>. I am currently learning <span class="skill-span">Ruby on Rails</span> so <a href="mailto:antonija1023@gmail.com" class="skill-anchor"><span class="help-span"> I am looking  for RoR internship </span></a>.
+   </p>
+</p>
+  </div><!--col-->
+ </div><!--row-->
+ <video muted poster="img/mac.png" class="video-bg" id="video">
+ <source src="video1.mp4" type="video/mp4">
+</video>
+<div class="video-layer"></div>
+<a class="btn-floating btn-large waves-effect waves-light red btn-arrow z-depth-3" href="#about-peaks">
+    <i class="fa fa-arrow-down"></i>
+  </a>
+
+</section>
+
+<section class="about-peaks" id="about-peaks">
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide portfolio-about-slide">
+        <div class="row portfolio-about-row">
+          <div class="col s10 offset-s1">
+            <h2 class="about-title">Peaks template <a href="http://supersuperstudio.com/peaks" target="_blank" class="about-title-anchor"><i class="fa fa-external-link"></i></a></h2>
+            <p class="about-paragraph">This is a bootstrap template for web and digital agencies. It is best used for showing portfolio and presenting work in general. Web features, such as preloader, parallax, slideshows, full-screen layout and responsivness, will help you with that. Template is built with SASS following OOCSS principles. The hardest part in development process was customization of parallax. It had to be compatible with swiper.js and also fully responsive. Biggest struggle was author section that has multiple parallax. The three images were not supposed to move at the same time which is not default behaviour of parallax plugin. Also, the text should have shown up on hover. And all of that needed to be responsive. That required high front-end skills.</p>
+          </div><!--col-->
+        </div><!--row-->  
+      </div><!--swiper-slide-->
+
+      <div class="swiper-slide portfolio-about-slide">
+        <div class="row portfolio-about-row">
+          <div class="col s10 offset-s1">
+            <h2 class="about-title">Problems</h2>
+            <p class="about-paragraph"> The hardest part in development process was customization of parallax. It had to be compatible with swiper.js and also fully responsive. Biggest struggle was author section that has multiple parallax. The three images were not supposed to move at the same time which is not default behaviour of parallax plugin. Also, the text should have shown up on hover. And all of that needed to be responsive. That required high front-end skills.</p>
+          </div><!--col-->
+        </div><!--row-->  
+      </div><!--swiper-slide-->
+
+      <div class="swiper-slide portfolio-about-slide">
+        <div class="row portfolio-about-row">
+          <div class="col s10 offset-s1">
+           <h2 class="about-title">Technologies used</h2>
+           <p class="about-paragraph">Template is built with HTML &amp; CSS3. And when I say CSS3 I really mean it. Preloader required CSS3 transitions, transformations and keyframes. Also, you may have noticed linear-gradients. CSS code in this template consists of classes which can be reused. In other words, code is content agnostic. Yes, I really did follow principles of OOCSS. CSS was compiled with SASS which helped me to speed up my workflow. Parallax and sliders are made with jQuery where I also tried to DRY the code and follow the principles of OOP.</p>
+          </div><!--col-->
+        </div><!--row-->  
+      </div><!--swiper-slide-->
+
+      <div class="swiper-slide portfolio-about-slide">
+        <div class="row portfolio-about-row">
+          <div class="col s10 offset-s1 center-align">
+           <h2 class="about-title">Nominations</h2>
+           <p class="about-paragraph about-paragraph-anchor"><a href="http://www.awwwards.com/best-websites/peaks-digital-agency-template/" target="_blank" class="about-peaks-anchor">"Website of the day" nomination at Awwwards.com </a></p>
+           <p class="about-paragraph about-paragraph-anchor"> <a href="http://www.cssdesignawards.com/sites/peaks-digital-agency-template/26739/" target="_blank" class="about-peaks-anchor"> "Website of the day" nomination at Cssdesignawards</a></p>
+           <p class="about-paragraph about-paragraph-anchor"> <a href="https://onepagelove.com/peaks" target="_blank" class="about-peaks-anchor">Peaks template is featured as one of best one page websites at Onepagelove: </a></p>
+          </div><!--col-->
+
+        </div><!--row-->  
+      </div><!--swiper-slide-->
+    </div><!--swiper-wrapper-->
+    <div class="swiper-pagination"></div>
+    <div class="swiper-button-prev hide-on-med-and-down"></div>
+    <div class="swiper-button-next hide-on-med-and-down"></div>
+  </div><!--swiper-con-->
 </section>
 
 <section class="portfolio-peaks parallax-window second-parallax-window"  data-parallax="scroll" data-image-src="img/peaks5.jpg" data-natural-width="150" data-position-x="top" id="portfolio">
@@ -82,12 +174,11 @@
   <a href="http://supersuperstudio.com/peaks" target="_blank" class="peaks-anchor">
     <span class="row portfolio-peaks-row waves-effect waves-teal">
       <span class="col s8 offset-s2 m8 offset-m2 portfolio-col">
-       <h2 class="portfolio-title"> Bootstrap template </h2>
+       <h2 class="portfolio-title"> Peaks template </h2>
      </span>
    </span>
  </a>
 </section>  
-
 
 <section class="about-peaks" id="about-peaks">
   <div class="swiper-container">
@@ -95,7 +186,81 @@
       <div class="swiper-slide portfolio-about-slide">
         <div class="row portfolio-about-row">
           <div class="col s10 offset-s1">
-            <h2 class="about-title">Bootstrap template <a href="http://supersuperstudio.com/peaks" target="_blank" class="about-title-anchor"><i class="fa fa-external-link"></i></a></h2>
+            <h2 class="about-title">Apex template <a href="http://supersuperstudio.com/peaks" target="_blank" class="about-title-anchor"><i class="fa fa-external-link"></i></a></h2>
+            <p class="about-paragraph">This is a bootstrap template which can be used for promoting your app or any oder product. Although it can be used for portfolio. If you want to impress, parallax mobile frame will help you. All styles are written with scss.</p>
+          </div><!--col-->
+        </div><!--row-->  
+      </div><!--swiper-slide-->
+
+      <div class="swiper-slide portfolio-about-slide">
+        <div class="row portfolio-about-row">
+          <div class="col s10 offset-s1">
+            <h2 class="about-title">Problems</h2>
+            <p class="about-paragraph"> The hardest part was customizing fade in effect in mobile frame which had to follow changing of the screen. Parallax callbacks helped me to get current slide and start the animation accordingly. Also, it had to be customized with swipper parallax feature. The most fun part was starting animation which I created with jQuery. </p>
+          </div><!--col-->
+        </div><!--row-->  
+      </div><!--swiper-slide-->
+
+      <div class="swiper-slide portfolio-about-slide">
+        <div class="row portfolio-about-row">
+          <div class="col s10 offset-s1">
+           <h2 class="about-title">Technologies used</h2>
+           <p class="about-paragraph">Template is built with HTML &amp; CSS3 following the principles of OOCSS. Gulp helped me to compile Sass and jQuery was used for manipulating parallax, sliding and loading animations. It is worth noting that I divided scss files based on template components and parts: home_slide.scss, second_slide.scss, navgiation.scss and so on. That means that template has multiple scss files which are all combined in one big file. I divided styles like so because I thought it would be better for future user. This way, he/she does not need to go through lots of styles at once.</p>
+          </div><!--col-->
+        </div><!--row-->  
+      </div><!--swiper-slide-->
+
+    </div><!--swiper-wrapper-->
+    <div class="swiper-pagination"></div>
+    <div class="swiper-button-prev hide-on-med-and-down"></div>
+    <div class="swiper-button-next hide-on-med-and-down"></div>
+  </div><!--swiper-con-->
+</section>
+
+<section class="portfolio-peaks parallax-window second-parallax-window"  data-parallax="scroll" data-image-src="img/apex.jpg" data-natural-width="150" data-position-x="top" id="portfolio">
+
+  <!-- Modal Trigger -->
+  <button data-target="modal1" class="btn modal-trigger waves-effect btn-more">Looking for more?</button>
+   <a class="btn-floating btn-large waves-effect waves-light red btn-arrow z-depth-3" href="#about-peaks">
+    <i class="fa fa-arrow-down"></i>
+  </a>
+
+  <!-- Modal Structure -->
+  <div id="modal1" class="modal portfolio-modal">
+    <div class="modal-content center-align">
+      <div class="row">
+        <div class="col s10 offset-s1 m10 offset-m1">
+          <h4 class="modal-title">Looking for more?</h4>
+      <p class="modal-paragraph flow-text">If you are looking for more of my work, please do not hesitate to contact me. I can show you two more works which are not yet officially published.</p>   
+        </div>
+      </div> 
+
+      <div class="row modal-bottom-row">
+        <div class="col s10 offset-s1 m10 offset-m1">
+          <a class="btn-modal" href="mailto:antonija1023@gmail.com"><i class="fa fa-envelope-o"></i></a>
+          <a href="#" class="modal-action modal-close waves-effect waves-teal btn-flat">Close</a>
+        </div>
+      </div>    
+    </div>
+   
+  </div>
+
+  <a href="http://supersuperstudio.com/peaks" target="_blank" class="peaks-anchor">
+    <span class="row portfolio-peaks-row waves-effect waves-teal">
+      <span class="col s8 offset-s2 m8 offset-m2 portfolio-col">
+       <h2 class="portfolio-title"> Apex template </h2>
+     </span>
+   </span>
+ </a>
+</section>  
+
+<section class="about-peaks" id="about-peaks">
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide portfolio-about-slide">
+        <div class="row portfolio-about-row">
+          <div class="col s10 offset-s1">
+            <h2 class="about-title">Ruby on Rails (sample) application <a href="http://supersuperstudio.com/peaks" target="_blank" class="about-title-anchor"><i class="fa fa-external-link"></i></a></h2>
             <p class="about-paragraph">This is a template for web and digital agencies. It is best used for showing portfolio and presenting work in general. Web features, such as preloader, parallax, slideshows, full-screen layout and responsivness, will help you with that. Template is built with SASS following OOCSS principles. The hardest part in development process was customization of parallax. It had to be compatible with swiper.js and also fully responsive. Biggest struggle was author section that has multiple parallax. The three images were not supposed to move at the same time which is not default behaviour of parallax plugin. Also, the text should have shown up on hover. And all of that needed to be responsive. That required high front-end skills.</p>
           </div><!--col-->
         </div><!--row-->  
@@ -105,7 +270,7 @@
         <div class="row portfolio-about-row">
           <div class="col s10 offset-s1">
             <h2 class="about-title">Problems</h2>
-            <p class="about-paragraph">      The hardest part in development process was customization of parallax. It had to be compatible with swiper.js and also fully responsive. Biggest struggle was author section that has multiple parallax. The three images were not supposed to move at the same time which is not default behaviour of parallax plugin. Also, the text should have shown up on hover. And all of that needed to be responsive. That required high front-end skills.</p>
+            <p class="about-paragraph"> The hardest part in development process was customization of parallax. It had to be compatible with swiper.js and also fully responsive. Biggest struggle was author section that has multiple parallax. The three images were not supposed to move at the same time which is not default behaviour of parallax plugin. Also, the text should have shown up on hover. And all of that needed to be responsive. That required high front-end skills.</p>
           </div><!--col-->
         </div><!--row-->  
       </div><!--swiper-slide-->
@@ -119,23 +284,55 @@
         </div><!--row-->  
       </div><!--swiper-slide-->
 
-      <div class="swiper-slide portfolio-about-slide">
-        <div class="row portfolio-about-row">
-          <div class="col s10 offset-s1 center-align">
-           <h2 class="about-title">Nominations</h2>
-           <p class="about-paragraph about-paragraph-anchor"><a href="http://www.awwwards.com/best-websites/peaks-digital-agency-template/" target="_blank" class="about-peaks-anchor">"Website of the day" nomination at Awwwards.com </a></p>
-           <p class="about-paragraph about-paragraph-anchor"> <a href="http://www.cssdesignawards.com/sites/peaks-digital-agency-template/26739/" target="_blank" class="about-peaks-anchor"> "Website of the day" nomination at Cssdesignawards</a></p>
-           <p class="about-paragraph about-paragraph-anchor"> <a href="https://onepagelove.com/peaks" target="_blank" class="about-peaks-anchor">Peaks template is featured as one of best one page websites at Onepagelove: </a></p>
-          </div><!--col-->
-
-        </div><!--row-->  
-      </div><!--swiper-slide-->
     </div><!--swiper-wrapper-->
     <div class="swiper-pagination"></div>
     <div class="swiper-button-prev hide-on-med-and-down"></div>
     <div class="swiper-button-next hide-on-med-and-down"></div>
   </div><!--swiper-con-->
 </section>
+
+<section class="portfolio-peaks parallax-window second-parallax-window"  data-parallax="scroll" data-image-src="img/apex.jpg" data-natural-width="150" data-position-x="top" id="portfolio">
+
+  <!-- Modal Trigger -->
+  <button data-target="modal1" class="btn modal-trigger waves-effect btn-more">Looking for more?</button>
+   
+  <!-- Modal Structure -->
+  <div id="modal1" class="modal portfolio-modal">
+    <div class="modal-content center-align">
+      <div class="row">
+        <div class="col s10 offset-s1 m10 offset-m1">
+          <h4 class="modal-title">Looking for more?</h4>
+      <p class="modal-paragraph flow-text">If you are looking for more of my work, please do not hesitate to contact me. I can show you two more works which are not yet officially published.</p>   
+        </div>
+      </div> 
+
+      <div class="row modal-bottom-row">
+        <div class="col s10 offset-s1 m10 offset-m1">
+          <a class="btn-modal" href="mailto:antonija1023@gmail.com"><i class="fa fa-envelope-o"></i></a>
+          <a href="#" class="modal-action modal-close waves-effect waves-teal btn-flat">Close</a>
+        </div>
+      </div>    
+    </div>
+   
+  </div>
+
+  <a href="http://supersuperstudio.com/peaks" target="_blank" class="peaks-anchor">
+    <span class="row portfolio-peaks-row waves-effect waves-teal">
+      <span class="col s8 offset-s2 m8 offset-m2 portfolio-col">
+       <h2 class="portfolio-title"> Ruby on Rails app </h2>
+     </span>
+   </span>
+ </a>
+</section> 
+
+<section class="work">
+  <div class="row">
+    <div class="col s6 offset-s3 center-align">
+      <h3 class="work-title">Have a project for me?</h3>
+      <h4 class="hire-me">Hire me as a front-end developer or help me learn Rails</h4>
+    </div>
+  </div>
+</section> 
 
 <section class="contact" id="contact">
   <div class="row contact-row">
@@ -161,10 +358,6 @@
       </a>
     </div><!--col-->
   </div><!--row-->
-
-
-
-  <i class="fa fa-bitbucket"></i>
 </section>
 <footer>
   <a href="https://twitter.com/tonkec_palonkec" target="_blank" class="footer-link twitter">@tonkec_palonkec</a><br />

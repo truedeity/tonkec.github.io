@@ -1,7 +1,24 @@
 $(window).load(function(){
- $('#preloader').delay(1000).fadeOut('slow'); 
+
+  /* preloader */
+ $('#preloader').delay(2000).fadeOut('slow', function(){
+  $("main").delay(500).css("visibility", "visible").fadeIn(2000);
+  $(".parallax-mirror").addClass("show-mirror");
+ }); 
+
  $('body').delay(500).css({'overflow':'visible'});
- $(".fixed-container, .btn-more").css("display", "block");
+
+/* animations only for large screen */
+ if ($(window).width() > 1200) {
+    animate();
+    buttonOnLargeScreen();
+  } else {
+    animateArrow();
+    buttonOnSmallScreen();
+  }
+
+
+/* swiper */
    var mySwiper = new Swiper ('.swiper-container', {
     direction: 'horizontal',
     loop: true,
@@ -11,9 +28,9 @@ $(window).load(function(){
     prevButton: '.swiper-button-prev',
   });   
 
+/* navigation button */
+  $(".fixed-container, .btn-more").css("display", "block");
   var buttonCircles = $(".nav-circle");
-
-$(window).width() < 1200? buttonOnSmallScreen() : buttonOnLargeScreen();
 
 function buttonOnSmallScreen () {
   $(".btn-nav").on("tap click", function(){
@@ -27,25 +44,18 @@ function buttonOnSmallScreen () {
 };
 
 function buttonOnLargeScreen () {
- 
-
 $(".btn-nav").on("mouseenter",function(){
   slideDown();
 });
-
  $(".circle-container").on("mouseleave",function(){
   slideUp();
 });
-
  $(".round-circle, .round-circle > a").click(function(){
   slideUp();
  });
- 
 };
 
-
 function slideDown() {
- 
  var topMargin = 20
  for (i = 0; i < buttonCircles.length; i++) {
   topMargin += 75
@@ -59,7 +69,6 @@ function slideDown() {
 }
 
 function slideUp() {
-
   var resetTop = 20
   for (i = 0; i < buttonCircles.length; i++) {
     $(buttonCircles[i]).animate({
@@ -85,34 +94,42 @@ function slideUp() {
    }
   });
  });
+
+ /* modal */
   $('.modal-trigger').leanModal();
   $(".modal-close").click(function(event){
     event.preventDefault();
   });
 
-   function type() {
+   function animateArrow () {
+    $(".btn-arrow").animate({
+          bottom: "+=150px"
+        }, 1, function(){
+          $(".fa-arrow-down").delay(1500).addClass("rotateIcon");
+          $("html,body").css("overflow", "visible");
+        });
+   }
+
+/* starting animation */
+  function animate () {
+    function type() {
      $(function(){
-    $(".element").typed({
-      strings: ['My name is Antonija and I am <span class="skill-span">front-end developer</span>. My skillset mainly consists of <span class="skill-span">HTML</span>, <span class="skill-span">CSS3</span> and <span class="skill-span">jQuery</span>. My biggest passion are <span class="skill-span">jQuery/CSS animations</span>. Front-end frameworks, such as <span class="skill-span">Bootstrap</span> and<span class="skill-span"> Materializecss</span> help me speed up my workflow. Compiling <span class="skill-span">SASS</span> with <span class="skill-span">Gulp</span> is must-have. I am working in <span class="skill-span">Linux Mint</span> and writing code with <span class="skill-span">SublimeText</span> and <span class="skill-span">Emmet</span>. I am currentyl learning <span class="skill-span">Ruby on Rails</span> so <a href="mailto:antonija1023@gmail.com" class="skill-anchor"><span class="help-span"> I am looking  for RoR internship </span></a>.'],
-      typeSpeed: 1,
-      contentType: 'html',
+       $(".element").typed({
+        strings: ['<h2 class="skill-title">Hello!</h2>My name is Antonija and I am <span class="skill-span">front-end developer</span>. My skillset mainly consists of <span class="skill-span">HTML</span>, <span class="skill-span">CSS3</span> and <span class="skill-span">jQuery</span>. Compiling <span class="skill-span">SASS</span> with  <span class="skill-span">Gulp</span> and versioning with <span class="skill-span">Git</span> is must-have. My biggest passions are <span class="skill-span">jQuery/CSS animations</span> and one pages. Front-end frameworks, such as <span class="skill-span">Bootstrap</span> and<span class="skill-span"> Materializecss</span> help me speed up my workflow. I code in <span class="skill-span">Linux Mint</span> and <span class="skill-span">SublimeText</span> equipped with <span class="skill-span">Emmet</span>. I am currently learning <span class="skill-span">Ruby on Rails</span> so <a href="mailto:antonija1023@gmail.com" class="skill-anchor"><span class="help-span"> I am looking  for RoR internship </span></a>.'],
+        typeSpeed: 0,
+        contentType: 'html',
+        startDelay: 8300,
+      });
+    }); 
+   } 
+
   
-    });
-  }); 
-  } 
 
-  $(window).scroll(function (){
-      var topOfWindow = $(window).scrollTop(),
-        bottomOfWindow = topOfWindow + $(window).height();
-        $(".skills-info").each(function(){
-          var elPosition = $(this).offset().top;
-          if (elPosition <= bottomOfWindow && elPosition >= topOfWindow) {
-            type()
-          }
-        }); 
-    });
-
- 
-
- 
+   var video = document.getElementById("video");
+   type();
+   video.play();
+   $("video").bind("ended", function() {
+    animateArrow();
+   });
+  }
 });
