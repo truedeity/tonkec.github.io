@@ -32,12 +32,14 @@
     right: 0;
     bottom: 0;
     top: 0;
-    width: auto;
+    width: 100%;
     min-width: 100%;
-    height: auto;
+    height: 100%;
     min-height: 100%;
     z-index: -100;
     background-image:linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5));
+    background-image: -moz-linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5));
+
   }
 </style>
 <body>
@@ -52,10 +54,7 @@
      <a class="btn-floating btn-large waves-effect waves-light circle btn-nav"><i id="icon" class="fa fa-plus"></i></a>
      <div class="circle-container">
       <div class="round-circle nav-circle waves-effect waves-teal first-circle">
-       <a href="#home"><i class="fa fa-nav fa-home"></i></a>
-     </div>
-     <div class="round-circle nav-circle waves-effect waves-teal second-circle">
-       <a href="#skills"><i class="fa fa-nav fa-rocket"></i></a>
+       <a href="#skills"><i class="fa fa-nav fa-home"></i></a>
      </div>
      <div class="round-circle nav-circle waves-effect waves-teal third-circle">
        <a href="#portfolio"><i class="fa fa-nav fa-trophy"></i></a>
@@ -73,29 +72,50 @@
  </div>
 </div>
 </section>-->
-<section class="skills" id="skills" class="parallax-container parallax-window home" data-parallax="scroll" data-image-src="img/mac.png" data-natural-width="150" data-position-x="top">
+<section class="skills" id="skills" class="parallax-container parallax-window home"  data-natural-width="150" data-position-x="top">
  <div class="row skills-row center-align">
   <div class="col s8 offset-s2 center-align">
 
-   <p class="skills-info element hide-on-med-and-down flow-text">
+   <p class="skills-info element hide-on-med-and-down flow-text"></p>
    <h2 class="skill-title hidden-on-large">Hello!</h2>
    <p class="skills-info hidden-on-large flow-text">
-     My name is Antonija and I am <span class="skill-span">front-end developer</span>. My skillset mainly consists of <span class="skill-span">HTML</span>, <span class="skill-span">CSS3</span> and <span class="skill-span">jQuery</span>. Compiling <span class="skill-span">SASS</span> with <span class="skill-span">Gulp</span> and versioning with<span class="skill-span">Git</span> is must-have. My biggest passions are <span class="skill-span">jQuery/CSS animations</span> and one pages. Front-end frameworks, such as <span class="skill-span">Bootstrap</span> and<span class="skill-span"> Materializecss</span> help me speed up my workflow. I code in <span class="skill-span">Linux Mint</span> and <span class="skill-span">SublimeText</span> equipped with <span class="skill-span">Emmet</span>. I am currently learning <span class="skill-span">Ruby on Rails</span> so <a href="mailto:antonija1023@gmail.com" class="skill-anchor"><span class="help-span"> I am looking  for RoR internship </span></a>.
+     My name is Antonija and I am <span class="skill-span">front-end developer</span>. My skillset mainly consists of <span class="skill-span">HTML</span>, <span class="skill-span">CSS3</span> and <span class="skill-span">jQuery</span>. Compiling <span class="skill-span">SASS</span> with <span class="skill-span">Gulp</span> and versioning with<span class="skill-span">Git</span> is must-have. My biggest passions are <span class="skill-span">jQuery/CSS animations</span> and one pages. Front-end frameworks, such as <span class="skill-span">Bootstrap</span> and<span class="skill-span"> Materializecss</span> speed up my workflow. I code in <span class="skill-span">Linux Mint</span> and <span class="skill-span">SublimeText</span> equipped with <span class="skill-span">Emmet</span>. I am currently learning <span class="skill-span">Ruby on Rails</span> so <a href="mailto:antonija1023@gmail.com" class="skill-anchor"><span class="help-span"> I am looking  for RoR internship </span></a>.
    </p>
-</p>
   </div><!--col-->
  </div><!--row-->
  <video muted poster="img/mac.png" class="video-bg" id="video">
  <source src="video1.mp4" type="video/mp4">
+ <source src="video1.ogv" type="video/ogv">
+ <source src="video1.webm" type="video/webm">
 </video>
 <div class="video-layer"></div>
-<a class="btn-floating btn-large waves-effect waves-light red btn-arrow z-depth-3" href="#about-peaks">
+<a class="btn-floating btn-large waves-effect waves-light red btn-arrow z-depth-3 " href="#about-peaks">
     <i class="fa fa-arrow-down"></i>
   </a>
 
 </section>
 
-<section class="about-peaks" id="about-peaks">
+<section class="work">
+  <div class="row">
+    <div class="col s6 offset-s3 center-align">
+      <h3 class="work-title">Have a project for me?</h3>
+      <h4 class="hire-me">Hire me as a front-end developer or help me learn Rails</h4>
+    </div>
+  </div>
+</section> 
+
+<section class="portfolio-peaks parallax-window second-parallax-window"  data-parallax="scroll" data-image-src="img/peaks5.jpg" data-natural-width="150" data-position-x="top">
+<div class="parallax-layer"></div>
+  <a href="http://supersuperstudio.com/peaks" target="_blank" class="peaks-anchor">
+    <span class="row portfolio-peaks-row waves-effect waves-teal">
+      <span class="col s8 offset-s2 m8 offset-m2 portfolio-col">
+       <h2 class="portfolio-title"> Peaks template </h2>
+     </span>
+   </span>
+ </a>
+</section>  
+
+<section class="about-peaks" id="portfolio">
   <div class="swiper-container">
     <div class="swiper-wrapper">
       <div class="swiper-slide portfolio-about-slide">
@@ -143,38 +163,12 @@
   </div><!--swiper-con-->
 </section>
 
-<section class="portfolio-peaks parallax-window second-parallax-window"  data-parallax="scroll" data-image-src="img/peaks5.jpg" data-natural-width="150" data-position-x="top" id="portfolio">
-
-  <!-- Modal Trigger -->
-  <button data-target="modal1" class="btn modal-trigger waves-effect btn-more">Looking for more?</button>
-   <a class="btn-floating btn-large waves-effect waves-light red btn-arrow z-depth-3" href="#about-peaks">
-    <i class="fa fa-arrow-down"></i>
-  </a>
-
-  <!-- Modal Structure -->
-  <div id="modal1" class="modal portfolio-modal">
-    <div class="modal-content center-align">
-      <div class="row">
-        <div class="col s10 offset-s1 m10 offset-m1">
-          <h4 class="modal-title">Looking for more?</h4>
-      <p class="modal-paragraph flow-text">If you are looking for more of my work, please do not hesitate to contact me. I can show you two more works which are not yet officially published.</p>   
-        </div>
-      </div> 
-
-      <div class="row modal-bottom-row">
-        <div class="col s10 offset-s1 m10 offset-m1">
-          <a class="btn-modal" href="mailto:antonija1023@gmail.com"><i class="fa fa-envelope-o"></i></a>
-          <a href="#" class="modal-action modal-close waves-effect waves-teal btn-flat">Close</a>
-        </div>
-      </div>    
-    </div>
-   
-  </div>
-
+<section class="portfolio-peaks parallax-window second-parallax-window"  data-parallax="scroll" data-image-src="img/apex.jpg" data-natural-width="150" data-position-x="top" id="portfolio">
+  <div class="parallax-layer"></div>
   <a href="http://supersuperstudio.com/peaks" target="_blank" class="peaks-anchor">
     <span class="row portfolio-peaks-row waves-effect waves-teal">
       <span class="col s8 offset-s2 m8 offset-m2 portfolio-col">
-       <h2 class="portfolio-title"> Peaks template </h2>
+       <h2 class="portfolio-title"> Apex template </h2>
      </span>
    </span>
  </a>
@@ -196,7 +190,7 @@
         <div class="row portfolio-about-row">
           <div class="col s10 offset-s1">
             <h2 class="about-title">Problems</h2>
-            <p class="about-paragraph"> The hardest part was customizing fade in effect in mobile frame which had to follow changing of the screen. Parallax callbacks helped me to get current slide and start the animation accordingly. Also, it had to be customized with swipper parallax feature. The most fun part was starting animation which I created with jQuery. </p>
+            <p class="about-paragraph"> The hardest part was customizing fade in effect in mobile frame which had to follow changing of the screen. Parallax callbacks helped me to get current slide and start the animation accordingly. Also, it had to be customized with swipper parallax feature. The most fun part was opening animation. </p>
           </div><!--col-->
         </div><!--row-->  
       </div><!--swiper-slide-->
@@ -218,41 +212,15 @@
 </section>
 
 <section class="portfolio-peaks parallax-window second-parallax-window"  data-parallax="scroll" data-image-src="img/apex.jpg" data-natural-width="150" data-position-x="top" id="portfolio">
-
-  <!-- Modal Trigger -->
-  <button data-target="modal1" class="btn modal-trigger waves-effect btn-more">Looking for more?</button>
-   <a class="btn-floating btn-large waves-effect waves-light red btn-arrow z-depth-3" href="#about-peaks">
-    <i class="fa fa-arrow-down"></i>
-  </a>
-
-  <!-- Modal Structure -->
-  <div id="modal1" class="modal portfolio-modal">
-    <div class="modal-content center-align">
-      <div class="row">
-        <div class="col s10 offset-s1 m10 offset-m1">
-          <h4 class="modal-title">Looking for more?</h4>
-      <p class="modal-paragraph flow-text">If you are looking for more of my work, please do not hesitate to contact me. I can show you two more works which are not yet officially published.</p>   
-        </div>
-      </div> 
-
-      <div class="row modal-bottom-row">
-        <div class="col s10 offset-s1 m10 offset-m1">
-          <a class="btn-modal" href="mailto:antonija1023@gmail.com"><i class="fa fa-envelope-o"></i></a>
-          <a href="#" class="modal-action modal-close waves-effect waves-teal btn-flat">Close</a>
-        </div>
-      </div>    
-    </div>
-   
-  </div>
-
+  <div class="parallax-layer"></div>
   <a href="http://supersuperstudio.com/peaks" target="_blank" class="peaks-anchor">
     <span class="row portfolio-peaks-row waves-effect waves-teal">
       <span class="col s8 offset-s2 m8 offset-m2 portfolio-col">
-       <h2 class="portfolio-title"> Apex template </h2>
+       <h2 class="portfolio-title"> Ruby on Rails app </h2>
      </span>
    </span>
  </a>
-</section>  
+</section> 
 
 <section class="about-peaks" id="about-peaks">
   <div class="swiper-container">
@@ -291,49 +259,6 @@
   </div><!--swiper-con-->
 </section>
 
-<section class="portfolio-peaks parallax-window second-parallax-window"  data-parallax="scroll" data-image-src="img/apex.jpg" data-natural-width="150" data-position-x="top" id="portfolio">
-
-  <!-- Modal Trigger -->
-  <button data-target="modal1" class="btn modal-trigger waves-effect btn-more">Looking for more?</button>
-   
-  <!-- Modal Structure -->
-  <div id="modal1" class="modal portfolio-modal">
-    <div class="modal-content center-align">
-      <div class="row">
-        <div class="col s10 offset-s1 m10 offset-m1">
-          <h4 class="modal-title">Looking for more?</h4>
-      <p class="modal-paragraph flow-text">If you are looking for more of my work, please do not hesitate to contact me. I can show you two more works which are not yet officially published.</p>   
-        </div>
-      </div> 
-
-      <div class="row modal-bottom-row">
-        <div class="col s10 offset-s1 m10 offset-m1">
-          <a class="btn-modal" href="mailto:antonija1023@gmail.com"><i class="fa fa-envelope-o"></i></a>
-          <a href="#" class="modal-action modal-close waves-effect waves-teal btn-flat">Close</a>
-        </div>
-      </div>    
-    </div>
-   
-  </div>
-
-  <a href="http://supersuperstudio.com/peaks" target="_blank" class="peaks-anchor">
-    <span class="row portfolio-peaks-row waves-effect waves-teal">
-      <span class="col s8 offset-s2 m8 offset-m2 portfolio-col">
-       <h2 class="portfolio-title"> Ruby on Rails app </h2>
-     </span>
-   </span>
- </a>
-</section> 
-
-<section class="work">
-  <div class="row">
-    <div class="col s6 offset-s3 center-align">
-      <h3 class="work-title">Have a project for me?</h3>
-      <h4 class="hire-me">Hire me as a front-end developer or help me learn Rails</h4>
-    </div>
-  </div>
-</section> 
-
 <section class="contact" id="contact">
   <div class="row contact-row">
     <div class="col s12 m3 center-align">
@@ -359,6 +284,7 @@
     </div><!--col-->
   </div><!--row-->
 </section>
+
 <footer>
   <a href="https://twitter.com/tonkec_palonkec" target="_blank" class="footer-link twitter">@tonkec_palonkec</a><br />
   <a href="mailto:antonij1023@gmail.com"  class="footer-link mail">antonija1023@gmail.com</a>

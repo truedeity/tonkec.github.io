@@ -11,20 +11,28 @@ main,
   font-family: "Source Sans Pro";
 }
 
-main, .parallax-mirror {
-  visibility: hidden;
+html,body {
+  overflow:hidden;
 }
 
 .parallax-mirror {
-  visibility: hidden !important;
+  display: block;
 }
 
-.show-mirror {
-  visibility: visible !important;
+.parallax-layer {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-image: -webkit-linear-gradient(rgba(0,0,0,0.05), rgba(0,0,0,0.3));
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#000000');
+  background-image: -o-linear-gradient(rgba(0,0,0,0.05), rgba(0,0,0,0.3));
+  background-image: -moz-linear-gradient(rgba(0,0,0,0.05), rgba(0,0,0,0.3));
 }
 
-html, body{
-  overflow: hidden;
+main {
+  display: block;
 }
 
 section {
@@ -43,20 +51,21 @@ section {
 
 .skills {
   position: relative;
+  background-image: -webkit-linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../img/mac.png");
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#000000'), url("../img/mac.png");
+  background-image: -o-linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../img/mac.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: -moz-linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../img/mac.png");
+  height: 100%;
+  padding-top: 80px;
+  padding-bottom: 80px;
 }
 
 .skills-row {
   z-index: 9999;
 }
-
-.video-overlay {
-  top: 0;
-    bottom: 0;
-      position: absolute;
-      left: 0;
-    right: 0;
-    }
-}   
 
 /* preloader */
 #preloader {
@@ -66,7 +75,7 @@ section {
   right: 0;
   bottom: 0;
   background-color: #fff;
-  z-index: 99; }
+  z-index: 999999; }
 
 #status {
   width: 200px;
@@ -125,11 +134,12 @@ section {
   position: absolute;
   left: 20px;
   top: 20px;
-  background-color: #67809F !important;
+  background-color: #000 !important;
   z-index: 9999;
   height: 70px !important;
   width: 70px !important;
   line-height: 70px !important;
+  border: none;
 }
 
 .fa-plus {
@@ -185,6 +195,7 @@ section {
   position: fixed;
   z-index: 99999;
   display: none;
+  left: -100%;
 }
 
 .fa-nav {
@@ -360,29 +371,6 @@ section {
           animation-duration: 1s;
 }
 
-/* home */
-.home {
-	background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.5));
-	height: 100% !important;
-}
-
-.home-title {
-	color: #FFF;
-	display: block;
-	font-family: "Source Sans Pro";
-	font-size: 4.2em;
-	text-align: center;
-	font-weight: 600;
-	margin: 0 auto;
-}
-
-.home-subtitle {
-	font-size: 2em;
-	color: #FFF;
-	text-align: center;
-	margin-top: 10px;
-}
-
 /* skills */
 .skill-title {
   font-size: 3.8em;
@@ -398,6 +386,7 @@ section {
   font-weight: 300;
   text-align: justify;
   color: #FFF;
+  z-index: -99999;
 }
 
 .skill-span {
@@ -485,7 +474,7 @@ section {
   position: absolute;
   background-color: transparent !important;
     border: 1px solid rgba(255,255,255,0.75);
-    bottom:-100px;
+    bottom:-100%;
     margin: 0 auto;
     left: 0;
     right: 0;
@@ -682,6 +671,8 @@ footer {
     -webkit-animation: blink 0.7s infinite;
     -moz-animation: blink 0.7s infinite;
     animation: blink 0.7s infinite;
+        color: #FFF;
+        font-size: 1.2em;
 }
 @keyframes blink{
     0% { opacity:1; }
@@ -726,7 +717,7 @@ footer {
 
 @media (min-width: 768px) {
 	.about-paragraph {
-		font-size: 1.8em;
+		font-size: 1.6em;
 	}
 	.home-title {
 		font-size: 7em;
@@ -737,7 +728,7 @@ footer {
 	}
 
 	.skills-info {
-		font-size: 2.3em;
+		font-size: 1.8em;
 	}
 
 	.btn-more {
@@ -751,7 +742,7 @@ footer {
 
 @media (min-width: 980px) {
 	.about-paragraph {
-		font-size: 2em;
+		font-size: 1.8em;
 	}
 
 	.about-title {
@@ -781,6 +772,11 @@ footer {
   .mail {
     bottom: 50px;
   }
+
+  .skills-info {
+    font-size: 2em;
+  }
+
 }
 @media (min-width: 1200px) {
 	.home-title,
@@ -795,7 +791,7 @@ footer {
 	}
 
 	.about-paragraph {
-		font-size: 2.2em;
+		font-size: 2em;
 	}
 
 	.about-title {
@@ -805,12 +801,31 @@ footer {
   .hidden-on-large {
     display: none;
   }
+
+  .skills {
+    background-image: none;
+    height: 100% !important;
+    padding-bottom: 0;
+    padding-top: 0;
+  }
+
+  .parallax-mirror, main {
+    display: none;
+  }
+
+  .parallax-layer {
+     background-image: none;
+     background-image: -webkit-linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0))
+     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#ffffff');
+     background-image: -o-linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0));
+     background-image: -moz-linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0));
+  }
 }
 @media (max-height: 700px) {
-  .skill-title {
-    font-size: 2.4em;
+  .skill-title { 
+    font-size: 2em;
   }
   .skills-info {
-    font-size: 1.8em;
+    font-size: 1.4em;
   }
 }
