@@ -130,15 +130,12 @@ function type() {
   } 
 function playVideo () {
   var video = document.getElementById("video");
-  var audio = document.getElementById('audio');
   video.play();
   $("#video").on("timeupdate",function(event){
       var videoCurrentTime = video.currentTime;
       var videoCurrentTimeToFloat = Math.floor(videoCurrentTime);
       if (videoCurrentTimeToFloat == 8) {
         type();
-        audio.play();
-
       }
       if (videoCurrentTimeToFloat == 34) {
         animateArrow(1) 
@@ -149,7 +146,6 @@ function playVideo () {
 });
 
 window.onresize = function(){ 
-  history.go(0);
   window.location.href = window.location.href;
   location.reload();
 }
