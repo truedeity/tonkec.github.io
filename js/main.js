@@ -148,8 +148,8 @@ function playVideo () {
 
 });
 
-/*window.onresize = function(){ 
+window.onresize = function(){ 
   history.go(0);
   window.location.href = window.location.href;
   location.reload();
-}*/
+}
