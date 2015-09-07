@@ -12,35 +12,50 @@
 </head>
 
 <style>
-  #video {
-        position: absolute;
+.video-con 
+{
+    position:absolute;
+    height:100%;
+    width:100%;
+    overflow: hidden;
+    top: 0;
+    left: 0;
     right: 0;
     bottom: 0;
-    width: auto;
+    display: none;
+}
+
+
+#video 
+{
     min-width: 100%;
-    height: auto;
     min-height: 100%;
-    z-index: -100;
-    background-image:url(img/mac.png);
-    background-repeat: no-repeat;
-    background-size: cover;
+}
+
+.video-layer {
+     position:absolute;
+    height:100%;
+    width:100%;
+    overflow: hidden;
     top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: none;
+    background-image:linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5));
+    background-image: -moz-linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5));
+  }
+
+@media (min-width: 1200px) {
+  .video-con {
+    display: block;
   }
 
   .video-layer {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    top: 0;
-    width: 100%;
-    min-width: 100%;
-    height: 100%;
-    min-height: 100%;
-    z-index: -100;
-    background-image:linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5));
-    background-image: -moz-linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5));
-
+    display: block;
   }
+}
+
 </style>
 <body>
  <div id="preloader">
@@ -53,59 +68,98 @@
     <div class="fixed-container">
      <a class="btn-floating btn-large waves-effect waves-light circle btn-nav"><i id="icon" class="fa fa-plus"></i></a>
      <div class="circle-container">
-      <div class="round-circle nav-circle waves-effect waves-teal first-circle">
+      <div class="round-circle nav-circle waves-effect first-circle">
        <a href="#skills"><i class="fa fa-nav fa-home"></i></a>
      </div>
-     <div class="round-circle nav-circle waves-effect waves-teal third-circle">
+      <div class="round-circle nav-circle waves-effect forth-circle">
+      <a href="#work"><i class="fa fa-nav fa-beer"></i></a>
+    </div>
+     <div class="round-circle nav-circle waves-effect third-circle">
        <a href="#portfolio"><i class="fa fa-nav fa-trophy"></i></a>
      </div>
-     <div class="round-circle nav-circle waves-effect waves-teal forth-circle">
-      <a href="#contact"><i class="fa fa-nav fa-beer"></i></a>
-    </div>
+     <div class="round-circle nav-circle waves-effect third-circle">
+       <a href="#contact"><i class="fa fa-nav fa-globe"></i></a>
+     </div>
   </div>
 </div>
-<!--<section class="parallax-container parallax-window home" data-parallax="scroll" data-image-src="http://www.solidbackgrounds.com/images/1920x1080/1920x1080-white-solid-color-background.jpg" data-natural-width="150" data-position-x="top" id="home">
- <div class="row home-row">
-  <div class="col s10 offset-s1 m8 offset-m2 center-align">
-   <h1 class="home-title">My name is Antonija</h1>
-   <h2 class="home-subtitle">I am front-end developer</h2>
- </div>
-</div>
-</section>-->
-<section class="skills" id="skills" class="parallax-container parallax-window home"  data-natural-width="150" data-position-x="top">
+
+<section class="skills" id="skills">
  <div class="row skills-row center-align">
   <div class="col s8 offset-s2 center-align">
 
-   <p class="skills-info element hide-on-med-and-down flow-text"></p>
+   <p class="skills-info typed-text flow-text"></p>
    <h2 class="skill-title hidden-on-large">Hello!</h2>
    <p class="skills-info hidden-on-large flow-text">
      My name is Antonija and I am <span class="skill-span">front-end developer</span>. My skillset mainly consists of <span class="skill-span">HTML</span>, <span class="skill-span">CSS3</span> and <span class="skill-span">jQuery</span>. Compiling <span class="skill-span">SASS</span> with <span class="skill-span">Gulp</span> and versioning with<span class="skill-span">Git</span> is must-have. My biggest passions are <span class="skill-span">jQuery/CSS animations</span> and one pages. Front-end frameworks, such as <span class="skill-span">Bootstrap</span> and<span class="skill-span"> Materializecss</span> speed up my workflow. I code in <span class="skill-span">Linux Mint</span> and <span class="skill-span">SublimeText</span> equipped with <span class="skill-span">Emmet</span>. I am currently learning <span class="skill-span">Ruby on Rails</span> so <a href="mailto:antonija1023@gmail.com" class="skill-anchor"><span class="help-span"> I am looking  for RoR internship </span></a>.
    </p>
   </div><!--col-->
  </div><!--row-->
- <video muted poster="img/mac.png" class="video-bg" id="video">
+<div class="video-con">
+  <video muted class="video-bg" id="video">
  <source src="video1.mp4" type="video/mp4">
  <source src="video1.ogv" type="video/ogv">
  <source src="video1.webm" type="video/webm">
 </video>
+</div>
+<audio id="audio">
+  <source src="audio.ogg" type="audio/ogg">
+</audio>
 <div class="video-layer"></div>
-<a class="btn-floating btn-large waves-effect waves-light red btn-arrow z-depth-3 " href="#about-peaks">
-    <i class="fa fa-arrow-down"></i>
-  </a>
+<a class="btn-floating btn-large waves-effect waves-light red btn-arrow z-depth-3 " href="#work">
+  <i class="fa fa-arrow-down"></i>
+</a>
 
 </section>
 
-<section class="work">
-  <div class="row">
-    <div class="col s6 offset-s3 center-align">
-      <h3 class="work-title">Have a project for me?</h3>
-      <h4 class="hire-me">Hire me as a front-end developer or help me learn Rails</h4>
-    </div>
-  </div>
-</section> 
+<section class="work" id="work">
+ <!--<form action="form.php" method="post" enctype="multipart/form-data">
 
-<section class="portfolio-peaks parallax-window second-parallax-window"  data-parallax="scroll" data-image-src="img/peaks5.jpg" data-natural-width="150" data-position-x="top">
-<div class="parallax-layer"></div>
+   <h1 class="title">Contact</h1>
+
+   <label></label>
+   <input name="name" required="required" placeholder="Your Name">
+
+
+   <label></label>
+   <input name="email" type="email" required="required" placeholder="Your Email">
+
+
+   <label></label>
+   <textarea name="message" cols="20" rows="5" required="required" placeholder="Message"></textarea>
+
+
+   <input id="cancel" name="cancel" value="Cancel" />
+
+   <input id="submit" name="submit" type="submit" value="Submit">
+
+ </form>-->
+
+
+  <div class="row">
+    <form class="col s12" action="form.php" method="post" enctype="multipart/form-data">
+      <div class="row">
+        <div class="input-field col s6">
+          <input  name="name" required="required" placeholder="Your Name" id="first_name" type="text" class="validate">
+          <label for="first_name">First Name</label>
+        </div>
+        <div class="input-field col s6">
+          <input name="email" type="email" required="required" placeholder="Your Email" id="last_name" class="validate">
+          <label for="last_name">Last Name</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <textarea name="message" required="required" placeholder="Message" id="textarea1" class="materialize-textarea"></textarea>
+          <label for="textarea1">Textarea</label>
+        </div>
+      </div>
+      <input id="submit" name="submit" type="submit" value="Submit" class="btn btn-primary">
+    </form>
+  </div>
+        
+</section>
+
+<section class="portfolio-peaks parallax-window"  data-parallax="scroll" data-image-src="img/peaks5.jpg" data-natural-width="150" data-position-x="top" id="portfolio">
   <a href="http://supersuperstudio.com/peaks" target="_blank" class="peaks-anchor">
     <span class="row portfolio-peaks-row waves-effect waves-teal">
       <span class="col s8 offset-s2 m8 offset-m2 portfolio-col">
@@ -113,9 +167,12 @@
      </span>
    </span>
  </a>
+ <a class="btn-floating btn-large waves-effect waves-light red btn-arrow z-depth-3 " href="#about-peaks">
+  <i class="fa fa-arrow-down"></i>
+</a>
 </section>  
 
-<section class="about-peaks" id="portfolio">
+<section class="about-portfolio" id="about-peaks">
   <div class="swiper-container">
     <div class="swiper-wrapper">
       <div class="swiper-slide portfolio-about-slide">
@@ -149,9 +206,9 @@
         <div class="row portfolio-about-row">
           <div class="col s10 offset-s1 center-align">
            <h2 class="about-title">Nominations</h2>
-           <p class="about-paragraph about-paragraph-anchor"><a href="http://www.awwwards.com/best-websites/peaks-digital-agency-template/" target="_blank" class="about-peaks-anchor">"Website of the day" nomination at Awwwards.com </a></p>
-           <p class="about-paragraph about-paragraph-anchor"> <a href="http://www.cssdesignawards.com/sites/peaks-digital-agency-template/26739/" target="_blank" class="about-peaks-anchor"> "Website of the day" nomination at Cssdesignawards</a></p>
-           <p class="about-paragraph about-paragraph-anchor"> <a href="https://onepagelove.com/peaks" target="_blank" class="about-peaks-anchor">Peaks template is featured as one of best one page websites at Onepagelove: </a></p>
+           <p class="about-paragraph about-paragraph-anchor"><a href="http://www.awwwards.com/best-websites/peaks-digital-agency-template/" target="_blank" class="about-portfolio-anchor">"Website of the day" nomination at Awwwards.com </a></p>
+           <p class="about-paragraph about-paragraph-anchor"> <a href="http://www.cssdesignawards.com/sites/peaks-digital-agency-template/26739/" target="_blank" class="about-portfolioabt-anchor"> "Website of the day" nomination at Cssdesignawards</a></p>
+           <p class="about-paragraph about-paragraph-anchor"> <a href="https://onepagelove.com/peaks" target="_blank" class="about-portfolio-anchor">Peaks template is featured as one of best one page websites at Onepagelove: </a></p>
           </div><!--col-->
 
         </div><!--row-->  
@@ -163,24 +220,27 @@
   </div><!--swiper-con-->
 </section>
 
-<section class="portfolio-peaks parallax-window second-parallax-window"  data-parallax="scroll" data-image-src="img/apex.jpg" data-natural-width="150" data-position-x="top" id="portfolio">
+<section class="portfolio-peaks parallax-window second-parallax-window"  data-parallax="scroll" data-image-src="img/apex.jpg" data-natural-width="150" data-position-x="top">
   <div class="parallax-layer"></div>
-  <a href="http://supersuperstudio.com/peaks" target="_blank" class="peaks-anchor">
+  <a href="http://supersuperstudio.com/apex" target="_blank" class="peaks-anchor">
     <span class="row portfolio-peaks-row waves-effect waves-teal">
       <span class="col s8 offset-s2 m8 offset-m2 portfolio-col">
        <h2 class="portfolio-title"> Apex template </h2>
      </span>
    </span>
  </a>
+  <a class="btn-floating btn-large waves-effect waves-light red btn-arrow z-depth-3 " href="#about-apex">
+  <i class="fa fa-arrow-down"></i>
+</a>
 </section>  
 
-<section class="about-peaks" id="about-peaks">
+<section class="about-portfolio" id="about-apex">
   <div class="swiper-container">
     <div class="swiper-wrapper">
       <div class="swiper-slide portfolio-about-slide">
         <div class="row portfolio-about-row">
           <div class="col s10 offset-s1">
-            <h2 class="about-title">Apex template <a href="http://supersuperstudio.com/peaks" target="_blank" class="about-title-anchor"><i class="fa fa-external-link"></i></a></h2>
+            <h2 class="about-title">Apex template <a href="http://supersuperstudio.com/apex" target="_blank" class="about-title-anchor"><i class="fa fa-external-link"></i></a></h2>
             <p class="about-paragraph">This is a bootstrap template which can be used for promoting your app or any oder product. Although it can be used for portfolio. If you want to impress, parallax mobile frame will help you. All styles are written with scss.</p>
           </div><!--col-->
         </div><!--row-->  
@@ -211,25 +271,28 @@
   </div><!--swiper-con-->
 </section>
 
-<section class="portfolio-peaks parallax-window second-parallax-window"  data-parallax="scroll" data-image-src="img/apex.jpg" data-natural-width="150" data-position-x="top" id="portfolio">
+<section class="portfolio-peaks parallax-window second-parallax-window"  data-parallax="scroll" data-image-src="img/ror2.png" data-natural-width="150" data-position-x="top" id="portfolio">
   <div class="parallax-layer"></div>
-  <a href="http://supersuperstudio.com/peaks" target="_blank" class="peaks-anchor">
+  <a href="https://morning-cove-2715.herokuapp.com/" target="_blank" class="peaks-anchor">
     <span class="row portfolio-peaks-row waves-effect waves-teal">
       <span class="col s8 offset-s2 m8 offset-m2 portfolio-col">
-       <h2 class="portfolio-title"> Ruby on Rails app </h2>
+       <h2 class="portfolio-title"> Ruby on Rails (sample) application </h2>
      </span>
    </span>
  </a>
+  <a class="btn-floating btn-large waves-effect waves-light red btn-arrow z-depth-3 " href="#rails">
+  <i class="fa fa-arrow-down"></i>
+</a>
 </section> 
 
-<section class="about-peaks" id="about-peaks">
+<section class="about-portfolio" id="rails">
   <div class="swiper-container">
     <div class="swiper-wrapper">
       <div class="swiper-slide portfolio-about-slide">
         <div class="row portfolio-about-row">
           <div class="col s10 offset-s1">
-            <h2 class="about-title">Ruby on Rails (sample) application <a href="http://supersuperstudio.com/peaks" target="_blank" class="about-title-anchor"><i class="fa fa-external-link"></i></a></h2>
-            <p class="about-paragraph">This is a template for web and digital agencies. It is best used for showing portfolio and presenting work in general. Web features, such as preloader, parallax, slideshows, full-screen layout and responsivness, will help you with that. Template is built with SASS following OOCSS principles. The hardest part in development process was customization of parallax. It had to be compatible with swiper.js and also fully responsive. Biggest struggle was author section that has multiple parallax. The three images were not supposed to move at the same time which is not default behaviour of parallax plugin. Also, the text should have shown up on hover. And all of that needed to be responsive. That required high front-end skills.</p>
+            <h2 class="about-title">Ruby on Rails (sample) application <a href="https://morning-cove-2715.herokuapp.com/" target="_blank" class="about-title-anchor"><i class="fa fa-external-link"></i></a></h2>
+            <p class="about-paragraph">This is a sample Rails application and although it sound easy and unprofessional I surely learned a lot. Indeed it is a hypotetical work but it covers development process that is required almost in every application. I am talking about modeling users, users' authentication and authorization. This app allows you to create user, which you have to verify with email, create your microposts, generate your status feed, read other user's profile and status feed, follow and unfollow other users.</p>
           </div><!--col-->
         </div><!--row-->  
       </div><!--swiper-slide-->
@@ -237,8 +300,9 @@
       <div class="swiper-slide portfolio-about-slide">
         <div class="row portfolio-about-row">
           <div class="col s10 offset-s1">
-            <h2 class="about-title">Problems</h2>
-            <p class="about-paragraph"> The hardest part in development process was customization of parallax. It had to be compatible with swiper.js and also fully responsive. Biggest struggle was author section that has multiple parallax. The three images were not supposed to move at the same time which is not default behaviour of parallax plugin. Also, the text should have shown up on hover. And all of that needed to be responsive. That required high front-end skills.</p>
+            <h2 class="about-title">Introduction</h2>
+            <p class="about-paragraph"> There were lots of problems, or at least, lots of new stuff so I am going to split it in several slides. First few chapters, which explained basic MVC structure and layouting, was super easy and I was brave enough to think that creating web applications was not so hard after all. I even survived sixth chapter with hashing password and seventh chapter with signing up a user. Everything was clear to me but little did I know I was heading to the land of despair called sessions and cookies. So it hit me in the chapter 8: Log in, log out. For someone who never heard of terms like stateless protocol this was really huge pain. Chapter included some ruby intermediate level of coding so that didn't help either. Luckily, there are some pretty useful resources for learning rails such as RailsCasts which truly helped me with understanding sessions although I'm pretty sure I am not an expert.
+            </p>
           </div><!--col-->
         </div><!--row-->  
       </div><!--swiper-slide-->
@@ -246,8 +310,35 @@
       <div class="swiper-slide portfolio-about-slide">
         <div class="row portfolio-about-row">
           <div class="col s10 offset-s1">
-           <h2 class="about-title">Technologies used</h2>
-           <p class="about-paragraph">Template is built with HTML &amp; CSS3. And when I say CSS3 I really mean it. Preloader required CSS3 transitions, transformations and keyframes. Also, you may have noticed linear-gradients. CSS code in this template consists of classes which can be reused. In other words, code is content agnostic. Yes, I really did follow principles of OOCSS. CSS was compiled with SASS which helped me to speed up my workflow. Parallax and sliders are made with jQuery where I also tried to DRY the code and follow the principles of OOP.</p>
+            <h2 class="about-title">Exploring Rails</h2>
+            <p class="about-paragraph">Next, I had to figure out remembering and forgetting the user. It took me ages to understand all of this at once and even if I did understand some parts, I still had to figure out how do they interact with each other. Action mailer was also new to me and I had problems with putting activation token on my browser.After that following and unfollowing users was waiting for me. Generating a relationship as a model was really hard to digest, logically. We had to differ pasive and active relationship and update database with follower_id and followed_id. Status feed required some hard sql querying.</p>
+          </div><!--col-->
+        </div><!--row-->  
+      </div><!--swiper-slide-->
+
+      <div class="swiper-slide portfolio-about-slide">
+        <div class="row portfolio-about-row">
+          <div class="col s10 offset-s1">
+            <h2 class="about-title">Deployment</h2>
+            <p class="about-paragraph">Finally the application was done. So now I just needed to deploy it. And again problems showed up. First I had to switch to another database, Postgres. Then I had to use puma server which I had problems with. I got well known error: Failed to build local extension. After I finally fixed that by installing local dependencies another error popped up: puma load error, no such file or directory. I read heroku logs, detected problem (I misplaced puma.rb file), and fixed it. Then I had to play with account activation via email which required heroku addons. Yes, it does sound trivial to senior developers but I was not one of them. So I had to google every error and luckily community on stack overflow gave me an answers. </p>
+          </div><!--col-->
+        </div><!--row-->  
+      </div><!--swiper-slide-->
+
+      <div class="swiper-slide portfolio-about-slide">
+        <div class="row portfolio-about-row">
+          <div class="col s10 offset-s1">
+           <h2 class="about-title">Technologies and principles</h2>
+           <p class="about-paragraph">Tutorial would have been much difficult if I didn't know front-end technologies and versioning with Git. Whole application was based on test driven development and I had to admit I liked it. Test are written with Rails default testing framework: Unit Tests. I learned about fixtures and difference between integration and controller tests. For profile pictures we used Gravatar API and for uploading images in microposts we used gem mini_magick. Pagination was made with will_paginate gem. And faker helped us create sample users.</p>
+          </div><!--col-->
+        </div><!--row-->  
+      </div><!--swiper-slide-->
+
+       <div class="swiper-slide portfolio-about-slide">
+        <div class="row portfolio-about-row">
+          <div class="col s10 offset-s1">
+            <h2 class="about-title">Conslusion</h2>
+            <p class="about-paragraph"> All of this was really hard. Don't believe anyone that learning to code is easy! It's not. It's super hard. But I promised myself not to give up. And I stuck to it. I didn't understand everything and maybe I still don't but I got basic idea. I know I am not Rails developer yet, but I would be glad to become one. The best way to learn something is by building something and that is why I would like to create real-life applications and learn from seniors. Although it took me a lot of time to read this tutorial book, I am fast learner especially if I am surounded with experts. You can check my source code <a href="https://bitbucket.org/antonija_simic/michaelhartlsampleapp/overview" target="_blank" class="rails-anchor">here</a></p>
           </div><!--col-->
         </div><!--row-->  
       </div><!--swiper-slide-->

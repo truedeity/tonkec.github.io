@@ -11,6 +11,10 @@ main,
   font-family: "Source Sans Pro";
 }
 
+.swiper-pagination-bullet-active {
+  background: #000 !important;
+}
+
 html,body {
   overflow:hidden;
 }
@@ -151,7 +155,7 @@ section {
 
 .round-circle {
   border-radius: 50%;
-  border: 2px solid #67809F; 
+  border: 1px solid #000; 
   background-color: #FFF; 
   width: 70px;
     height: 70px;
@@ -163,8 +167,9 @@ section {
 }
 
 .round-circle > a {
-  height: 80px;
-  width: 80px;
+  height: 100%;
+  width: 100%;
+  display: block;
 }
 
 .circle-container {
@@ -378,15 +383,20 @@ section {
   margin-bottom: 30px;
   color: #FFF;
   text-align: center;
+  display: block;
 }
 
 .skills-info {
   font-size: 1.4em;
-  line-height: 1.6em;
+  line-height: 1.4em;
   font-weight: 300;
   text-align: justify;
   color: #FFF;
   z-index: -99999;
+}
+
+.typed-text {
+  display: none;
 }
 
 .skill-span {
@@ -462,13 +472,6 @@ section {
 	text-align: center;
 }
 
-.modal-trigger {
-  position: absolute;
-  right: 20px;
-  bottom: 20px;
-  background-color: #67809F !important;
-  z-index: 99999;
-}
 
 .btn-arrow {
   position: absolute;
@@ -494,75 +497,19 @@ section {
     border: 1px solid rgba(255,255,255,.75);
 }
 
-
-.portfolio-modal {
-  height: 40vh;
-  z-index: 99999 !important;
-  display: table !important;
-  width: 80vw;
-}
-
-
-.modal-content {
-  height: auto;
-  display: table-cell;
-  vertical-align: middle;
-}
-
-.modal-close {
-  position: absolute;
-    right: 0;
-    bottom: 20px;
-}
-
-.modal-title {
-  font-size: 2.5em;
-}
-
-.modal-paragraph {
-  font-size: 1.2em;
-  margin-top: 30px;
-  font-weight: 300;
-}
-
-.btn-modal {
-  width: auto;
-    height: auto;
-    position: absolute;
-    left: 30px;
-    margin: 0 auto !important;
-    bottom: 20px;
-}
-
-.modal-bottom-row {
-  margin-top: 30px;
-}
-
-.fa-envelope-o {
-  font-size: 2em !important;
-  line-height: 50px !important;
-  color: #000;
-}
-
-.fa-envelope-o:hover {
-  color: #039be5;
-  cursor: pointer;
-}
-
-
 /* about */
-.about-peaks {
+.about-portfolio {
 	background-color: #fff;
 	height: auto;
 }
 
-.about-peaks-anchor {
+.about-portfolio-anchor {
 	color: #000;
 	text-decoration: underline;
 	margin-bottom: 10px;
 }
 
-.about-peaks-anchor:hover {
+.about-portfolio-anchor:hover {
 	text-decoration: underline;
 	color: #039be5;
 }
@@ -599,6 +546,13 @@ section {
 	margin-bottom: 40px;
 }
 
+.rails-anchor {
+  text-decoration: underline;
+}
+
+.rails-anchor:hover {
+  color: #039be5;
+}
 /* contact */
 .contact {
 	height: auto;
@@ -690,23 +644,44 @@ footer {
     100% { opacity:1; }
 }
 
-.hire-me {
-  font-size: 3em;
-}
-
 .work-title {
   font-size: 4em;
+  font-weight: 700;
+  text-align: center;
+}
+
+.work-subtext {
+    font-size: 1.6em;
+    font-weight: 300;
+    line-height: 1.2em;
+}
+
+.work-span {
+  font-weight: 700;
+}
+
+.fa-work {
+    text-align: center;
+    font-size: 5em;
+    margin-top: 30px;
+    color: #000;
+}
+
+.fa-work:hover {
+  color: #039be5;
+  -webkit-transition: color .5s ease;
+     -moz-transition: color .5s ease;
+      -ms-transition: color .5s ease;
+       -o-transition: color .5s ease;
+          transition: color .5s ease;
 }
 
 /* responsive */
 @media (min-width: 480px) {
 	.skills-info {
-		font-size: 1.8em;
+		font-size: 1.4em;
+    line-height: 1.6em;
 	}
-
-  .modal-paragraph {
-    font-size: 1.6em;
-  }
 
 }
 @media (min-width: 600px) {
@@ -728,16 +703,18 @@ footer {
 	}
 
 	.skills-info {
-		font-size: 1.8em;
+		font-size: 1.7em;
 	}
 
-	.btn-more {
-		right: 20px;
-		bottom: 20px;
-		width: 20%;
-		left: auto;
-		margin: 0;
-	}
+	
+  .work-title {
+    font-size: 5em;
+  }
+
+  .work-subtext {
+    font-size: 2em;
+  }
+
 }
 
 @media (min-width: 980px) {
@@ -748,14 +725,6 @@ footer {
 	.about-title {
 		font-size: 3em;
 	}
-
-  .modal-paragraph {
-    font-size: 2em;
-  }
-
-  .portoflio-modal {
-    width: 30vw;
-  }
 
   .portoflio-title {
     font-size: 6em;
@@ -777,8 +746,15 @@ footer {
     font-size: 2em;
   }
 
+  .work-title {
+    font-size: 4em;
+  }
+
 }
 @media (min-width: 1200px) {
+  .typed-text {
+    display: block;
+  }
 	.home-title,
 	.portoflio-title {
 		font-size: 7em;
@@ -787,8 +763,12 @@ footer {
 		font-size: 3em;
 	}
 	.skills-info {
-		font-size: 2.2em;
+		font-size: 2em;
 	}
+
+  .skill-title {
+    font-size: 3em;
+  }
 
 	.about-paragraph {
 		font-size: 2em;
@@ -820,6 +800,15 @@ footer {
      background-image: -o-linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0));
      background-image: -moz-linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0));
   }
+
+  .work-title {
+    font-size: 6em;
+  }
+
+  .work-subtext {
+    font-size: 2.2em;
+  }
+
 }
 @media (max-height: 700px) {
   .skill-title { 
@@ -829,3 +818,13 @@ footer {
     font-size: 1.4em;
   }
 }
+
+@media (max-height: 700px) and (min-width: 1200px) {
+  .skill-title {
+    font-size: 3em;
+  }
+
+  .skills-info {
+    font-size: 1.7em;
+  }
+ }
