@@ -146,6 +146,5 @@ function playVideo () {
 });
 
 window.onresize = function(){ 
-  window.location.href = window.location.href;
   location.reload();
 }
