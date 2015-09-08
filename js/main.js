@@ -3,11 +3,11 @@ $(window).load(function(){
   runPreloader();
 /* animations only for diff screen sizes */
  if ($(window).width() >= 1200) {
-    $(window).scrollTop(0);
+
     buttonOnLargeScreen();
     playVideo();
   } else {
-    $(window).scrollTop(0);
+
     animateArrow(3000);
     buttonOnSmallScreen();
   }
@@ -144,8 +144,3 @@ function playVideo () {
 }
 
 });
-
-window.onresize = function(){ 
-  window.location.href = window.location.href;
-  location.reload();
-}
