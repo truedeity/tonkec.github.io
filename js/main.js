@@ -1,14 +1,22 @@
 $(window).load(function(){
-
+  window.onresize = function() {     
+    if ($(window).width() >= 1200) {
+      window.location.href = window.location.href;
+      location.reload();
+    }
+  }
   runPreloader();
-/* animations only for diff screen sizes */
+
+/* animations for different screen sizes */
  if ($(window).width() >= 1200) {
     $(window).scrollTop(0);
     buttonOnLargeScreen();
     playVideo();
+
   } else {
+    type(3000);
     $(window).scrollTop(0);
-    animateArrow(3000);
+    animateArrow(23000);
     buttonOnSmallScreen();
   }
 
@@ -117,13 +125,13 @@ function runPreloader () {
   });
 }
 
-function type() {
+function type(delay) {
   $(function(){
     $(".typed-text").typed({
-      strings: ['<p class="skill-title">Hello!</p>My name is Antonija and I am <span class="skill-span">front-end developer</span>. My skillset mainly consists of <span class="skill-span">HTML</span>, <span class="skill-span">CSS3</span> and <span class="skill-span">jQuery</span>. Compiling <span class="skill-span">SASS</span> with  <span class="skill-span">Gulp</span> and versioning with <span class="skill-span">Git</span> is must-have. My biggest passions are <span class="skill-span">jQuery/CSS animations</span> and one pages. Front-end frameworks, such as <span class="skill-span">Bootstrap</span> and<span class="skill-span"> Materializecss</span> speed up my workflow. I code in <span class="skill-span">Linux Mint</span> and <span class="skill-span">SublimeText</span> equipped with <span class="skill-span">Emmet</span>. I am currently learning <span class="skill-span">Ruby on Rails</span> so <a href="mailto:antonija1023@gmail.com" class="skill-anchor"><span class="help-span"> I am looking  for RoR internship </span></a>.'],
+      strings: ['<span class="skill-title">Hello!</span>My name is Antonija and I am <span class="skill-span">front-end developer</span>. I speak <span class="skill-span">HTML</span>, <span class="skill-span">CSS3</span> and <span class="skill-span">jQuery</span> which help me make websites dance. Compiling <span class="skill-span">SASS</span> with <span class="skill-span">Gulp</span> and versioning with <span class="skill-span">Git</span> is must-have. My biggest passions are <span class="skill-span">jQuery/CSS animations</span> and one pages. Front-end frameworks, such as <span class="skill-span">Bootstrap</span> and<span class="skill-span"> Materializecss</span> speed up my workflow. I code in <span class="skill-span">Linux Mint</span> and <span class="skill-span">SublimeText</span> equipped with <span class="skill-span">Emmet</span>. I am currently learning <span class="skill-span">Ruby on Rails</span> so <a href="mailto:antonija1023@gmail.com" class="skill-anchor"><span class="help-span"> I am looking  for RoR internship </span></a>.'],
       typeSpeed: 0,
       contentType: 'html',
-      startDelay: 0,
+      startDelay: delay,
       showCursor: true
     });
   }); 
@@ -135,7 +143,7 @@ function playVideo () {
       var videoCurrentTime = video.currentTime;
       var videoCurrentTimeToFloat = Math.floor(videoCurrentTime);
       if (videoCurrentTimeToFloat == 8) {
-        type();
+        type(0);
       }
       if (videoCurrentTimeToFloat == 34) {
         animateArrow(1) 
@@ -143,6 +151,14 @@ function playVideo () {
   });
 }
 
+
+
+Materialize.scrollFire([{ selector:".whoosh", offset: 150, callback: '$(".animated").addClass("bounceInLeft");'}]);
+
+
+function animateText () {
+  alert(43567)
+}
 });
 
 window.addEventListener("orientationchange", function() {
