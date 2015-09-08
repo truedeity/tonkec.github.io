@@ -15,7 +15,7 @@
 <style>
 .video-con 
 {
-    position:absolute;
+    position:static;
     height:100%;
     width:100%;
     overflow: hidden;
@@ -29,8 +29,10 @@
 
 #video 
 {
-    min-width: 100%;
-    min-height: 100%;
+    /*min-width: 100%;
+    min-height: 100%;*/
+    width: 100%    !important;
+  height: auto  !important;
 }
 
 .video-layer {
@@ -47,8 +49,8 @@
     background-image: -moz-linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5));
   }
 
-@media (min-width: 1200px) {
-  .video-con {
+ @media (min-width: 1200px) {
+ .video-con {
     display: block;
   }
 
@@ -86,13 +88,13 @@
 
 <section class="skills" id="skills">
  <div class="row skills-row center-align">
-  <div class="col s8 offset-s2 center-align">
+  <div class="col s8 center-align">
 
    <p class="skills-info typed-text flow-text"></p>
-   <h2 class="skill-title hidden-on-large">Hello!</h2>
+   <!--<h2 class="skill-title hidden-on-large">Hello!</h2>
    <p class="skills-info hidden-on-large flow-text">
      My name is Antonija and I am <span class="skill-span">front-end developer</span>. My skillset mainly consists of <span class="skill-span">HTML</span>, <span class="skill-span">CSS3</span> and <span class="skill-span">jQuery</span>. Compiling <span class="skill-span">SASS</span> with <span class="skill-span">Gulp</span> and versioning with<span class="skill-span">Git</span> is must-have. My biggest passions are <span class="skill-span">jQuery/CSS animations</span> and one pages. Front-end frameworks, such as <span class="skill-span">Bootstrap</span> and<span class="skill-span"> Materializecss</span> speed up my workflow. I code in <span class="skill-span">Linux Mint</span> and <span class="skill-span">SublimeText</span> equipped with <span class="skill-span">Emmet</span>. I am currently learning <span class="skill-span">Ruby on Rails</span> so <a href="mailto:antonija1023@gmail.com" class="skill-anchor"><span class="help-span"> I am looking  for RoR internship </span></a>.
-   </p>
+   </p>-->
   </div><!--col-->
  </div><!--row-->
 <div class="video-con">
