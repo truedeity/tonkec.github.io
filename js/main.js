@@ -2,7 +2,7 @@ $(window).load(function(){
 
   runPreloader();
 /* animations only for diff screen sizes */
- if ($(window).width() >= 1200) {
+ if ($(window).width() >= 1200) { 
 
     buttonOnLargeScreen();
     playVideo();
