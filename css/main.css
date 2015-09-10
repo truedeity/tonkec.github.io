@@ -208,7 +208,7 @@ section {
 }
 
 .round-circle {
-  border-radius: 50%;
+ border-radius: 50%;
   border: 1px solid #000; 
   background-color: #FFF; 
   width: 70px;
@@ -230,7 +230,7 @@ section {
   visibility: visible;
   position: absolute;
   height: 400px;
-  left: 19px;
+  left: 20px;
   width: 100px;
 }
 
@@ -251,10 +251,9 @@ section {
 }
 
 .fixed-container {
-  position: fixed;
+position: fixed;
   z-index: 99999;
-  display: none;
-  left: -100%;
+  left: -500px;
 }
 
 .fa-nav {
@@ -429,7 +428,6 @@ section {
        -o-animation-duration: 1s;
           animation-duration: 1s;
 }
-
 /* skills */
 .skill-title {
   font-size: 3.8em;

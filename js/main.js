@@ -10,14 +10,12 @@ $(window).load(function(){
 /* animations for different screen sizes */
  if ($(window).width() >= 1200) {
     $(window).scrollTop(0);
-    buttonOnLargeScreen();
     playVideo();
 
   } else {
     type(3000);
     $(window).scrollTop(0);
     animateArrow(23000);
-    buttonOnSmallScreen();
   }
 
 /* swiper */
@@ -31,11 +29,9 @@ $(window).load(function(){
   });   
 
 /* navigation button */
-  $(".fixed-container, .btn-more").css("display", "block");
-  var buttonCircles = $(".nav-circle");
+   var buttonCircles = $(".nav-circle");
 
-function buttonOnSmallScreen () {
-  $(".btn-nav").on("tap click", function(){
+  $(".btn-nav").on("tap click", function() {
     $(this).toggleClass("closed-nav")
     if ($(this).hasClass("closed-nav")) {
       slideDown();
@@ -43,46 +39,48 @@ function buttonOnSmallScreen () {
       slideUp()
     }
   });
-};
 
-function buttonOnLargeScreen () {
- $(".btn-nav").on("mouseenter", function(){
-    slideDown();
-  });
-
-  $(".circle-container").on("mouseleave", function(){
-    slideUp();
-  });
-
-  $(".round-circle").click(function(){
+  $(".round-circle").click(function() {
+    $(".btn-nav").toggleClass("closed-nav");
     slideUp();
   })
-};
 
-function slideDown() {
- var topMargin = 20
- for (i = 0; i < buttonCircles.length; i++) {
-  topMargin += 75
-  $(buttonCircles[i]).animate({
-    top: topMargin
-  }, function() {
-    $(".circle-container, .round-circle").css("visibility", "visible");
-    $(".fa-plus").addClass("rotateIcon").removeClass("unRotateIcon");
-  })
-}
-}
+  function slideDown() {
 
-function slideUp() {
-  var resetTop = 20
-  for (i = 0; i < buttonCircles.length; i++) {
-    $(buttonCircles[i]).animate({
-      top: resetTop
-    },500, function() {
-      $(".circle-container, .round-circle").css("visibility", "hidden");
-      $(".fa-plus").addClass("unRotateIcon").removeClass("rotateIcon");
-    })
+    var topMargin = 20
+    for (i = 0; i < buttonCircles.length; i++) {
+      topMargin += 75
+      $(buttonCircles[i]).animate({
+        top: topMargin
+      }, function() {
+        $(".circle-container, .round-circle").css("visibility", "visible");
+        if ($(".fa-plus").hasClass("unRotateIcon")) {
+          $(".fa-plus").removeClass("unRotateIcon").addClass("rotateIcon");
+        } else {
+          $(".fa-plus").addClass("rotateIcon");
+        }
+
+      })
+    }
   }
-}
+
+  function slideUp() {
+
+    var resetTop = 20
+    for (i = 0; i < buttonCircles.length; i++) {
+      $(buttonCircles[i]).animate({
+        top: resetTop
+      }, 400, function() {
+        $(".circle-container, .round-circle").css("visibility", "hidden");
+        if ($(".fa-plus").hasClass("rotateIcon")) {
+          $(".fa-plus").removeClass("rotateIcon").addClass("unRotateIcon");
+        } else {
+          $(".fa-plus").addClass("unRotateIcon");
+        }
+      })
+    }
+  }
+
 
  $(function() {
   $('a[href*=#]:not([href=#])').click(function() {
@@ -112,8 +110,7 @@ function slideUp() {
 function animateButton () {
   $(".fixed-container").animate({
     left: "0px"
-  }, 1500, function(){
-
+  }, 500, function(){
   });
 }
 
