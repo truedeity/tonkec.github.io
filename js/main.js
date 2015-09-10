@@ -132,7 +132,9 @@ function type(delay) {
       typeSpeed: 0,
       contentType: 'html',
       startDelay: delay,
-      showCursor: true
+      showCursor: true,
+      loop: false,
+      loopCount: false
     });
   }); 
   } 
@@ -153,7 +155,7 @@ function playVideo () {
 
 
 
-Materialize.scrollFire([{ selector:".whoosh", offset: 150, callback: '$(".animated").addClass("bounceInLeft");'}]);
+/*Materialize.scrollFire([{ selector:".whoosh", offset: 150, callback: '$(".animated").addClass("fadeInUpBig");'}]);*/
 
 
 function animateText () {
