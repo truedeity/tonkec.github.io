@@ -11,55 +11,6 @@
   <link rel="stylesheet" href="css/animate.css">
   <link rel="stylesheet" href="css/main.css">
 </head>
-
-<style>
-.video-con 
-{
-    position:static;
-    height:100%;
-    width:100%;
-    overflow: hidden;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    display: none;
-}
-
-
-#video 
-{
-    /*min-width: 100%;
-    min-height: 100%;*/
-    width: 100%    !important;
-  height: auto  !important;
-}
-
-.video-layer {
-     position:absolute;
-    height:100%;
-    width:100%;
-    overflow: hidden;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    display: none;
-    background-image:linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5));
-    background-image: -moz-linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5));
-  }
-
- @media (min-width: 1200px) {
- .video-con {
-    display: block;
-  }
-
-  .video-layer {
-    display: block;
-  }
-}
-
-</style>
 <body>
  <div id="preloader">
       <div id="status">
@@ -71,16 +22,16 @@
     <div class="fixed-container">
      <a class="btn-floating btn-large waves-effect waves-light circle btn-nav"><i id="icon" class="fa fa-plus"></i></a>
      <div class="circle-container">
-      <div class="round-circle nav-circle waves-effect first-circle">
+      <div class="round-circle nav-circle waves-effec  waves-light first-circle">
        <a href="#skills"><i class="fa fa-nav fa-home"></i></a>
      </div>
-      <div class="round-circle nav-circle waves-effect forth-circle">
+      <div class="round-circle nav-circle waves-effect waves-light forth-circle">
       <a href="#work"><i class="fa fa-nav fa-beer"></i></a>
     </div>
-     <div class="round-circle nav-circle waves-effect third-circle">
+     <div class="round-circle nav-circle waves-effect waves-light third-circle">
        <a href="#portfolio"><i class="fa fa-nav fa-trophy"></i></a>
      </div>
-     <div class="round-circle nav-circle waves-effect third-circle">
+     <div class="round-circle nav-circle waves-effect waves-light third-circle">
        <a href="#contact"><i class="fa fa-nav fa-globe"></i></a>
      </div>
   </div>
@@ -89,16 +40,11 @@
 <section class="skills" id="skills">
  <div class="row skills-row center-align">
   <div class="col s8 center-align">
-
    <p class="skills-info typed-text flow-text"></p>
-   <!--<h2 class="skill-title hidden-on-large">Hello!</h2>
-   <p class="skills-info hidden-on-large flow-text">
-     My name is Antonija and I am <span class="skill-span">front-end developer</span>. My skillset mainly consists of <span class="skill-span">HTML</span>, <span class="skill-span">CSS3</span> and <span class="skill-span">jQuery</span>. Compiling <span class="skill-span">SASS</span> with <span class="skill-span">Gulp</span> and versioning with<span class="skill-span">Git</span> is must-have. My biggest passions are <span class="skill-span">jQuery/CSS animations</span> and one pages. Front-end frameworks, such as <span class="skill-span">Bootstrap</span> and<span class="skill-span"> Materializecss</span> speed up my workflow. I code in <span class="skill-span">Linux Mint</span> and <span class="skill-span">SublimeText</span> equipped with <span class="skill-span">Emmet</span>. I am currently learning <span class="skill-span">Ruby on Rails</span> so <a href="mailto:antonija1023@gmail.com" class="skill-anchor"><span class="help-span"> I am looking  for RoR internship </span></a>.
-   </p>-->
   </div><!--col-->
  </div><!--row-->
 <div class="video-con">
-  <video muted class="video-bg" id="video">
+  <video muted class="video" id="video">
  <source src="video1.mp4" type="video/mp4">
  <source src="video1.ogv" type="video/ogv">
  <source src="video1.webm" type="video/webm">
@@ -113,15 +59,15 @@
 
 <section class="work" id="work">
   <div class="row">
-    <div class="col s10 m10 animated">
-        <a href="mailto:antonija1023@gmail.com" class="work-anchor whoosh">antonija1023@gmail.com</a>
+    <div class="col s10 m10">
+        <a href="mailto:antonija1023@gmail.com" class="work-anchor">antonija1023@gmail.com</a>
     </div>
   </div>
 </section>
 
 <section class="portfolio-peaks parallax-window"  data-parallax="scroll" data-image-src="img/peaks5.jpg" data-natural-width="150" data-position-x="top" id="portfolio">
   <a href="http://supersuperstudio.com/peaks" target="_blank" class="peaks-anchor">
-    <span class="row portfolio-peaks-row waves-effect waves-teal">
+    <span class="row portfolio-peaks-row waves-effect  waves-light">
       <span class="col s8 offset-s2 m8 offset-m2 portfolio-col">
        <h2 class="portfolio-title"> Peaks template </h2>
      </span>
@@ -183,7 +129,7 @@
 <section class="portfolio-peaks parallax-window second-parallax-window"  data-parallax="scroll" data-image-src="img/apex.jpg" data-natural-width="150" data-position-x="top">
   <div class="parallax-layer"></div>
   <a href="http://supersuperstudio.com/apex" target="_blank" class="peaks-anchor">
-    <span class="row portfolio-peaks-row waves-effect waves-teal">
+    <span class="row portfolio-peaks-row waves-effect waves-light">
       <span class="col s8 offset-s2 m8 offset-m2 portfolio-col">
        <h2 class="portfolio-title"> Apex template </h2>
      </span>
@@ -234,7 +180,7 @@
 <section class="portfolio-peaks parallax-window second-parallax-window"  data-parallax="scroll" data-image-src="img/ror2.png" data-natural-width="150" data-position-x="top" id="portfolio">
   <div class="parallax-layer"></div>
   <a href="https://morning-cove-2715.herokuapp.com/" target="_blank" class="peaks-anchor">
-    <span class="row portfolio-peaks-row waves-effect waves-teal">
+    <span class="row portfolio-peaks-row waves-effect waves-light">
       <span class="col s8 offset-s2 m8 offset-m2 portfolio-col">
        <h2 class="portfolio-title"> Ruby on Rails (sample) application </h2>
      </span>

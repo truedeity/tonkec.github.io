@@ -79,8 +79,51 @@ section {
 }
 
 .skills-row {
-  z-index: 9999;
+  z-index: 1;
 }
+
+.video-con {
+  position:static;
+  height:100%;
+  width:100%;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: none;
+}
+
+
+.video {
+  width: 100%    !important;
+  height: auto  !important;
+}
+
+.video-layer {
+ position:absolute;
+ height:100%;
+ width:100%;
+ overflow: hidden;
+ top: 0;
+ left: 0;
+ right: 0;
+ bottom: 0;
+ display: none;
+ background-image:linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5));
+ background-image: -moz-linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5));
+}
+
+ @media (min-width: 1200px) {
+ .video-con {
+    display: block;
+  }
+
+  .video-layer {
+    display: block;
+  }
+}
+
 
 /* preloader */
 #preloader {
