@@ -523,25 +523,15 @@ position: fixed;
 .btn-arrow {
   position: absolute;
   background-color: transparent !important;
-    border: 1px solid rgba(255,255,255,0.75);
-    bottom:-100%;
-    margin: 0 auto;
-    left: 0;
-    right: 0;
+  border: 1px solid rgba(255,255,255,0.75);
+  bottom: 2%;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
 }
 
-.btn-more {
-    position: absolute;
-    display: none;
-    bottom: 80px;
-    background-color: transparent !important;
-    z-index: 99999;
-    width: 50%;
-    margin: 0 auto;
-    left: 0;
-    right: 0;
-    margin-bottom: 20px;
-    border: 1px solid rgba(255,255,255,.75);
+.btn-skip {
+  bottom: -100%;
 }
 
 /* about */
@@ -758,7 +748,7 @@ footer {
 
 .work-paragraph {
   font-size: 1.2em;
-  margin: 20px 0;
+  margin: 20px 0 10px;
 }
 
 /* responsive */
