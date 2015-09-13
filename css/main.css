@@ -693,7 +693,74 @@ footer {
 
 .work-anchor {
   font-size: 2em;
+  color: #000;
 }
+
+.work-heading {
+  font-size: 1.8em;
+  display: block;  
+}
+
+.work-anchor:after,
+.work-heading:after {
+ content: "";
+ height: 3%; 
+ left: 0; 
+ bottom: 0; 
+ width: 1px;  
+ position: absolute; 
+ -webkit-transition: all 0.5s ease;
+ -moz-transition: all 0.5s ease;
+ -ms-transition: all 0.5s ease;
+ -o-transition: all 0.5s ease;
+ transition: all 0.5s ease;
+ z-index: -1;
+ background: transparent;
+ right: 0;
+ margin: 0 auto;
+ color: #000;
+}
+
+.work-anchor:hover,
+.work-heading:hover {
+   border-bottom: 0px; 
+   color: #039be5;
+   -webkit-transition: all 0.5s ease;
+     -moz-transition: all 0.5s ease;
+      -ms-transition: all 0.5s ease;
+       -o-transition: all 0.5s ease;
+          transition: all 0.5s ease;
+}
+
+.work-anchor:hover:after {
+  width: 70%;
+  background: #039be5;
+}
+
+.work-heading:hover:after {
+  width: 100%;
+  background: #039be5;
+}
+
+.work-anchor,
+.work-heading {
+  display: block; 
+  width: 100%; 
+  padding: 20px; 
+  position: relative; 
+  z-index: 2;
+  text-decoration: none;
+  color: #000;
+  box-sizing: border-box;  
+  -moz-box-sizing: border-box;  
+  -webkit-box-sizing: border-box;
+}
+
+.work-paragraph {
+  font-size: 1.2em;
+  margin: 20px 0;
+}
+
 /* responsive */
 @media (min-width: 480px) {
 	.skills-info {
@@ -701,7 +768,22 @@ footer {
     line-height: 1.6em;
 	}
   .work-anchor {
-    font-size: 2.7em;
+    font-size: 3em;
+  }
+  .work-heading {
+    font-size: 2.5em;
+  }
+
+  .work-paragraph {
+    font-size: 1.8em;
+  }
+
+  .work-heading:hover:after {
+    width: 70%;
+  }
+
+  .work-anchor:hover:after {
+    width: 50%;
   }
 
 }
@@ -727,17 +809,13 @@ footer {
 		font-size: 1.7em;
 	}
 
-	
-  .work-title {
-    font-size: 5em;
-  }
-
-  .work-subtext {
-    font-size: 2em;
-  }
-
-  .work-anchor {
+  .work-anchor,
+  .work-heading{
     font-size: 3.7em;
+  }
+
+  .work-heading:hover:after {
+    width: 80%;
   }
 }
 
@@ -770,8 +848,17 @@ footer {
     font-size: 2em;
   }
 
-  .work-anchor {
+  .work-anchor,
+  .work-heading {
     font-size: 4em;
+  }
+
+  .work-anchor:hover:after {
+    width: 40%;
+  }
+
+  .work-heading:hover:after {
+    width: 70%;
   }
 }
 @media (min-width: 1200px) {
@@ -824,12 +911,17 @@ footer {
      background-image: -moz-linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0));
   }
 
-  .work-title {
-    font-size: 6em;
+  .work-anchor,
+  .work-heading {
+    font-size: 4.8em;
   }
 
-  .work-subtext {
-    font-size: 2.2em;
+  .work-anchor:hover:after {
+    width: 45%;
+  }
+
+  .work-heading:hover:after {
+    width: 80%;
   }
 
 }
