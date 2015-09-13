@@ -122,7 +122,7 @@ function runPreloader () {
   $('#preloader').delay(2000).fadeOut('slow'); 
   $('body').delay(500).css({'overflow':'visible'});
   $("main").fadeIn(5000, function(){
-    $(".parallax-mirror").fadeIn(9000);
+    $(".parallax-mirror").fadeIn(2000);
   });
 }
 
