@@ -114,16 +114,6 @@ section {
  background-image: -moz-linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5));
 }
 
-@media (min-width: 1200px) {
- .video-con {
-  display: block;
-}
-
-.video-layer {
-  display: block;
-}
-}
-
 
 /* preloader */
 #preloader {
@@ -852,6 +842,13 @@ section {
   }
 }
 @media (min-width: 1200px) {
+   .video-con {
+      display: block;
+    }
+
+    .video-layer {
+      display: block;
+    }
   .typed-text {
     display: block;
   }
@@ -911,7 +908,7 @@ section {
 }
 
 .work-heading:hover:after {
-  width: 80%;
+  width: 77%;
 }
 
 }
