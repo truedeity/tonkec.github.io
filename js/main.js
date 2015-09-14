@@ -1,10 +1,10 @@
 $(window).load(function(){
-  /*window.onresize = function() {     
+  window.onresize = function() {     
     if ($(window).width() >= 1200) {
       window.location.href = window.location.href;
       location.reload();
     }
-  }*/
+  }
   runPreloader();
 
 /* animations for different screen sizes */
@@ -20,14 +20,45 @@ $(window).load(function(){
   }
 
 /* swiper */
-   var mySwiper = new Swiper ('.swiper-container', {
+   var mySwiper1 = new Swiper ('.swiper-container-first', {
     direction: 'horizontal',
     loop: true,
     keyboardControl: true,    
-    pagination: '.swiper-pagination',
-    nextButton: '.swiper-button-next',
-    prevButton: '.swiper-button-prev',
+    pagination: '.swiper-pagination-first',
+    nextButton: '.swiper-button-next-first',
+    prevButton: '.swiper-button-prev-first',
   });   
+
+
+   var mySwiper2 = new Swiper ('.swiper-container-second', {
+    direction: 'horizontal',
+    loop: true,
+    keyboardControl: true,    
+    pagination: '.swiper-pagination-second',
+    nextButton: '.swiper-button-next-second',
+    prevButton: '.swiper-button-prev-second',
+  });
+
+   var mySwiper3 = new Swiper ('.swiper-container-third', {
+    direction: 'horizontal',
+    loop: true,
+    keyboardControl: true,    
+    pagination: '.swiper-pagination-third',
+    nextButton: '.swiper-button-next-third',
+    prevButton: '.swiper-button-prev-third',
+  });
+
+   var mySwiper4 = new Swiper ('.swiper-container-forth', {
+    direction: 'horizontal',
+    loop: true,
+    keyboardControl: true,    
+    pagination: '.swiper-pagination-forth',
+    nextButton: '.swiper-button-next-forth',
+    prevButton: '.swiper-button-prev-forth',
+  });
+
+
+   
 
 /* navigation button */
    var buttonCircles = $(".nav-circle");
