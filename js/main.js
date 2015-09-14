@@ -1,10 +1,10 @@
 $(window).load(function(){
-  window.onresize = function() {     
+  /*window.onresize = function() {     
     if ($(window).width() >= 1200) {
       window.location.href = window.location.href;
       location.reload();
     }
-  }
+  }*/
   runPreloader();
 
 /* animations for different screen sizes */

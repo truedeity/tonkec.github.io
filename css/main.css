@@ -100,6 +100,14 @@ section {
   min-height: 100%;
 }
 
+@media (max-height: 900px) {
+  .video {
+    height: auto !important;
+    width: 100%;
+  }
+}
+
+
 .video-layer {
  position:absolute;
  height:100%;
