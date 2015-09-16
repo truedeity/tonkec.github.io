@@ -564,7 +564,7 @@ section {
 
 .about-portfolio {
   background-color: #fff;
-  height: 100%;
+  height: auto;
 }
 
 .about-portfolio-anchor {
