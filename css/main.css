@@ -22,7 +22,7 @@ main,
 
 html,
 body {
-  overflow:hidden;
+ overflow:hidden;
 }
 
 .parallax-mirror {
@@ -75,6 +75,10 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.work {
+  background: #fff;
 }
 
 .skills {
@@ -504,17 +508,41 @@ section {
   font-size: 4.2em;
 }
 
-.portfolio-title .fa-external-link {
-  color: #fff;
+.portfolio-title:after {
+  content: "";
+  height: 2%;
+  left: 0;
+  bottom: 0;
+  width: 1px;
+  position: absolute;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  right: 0;
+  margin: 0 auto;
+  background: blue;
 }
 
-.portfolio-title .fa-external-link:hover {
-  color: #039be5;
-  -webkit-transition: all .5s ease;
-     -moz-transition: all .5s ease;
-      -ms-transition: all .5s ease;
-       -o-transition: all .5s ease;
-          transition: all .5s ease;
+.portfolio-title:hover {
+  color: #fff;
+  -webkit-transition: all .8s ease;
+  -moz-transition: all .8s ease;
+  -ms-transition: all .8s ease;
+  -o-transition: all .8s ease;
+  transition: all .8s ease;
+  cursor: pointer;
+}
+
+.portoflio-title:hover:after {
+  width: 100%;
+  background-color: #fff;
+  -webkit-transition: all .8s ease;
+     -moz-transition: all .8s ease;
+      -ms-transition: all .8s ease;
+       -o-transition: all .8s ease;
+          transition: all .8s ease;
 }
 
 .portfolio-row {
@@ -584,7 +612,7 @@ section {
 
 .about-title-anchor {
   margin-left: 5px;
-  color: #000;
+  color: #fff;
 }
 
 .about-title-anchor:hover {
