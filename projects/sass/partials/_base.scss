@@ -1,0 +1,104 @@
+@mixin transition-opt($hover-color: #fff, $display: inline, $transition-color: #fff, $transition-speed: 1s, $transition-easing: ease-in-out, $delay-after: 0s, $delay-before: 0s, $padding: 10px) {
+	display: $display;
+	position: relative;
+	z-index: 2;
+	text-decoration: none;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	padding: $padding;
+	white-space: nowrap;
+	overflow: hidden;
+	-webkit-transition: color $transition-speed $transition-easing; 
+		-moz-transition: color $transition-speed $transition-easing; 
+		-ms-transition: color $transition-speed $transition-easing; 
+		-o-transition: color $transition-speed $transition-easing; 
+		transition: color $transition-speed $transition-easing; 
+
+	&:hover,
+	&:focus {
+		outline: 0;
+		color: $hover-color;
+		-webkit-transition: color $transition-speed $transition-easing; 
+		-moz-transition: color $transition-speed $transition-easing; 
+		-ms-transition: color $transition-speed $transition-easing; 
+		-o-transition: color $transition-speed $transition-easing; 
+		transition: color $transition-speed $transition-easing; 
+		cursor: pointer;
+	}
+
+	/* backward transition */
+	&:before {
+		-webkit-transition: all $transition-speed $transition-easing $delay-before; 
+		-moz-transition: all $transition-speed $transition-easing $delay-before; 
+		-ms-transition: all $transition-speed $transition-easing $delay-before; 
+		-o-transition: all $transition-speed $transition-easing $delay-before; 
+		transition: all $transition-speed $transition-easing $delay-before; 
+	}
+	/* backward transition */
+	&:after {
+		-webkit-transition: all $transition-speed $transition-easing $delay-after; 
+		-moz-transition: all $transition-speed $transition-easing $delay-after; 
+		-ms-transition: all $transition-speed $transition-easing $delay-after; 
+		-o-transition: all $transition-speed $transition-easing $delay-after; 
+		transition: all $transition-speed $transition-easing $delay-after;
+	}
+
+	&:hover:after,
+	&:focus:after  {
+		outline: 0;
+		background-color: $transition-color;
+		-webkit-transition: all $transition-speed $transition-easing $delay-after; 
+		-moz-transition: all $transition-speed $transition-easing $delay-after; 
+		-ms-transition: all $transition-speed $transition-easing $delay-after; 
+		-o-transition: all $transition-speed $transition-easing $delay-after; 
+		transition: all $transition-speed $transition-easing $delay-after; 
+	}
+
+	&:hover:before,
+	&:focus:before {
+		outline: 0;
+		background-color: $transition-color; 
+		-webkit-transition: all $transition-speed $transition-easing $delay-before; 
+		-moz-transition: all $transition-speed $transition-easing $delay-before; 
+		-ms-transition: all $transition-speed $transition-easing $delay-before; 
+		-o-transition: all $transition-speed $transition-easing $delay-before; 
+		transition: all $transition-speed $transition-easing $delay-before; 
+	}
+	
+}
+
+
+@mixin line-opt($type, $width: 3px, $height: 2%, $transition-width: 100%, $transition-height: 100%) {
+	@if $type == pseudoafter {
+		&:after {
+			content: "";
+			position: absolute;
+			z-index: -1; 
+			width: $width;
+			height: $height; 
+		}
+
+		&:hover:after,
+		&:focus:after {
+			width: $transition-width;
+			height: $transition-height; 
+		}
+	}
+
+	@else if $type == pseudobefore {
+		&:before {
+			content: "";
+			position: absolute;
+			z-index: -1; 
+			width: $width;
+			height: $height; 
+		}
+
+		&:hover:before,
+		&:focus:before  {
+			width: $transition-width;
+			height: $transition-height; 
+		}
+	}
+}

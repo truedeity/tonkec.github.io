@@ -1,0 +1,7 @@
+@mixin fill-top-right {
+  @include line-opt(pseudobefore);
+   &:before {
+  top: 0%;
+  left: 0;
+  }
+}

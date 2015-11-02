@@ -1,0 +1,357 @@
+@import 'partials/effects';
+
+.overline-right {
+  @include overline-right;
+}
+
+.both-down {
+  @include both-down;
+}
+
+.both-left {
+  @include both-left;
+}
+
+.both-right {
+  @include both-right;
+}
+
+.both-up {
+  @include both-up;
+}
+
+.both-opening-horizontal {
+  @include both-opening-horizontal;
+}
+
+.left-up-right-down {
+  @include left-up-right-down;
+}
+
+.left-down-right-up {
+  @include left-down-right-up;
+}
+
+.left-down {
+  @include left-down;
+}
+
+.left-up {
+  @include left-up;
+}
+
+.right-up {
+  @include right-up;
+}
+
+.right-down {
+  @include right-down;
+}
+
+.overline-left {
+  @include overline-left;
+}
+
+.underline-left {
+  @include underline-left;
+}
+
+.underline-closing {
+  @include underline-closing;
+}
+
+.underline-opening {
+  @include underline-opening;
+}
+
+.underline-right {
+  @include underline-right;
+}
+
+.fill-up {
+ @include transition-opt($hover-color: $color);
+ @include fill-up;
+}
+
+.fill-down {
+ @include transition-opt($hover-color: $color);
+ @include fill-down;
+}
+
+.fill-left {
+ @include transition-opt($hover-color: $color);
+ @include fill-left;
+}
+
+.fill-right {
+ @include transition-opt($hover-color: $color);
+ @include fill-right;
+}
+
+.fill-top-left {
+ @include transition-opt($hover-color: $color);
+ @include fill-top-left;
+}
+
+.fill-top-right {
+ @include transition-opt($hover-color: $color);
+ @include fill-top-right;
+}
+
+.fill-bottom-left {
+ @include transition-opt($hover-color: $color);
+ @include fill-bottom-left;
+}
+
+.fill-bottom-right {
+ @include transition-opt($hover-color: $color);
+ @include fill-bottom-right;
+}
+
+.fill-opening-horizontal {
+ @include transition-opt($hover-color: $color);
+ @include fill-opening-horizontal; 
+}
+
+.fill-closing-horizontal {
+ @include transition-opt($hover-color: $color);
+ @include fill-closing-horizontal; 
+}
+
+.fill-closing-vertical {
+ @include transition-opt($hover-color: $color);
+ @include fill-closing-vertical; 
+}
+
+.left-top {
+  @include left-top;
+}
+
+.right-top {
+  @include right-top;
+}
+
+.left-bottom {
+  @include left-bottom;
+}
+
+.right-bottom {
+  @include right-bottom;
+}
+
+.linethrough-opening {
+  @include linethrough-opening;
+}
+
+.linethrough-closing {
+  @include linethrough-closing;
+}
+
+.linethrough-left {
+  @include linethrough-left;
+}
+
+.linethrough-right {
+  @include linethrough-right;
+}
+
+.overline-closing {
+  @include overline-closing;
+}
+
+.overline-opening {
+  @include overline-opening;
+}
+
+.overline-left-underline-right {
+  @include overline-left-underline-right;
+}
+
+.overline-right-underline-left {
+  @include overline-right-underline-left;
+}
+
+.double-underline-left {
+  @include double-underline-left;
+}
+
+.double-underline-right {
+  @include double-underline-right;
+}
+
+.double-underline-opening {
+  @include double-underline-opening;
+}
+
+.double-underline-left-right {
+  @include double-underline-left-right;
+}
+
+.double-underline-right-left {
+  @include double-underline-right-left;
+}
+
+.double-linethrough-left {
+  @include double-linethrough-left;
+}
+
+.double-linethrough-right {
+  @include double-linethrough-right;
+}
+
+.double-linethrough-left-right {
+  @include double-linethrough-left-right;
+}
+
+.double-linethrough-right-left {
+  @include double-linethrough-right-left;
+}
+
+.double-linethrough-opening {
+  @include double-linethrough-opening;
+}
+
+.top-right {
+  @include top-right;
+}
+
+.top-left {
+  @include top-left;
+}
+
+.bottom-left {
+  @include bottom-left;
+}
+
+.bottom-right {
+  @include bottom-right;
+}
+
+.double-overline-left {
+  @include double-overline-left;
+}
+
+.double-overline-right {
+  @include double-overline-right;
+}
+
+.double-overline-left-right {
+  @include double-overline-left-right;
+}
+
+.double-overline-right-left {
+  @include double-overline-right-left;
+}
+
+.double-overline-opening {
+  @include double-overline-opening;
+}
+
+.double-underline-right-delayed {
+  @include transition-opt($delay-after: 1s);
+  @include double-underline-right;
+}
+
+.double-underline-opening-delayed {
+ @include transition-opt($delay-after: .5s);
+ @include double-underline-opening;
+}
+
+.left-bottom-delay {
+  @include transition-opt($delay-after: .5s);
+  @include left-bottom;
+}
+
+.right-top-delay {
+  @include transition-opt($delay-after: .5s);
+  @include right-top;
+}
+
+.left-bottom-delay {
+  @include transition-opt($delay-after: .5s);
+  @include left-bottom;
+}
+
+.right-bottom-delay {
+  @include transition-opt($delay-after: .5s);
+  @include right-bottom;
+}
+
+.left-top-delay {
+  @include transition-opt($delay-after: .5s);
+  @include left-top;
+}
+
+.right-top-delay {
+  @include transition-opt($delay-after: .5s);
+  @include right-top;
+}
+
+.left-bottom-delay {
+  @include transition-opt($delay-after: .5s);
+  @include left-bottom;
+}
+
+.right-bottom-delay {
+  @include transition-opt($delay-after: .5s);
+  @include right-bottom;
+}
+
+.double-linethrough-left-delayed {
+  @include transition-opt($delay-after: .5s);
+  @include double-linethrough-left;
+}
+
+.double-linethrough-right-delayed {
+  @include transition-opt($delay-after: .5s);
+  @include double-linethrough-right;
+}
+
+.double-linethrough-left-right-delayed {
+  @include transition-opt($delay-after: .5s);
+  @include double-linethrough-left-right;
+}
+
+.double-linethrough-right-left-delayed {
+  @include transition-opt($delay-after: .5s);
+  @include double-linethrough-right-left;
+}
+.double-linethrough-opening-delayed {
+  @include transition-opt($delay-after: .5s);
+  @include double-linethrough-opening;
+}
+
+.fill-closing-horizontal-delayed {
+ @include transition-opt($delay-after: .5s, $hover-color: $color);
+ @include fill-closing-horizontal; 
+}
+
+.both-left-delayed {
+  @include transition-opt($delay-after: .5s);
+  @include both-left;
+}
+
+.both-right-delayed {  
+  @include transition-opt($delay-after: .5s);
+  @include both-right;
+}
+
+.top-right-delay {
+  @include transition-opt($delay-after: .5s);
+  @include top-right;
+}
+
+.top-left-delay {
+  @include transition-opt($delay-after: .5s);
+  @include top-left;
+}
+
+.bottom-left-delay {
+  @include transition-opt($delay-after: .5s);
+  @include bottom-left;
+}
+
+.bottom-right-delay {
+  @include transition-opt($delay-after: .5s);
+  @include bottom-right;
+}
