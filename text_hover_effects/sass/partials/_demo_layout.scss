@@ -1,9 +1,7 @@
 html,
 body {
-  height: 100%;
   padding: 0;
   margin: 0;
-  width: 100%;
   background-color: #1BA39C;
   font-family: 'Source Sans Pro', Arial;
 }
@@ -11,14 +9,14 @@ body {
 main {
   height: 100%;
   width: 100%;
-  overflow: hidden; 
+  overflow: hidden;
+  position: relative; 
 }
 
 aside {
   height: 100%;
   
   &.left {
-    float: left;
     background: $color;
     overflow: auto;
     display: none;  
@@ -228,16 +226,6 @@ aside {
      -ms-transition: all 1s ease; 
      -o-transition: all 1s ease; 
      transition: all 1s ease; 
-}
-
-.vertical-align {
-  position: relative;
-  top: 50%;
-  -webkit-transform: translateY(-50%); 
-  -moz-transform: translateY(-50%); 
-  -ms-transform: translateY(-50%); 
-  -o-transform: translateY(-50%); 
-  transform: translateY(-50%); 
 }
 
 .hidden-sm {

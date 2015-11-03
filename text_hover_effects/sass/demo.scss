@@ -2,6 +2,15 @@
 @import 'partials/demo_layout';
 @import 'partials/css-classes';
 
+html, body {
+  width: 100%;
+  height: 100%;  
+}
+
+.left-demo {
+  float: left;
+}
+
 .col {
  position: absolute;
  width: 100%; 

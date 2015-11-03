@@ -10,42 +10,47 @@
 <body>
   <main>
     <div class="overlay"></div>
-    <aside class="left">
+    <aside class="left left-doc">
       <ul class="styles">
         <span class="close">x</span>
         <h2 class="list-heading">Documentation</h2>
-        <li class="item-doc" id="0">About</li>
-        <li class="item-doc" id="1">Getting Started</li>
-        <li class="item-doc" id="2">How To Use</li>
-        <li class="item-doc" id="3">Customize</li>
-        <li class="item-doc" id="4">Supported Elements</li>
-        <li class="item-doc" id="5">Under the hood</li>
-        <li class="item-doc" id="6">Mobile Support</li>
-        <li class="item-doc" id="7">Browser Suppport</li>
-        <li class="item-doc" id="8">Contributing</li>
+        <li class="item-doc" id="0"><a href="#about">About</a></li>
+        <li class="item-doc" id="1"><a href="#getting-started">Getting Started</a></li>
+        <li class="item-doc" id="2"><a href="#how-to-use">How To Use</a></li>
+        <li class="item-doc" id="3"><a href="#customize">Customize</a></li>
+        <li class="item-doc" id="4"><a href="#supported-elements">Supported Elements</a></li>
+        <li class="item-doc" id="5"><a href="#under-the-hood">Under the hood</a></li>
+        <li class="item-doc" id="6"><a href="#mobile-support">Mobile Support</a></li>
+        <li class="item-doc" id="7"><a href="#browser-support">Browser Suppport</a></li>
+        <li class="item-doc" id="8"><a href="#contributing">Contributing</a></li>
 
       </ul>
     </aside>
     <aside class="right">
 
       <div class="nav-container">
-        <a href="" class="nav menu">Menu</a>
+        <a href="" class="doc-menu">+</a>
         <div class="container-right">
-            <a href="http://codepen.io/tonkec/pen/YyjPoE" class="nav" target="_blank">Demo</a>
+            <a href="index.html" class="nav">Home</a>
+            <a href="demo.html" class="nav">Demo</a>
             <a href="https://github.com/tonkec/text_hover_effects" class="nav" target="_blank">Download</a>
         </div>
       </div>
       <div class="main-container">
 
-       <div class="content vertical-align content-active">
+       <div class="content vertical-align" id="about">
          <h2 class="content-heading">About</h2>
          <p class="content-paragraph"><em class="effect-em underline-right">Text Hover Effect</em> is a <em class="effect-em underline-right">Sass</em> mixin library that consists of effects for typography that are triggered on hover. Effects are made with pseudoelements <em class="effect-em underline-right">::after</em> and <em class="effect-em underline-right">::before</em>  and <em class="effect-em underline-right">CSS3 </em> transitions. See all of them <a class="anchor underline-right" href="demo.html">here</a>.</p>
        </div><!--content-->
 
-       <div class="content small-margin">
+       <div class="content" id="getting-started">
         <h2 class="content-heading">Getting Started</h2>
         <h3 class="content-small-heading">1. The Sass Way</h3>
-        <p class="content-paragraph">Download or clone repo from Github and include <em class="effect-em underline-right">effect.scss</em> file. In order effects to work you need to have partials directory in your project directory on the same level as effect.scss file. Effects.scss imports all of the mixins. If you need only several effects, delete unnecessary imports. All effects must have _base.scss imported because it has <em class="effect-em underline-right">transition-opt</em> and <em class="effect-em underline-right">line-opt</em> mixins mandatory for all effects.</p>
+        <p class="content-paragraph">Download or clone repo from<a class="anchor underline-right" href="https://github.com/tonkec/text_hover_effects" target="_blank">Github</a>.</p>
+        <div class="div-git">
+          <em class="em-git">git clone https://github.com/tonkec/text_hover_effects.git</em>
+        </div>
+        <p class="content-paragraph">In order effects to work you need to have partials directory in your project directory on the same level as effect.scss file. Include <em class="effect-em underline-right">effect.scss</em> file. That file imports all of the mixins. If you need only several effects, delete unnecessary imports. All effects must have _base.scss imported because it has <em class="effect-em underline-right">transition-opt</em> and <em class="effect-em underline-right">line-opt</em> mixins mandatory for all effects.</p>
         <div class="content-container">
           <pre class="full-width">
            <code language="sass" data-lang="sass">
@@ -73,7 +78,7 @@
 
   </div><!--content-->
 
-  <div class="content small-margin">
+  <div class="content" id="how-to-use">
    <h2 class="content-heading">How To Use</h2>
    <h3 class="content-small-heading">1. The Sass Way</h3>
    <p class="content-paragraph">After you have all the files downloaded, you are ready to use effects. Include <em class="effect-em underline-right">transition-opt</em> to  an element you wish to apply effect to. Then add <em class="effect-em underline-right">effect</em>. For example:</p>
@@ -127,7 +132,7 @@
   </div><!--content-->
 
 
-<div class="content small-margin">
+<div class="content" id="customize">
  <h2 class="content-heading">Customize</h2>
  <p class="content-paragraph">Mixin <em class="effect-em underline-right">transition-opt</em> has several options. You can change each of them. These are defaults</p>
  <div class="content-container">
@@ -211,7 +216,7 @@
 </div>
 </div><!--content-->
 
-<div class="content small-margin">
+<div class="content" id="supported-elements">
  <h2 class="content-heading">Supported Elements</h2>
  <p class="content-paragraph">List of supported elements: </p>
  <div class="content-container">
@@ -254,7 +259,7 @@
 </div><!--content-container-->
 </div><!--content-->
 
-<div class="content small-margin">
+<div class="content" id="under-the-hood">
  <h2 class="content-heading">Under the hood</h2>
  <p class="content-paragraph">All transitions are made with pseudoelements <em class="effect-em underline-opening">::before</em> and <em class="effect-em underline-opening">::after</em>. Each element that has transition-opt mixin included will have those two pseudoelements. Mixin transition-opt sets the base for transition. It allows you to set the options. It triggers hover and focus event. You can see code in <em class="effect-em overline-opening">_base.scss</em></p>
  <p class="content-paragraph"> Each transition includes <em class="effect-em underline-right">line-opt</em> mixin, which sets width and height of pseudoelements. The default width is 3px, and default height is 2%. Line-opt depends on the type of transition. Some transitions have only one pseudoelement. Line-opt mixin allows to choose which pseudoelement should be created for particular transition. For example, <em class="effect-em overline-left">overline-left</em> transition is created only with ::after pseudoelement.</p>
@@ -321,18 +326,18 @@
 
 </div><!--content-->
 
-<div class="content vertical-align">
+<div class="content" id="mobile-support">
  <h2 class="content-heading">Mobile Support</h2>
- <p class="content-paragraph"></p>
+ <p class="content-paragraph">Effects work on <em class="effect-em underline-opening">touchstart</em> and <em class="effect-em underline-opening">touchend</em> events. When transition-opt is included, default touch behaviour will be removed for all browsers. In other words, <em class="effect-em underline-opening">user-select</em> is set to <em class="effect-em underline-opening">none</em>.</p>
 
 </div><!--content-->
 
-<div class="content vertical-align">
+<div class="content" id="browser-support">
  <h2 class="content-heading">Browser Support</h2>
- <p class="content-paragraph">Effects are supported in <em class="effect-em both-opening-horizontal">Chrome</em> and <em class="effect-em both-opening-horizontal">Firefox</em></p>
+ <p class="content-paragraph">Effects are supported in <em class="effect-em both-opening-horizontal">Chrome</em>,<em class="effect-em both-opening-horizontal">Firefox</em> and <em class="effect-em both-opening-horizontal">IE</em>.</p>
 
 </div><!--content-->
-<div class="content vertical-align">
+<div class="content" id="contributing">
  <h2 class="content-heading">Contributing</h2>
  <p class="content-paragraph">All contributions are welcome! Feel free to create pull request, add new animations or improve code.</p>
 
