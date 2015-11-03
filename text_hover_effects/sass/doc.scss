@@ -62,7 +62,7 @@
 	color: $color;
 	font-size: 2em;
 	margin-left: 40px;
-	margin-top: 40px; 
+	margin-top: 80px; 
 	font-weight: 700;
 	font-size: 2em;
 	text-align: left;
@@ -189,10 +189,11 @@ pre {
 
 .div-git {
 	background: #f5f5f5;
-	width: 50%;
+	width: auto;
 	margin: 0 auto;
 	padding: 20px;
-	text-align: center;   
+	text-align: center; 
+	display: inline;  
 }
 
 .include {
