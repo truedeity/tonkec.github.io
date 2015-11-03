@@ -122,7 +122,8 @@
           .underline-left:<em class="include">hover</em>:<em class="include">after</em> {
               <em class="property">width</em>: <em class="value">100%</em>;
               <em class="property">height</em>: <em class="value">2%</em>;
-          }   
+          }
+
         </em>  
        </code>
      </pre>
@@ -235,7 +236,7 @@
   <b class="text-effect b">b</b>
   <li class="text-effect li">li</li>
 </div>
-<p class="content-paragraph">Although library main elements are meant to be text, it could be used for several other elements such as buttons. </p>
+<p class="content-paragraph">Although library is made for typography, it could be used for several other elements such as buttons. </p>
 <div class="content-container">
   <pre class="half-width">
    <code language="sass" data-lang="sass">
@@ -263,8 +264,12 @@
 
 <div class="content" id="under-the-hood">
  <h2 class="content-heading">Under the hood</h2>
- <p class="content-paragraph">All transitions are made with pseudoelements <em class="effect-em underline-opening">::before</em> and <em class="effect-em underline-opening">::after</em>. Each element that has transition-opt mixin included will have those two pseudoelements. Mixin transition-opt sets the base for transition. It allows you to set the options. It triggers hover and focus event. You can see code in <em class="effect-em overline-opening">_base.scss</em></p>
- <p class="content-paragraph"> Each transition includes <em class="effect-em underline-right">line-opt</em> mixin, which sets width and height of pseudoelements. The default width is 3px, and default height is 2%. Line-opt depends on the type of transition. Some transitions have only one pseudoelement. Line-opt mixin allows to choose which pseudoelement should be created for particular transition. For example, <em class="effect-em overline-left">overline-left</em> transition is created only with ::after pseudoelement.</p>
+ <p class="content-paragraph">All transitions are made with pseudoelements <em class="effect-em underline-opening"> ::before</em> and <em class="effect-em underline-opening">::after</em>. Each element that has transition-opt mixin included will have <em class="effect-em underline-opening"> ::before</em>, <em class="effect-em underline-opening">::after</em> or both of them. Mixin transition-opt sets the base for transition. It allows you to set the options. It triggers hover and focus event. You can see code in <em class="effect-em underline-opening">_base.scss</em>.</p>
+ <p class="content-paragraph"> Each transition includes <em class="effect-em underline-right">line-opt</em> mixin, which sets width, transition-width, height, transition-height, position, type of pseudoelements. The default width is 3px, and default height is 2%.
+ <p class="content-paragraph"> When hovered or focused, some pseudoelements have only maximum height or maximum width. For example, <em class="effect-em underline-right">underline-right</em> transition has maximum width set to 100%, while height is set to default, that is 2%. Some have maximum height set to 100%, while width is set to default, that is 3px. For example, <em class="effect-em left-up">left-up</em>.</p>
+ <p class="content-paragraph">Some effects have maximum height and maximum width. For example, all transition in <em class="effect-em fill-top-left">fill-corners</em> group.</p>
+ <p class="content-paragraph"> If you want to change these defaults, go to <em class="effect-em underline-right">_defaults.scss</em> in the partials directory.</p></p>
+ <p class="content-paragraph">Line-opt depends on the type of transition. It allows to choose which pseudoelement should be created for particular transition. For example, <em class="effect-em overline-left">overline-left</em> transition is created only with <em class="effect-em overline-left">::after</em> pseudoelement.</p>
  <div class="content-container">
   <pre class="half-width">
    <code language="sass" data-lang="sass">
@@ -289,7 +294,7 @@
 </div><!--content-container-->
 <p class="content-paragraph">First, we define mixin overline-left. Then we include line-opt mixin and define the type of pseudoelement which is here pseudoafter. After that, we define the transition width. Since the default transition-width in line-opt is 100%, we do not need to set it explicitly. But default transition-height in line-opt is also 100% and we do not want that. We want it to remain the same. That is why we set it to the height of an element which is 2%.</p>
 
-<p class="content-paragraph">Some transitions needs to have both pseudoelements such as<em class="effect-em overline-closing">overline-closing</em>. Pseudoelements are positioned differently.</p>
+<p class="content-paragraph">Some transitions needs to have both pseudoelements such as<em class="effect-em overline-closing">overline-closing</em>: </p>
 <div class="content-container">
   <pre class="half-width">
    <code language="sass" data-lang="sass">
@@ -324,7 +329,7 @@
  <em class="effect-demo overline-closing">Result</em>          
 </div>
 </div><!--content-container-->
-<p class="content-paragraph">Line-opt also sets the width and height of pseudoelement on hover and focus, that is, width and height of transition. Since default display property is set to inline, transition width or height will never be wider or higher than the element's width or height. That is why transitions vary in maximum height or width. In other words, when hovered or focused, some pseudoelements have only maximum height, maximum width and some have both. For example, <em class="effect-em underline-right">underline-right</em> transition has maximum width set to 100%, while height is set to default, that is 2%. Some have maximum height set to 100%, while width is set to default, that is 3px. For example, <em class="effect-em left-up">left-up</em></p>
+
 
 </div><!--content-->
 

@@ -98,7 +98,15 @@
 
 	@include transition-opt(
 		$padding: 5px
-		);
+	);
+	
+	&.fill-top-left {
+		@include transition-opt(
+		$padding: 10px,
+		$hover-color: $color
+	);
+	
+	}
 }
 
 .col-doc {
@@ -185,6 +193,8 @@ pre {
 
 .em-git {
 	color: $color;
+	font-size: 2em;
+	font-weight: 700;  
 }
 
 .div-git {
