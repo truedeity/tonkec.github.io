@@ -69,7 +69,6 @@ section {
 
 .skills-row,
 .home,
-.portfolio-peaks,
 .portfolio-about-slide,
 .work {
   display: flex;
@@ -503,51 +502,95 @@ section {
 }
 
 .portfolio-title {
-  color: #FFF;
   text-align: center;
-  font-size: 4.2em;
+  font-size: 3em;
 }
 
-.portfolio-title:after {
-  content: "";
-  height: 2%;
-  left: 0;
-  bottom: 0;
-  width: 1px;
-  position: absolute;
-  -webkit-transition: all 0.5s ease;
-  -moz-transition: all 0.5s ease;
-  -ms-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
-  transition: all 0.5s ease;
-  right: 0;
-  margin: 0 auto;
-  background: blue;
-}
-
-.portfolio-title:hover {
+.double-underline-opening {
   color: #fff;
-  -webkit-transition: all .8s ease;
-  -moz-transition: all .8s ease;
-  -ms-transition: all .8s ease;
-  -o-transition: all .8s ease;
-  transition: all .8s ease;
-  cursor: pointer;
+  display: inline;
+  position: relative;
+  z-index: 2;
+  text-decoration: none;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -webkit-user-select: none; 
+  -moz-user-select: none; 
+  -ms-user-select: none; 
+  user-select: none; 
+  -webkit-touch-callout: none; 
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); 
+  padding: 0 0 20px;
+ -webkit-transition: color 1s ease;
+    -moz-transition: color 1s ease;
+     -ms-transition: color 1s ease;
+      -o-transition: color 1s ease;
+         transition: color 1s ease;
 }
 
-.portoflio-title:hover:after {
+.double-underline-opening:hover,
+.double-underline-opening:focus {
+  color: #039be5;
+  -webkit-transition: all 1s ease;
+     -moz-transition: all 1s ease;
+      -ms-transition: all 1s ease;
+       -o-transition: all 1s ease;
+          transition: all 1s ease;
+}
+
+.double-underline-opening:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  width: 3px;
+  height: 2%;
+  -webkit-transition: all 1s ease;
+     -moz-transition: all 1s ease;
+      -ms-transition: all 1s ease;
+       -o-transition: all 1s ease;
+          transition: all 1s ease;
+  }
+
+.double-underline-opening:hover:after {
   width: 100%;
-  background-color: #fff;
-  -webkit-transition: all .8s ease;
-     -moz-transition: all .8s ease;
-      -ms-transition: all .8s ease;
-       -o-transition: all .8s ease;
-          transition: all .8s ease;
+  height: 2%;
+  background-color: #039be5;
 }
 
-.portfolio-row {
-  display: block;
-  height: 100%;
+.double-underline-opening:after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  width: 3px;
+  height: 2%; 
+   -webkit-transition: all 1s ease .5s;
+     -moz-transition: all 1s ease .5s;
+      -ms-transition: all 1s ease .5s;
+       -o-transition: all 1s ease .5s;
+          transition: all 1s ease .5s;}
+
+.double-underline-opening:hover:before {
+  width: 100%;
+  height: 2%;
+  background-color: #039be5;
+ }
+
+.double-underline-opening:after {
+  right: 0%;
+  bottom: 0;
+  margin: 0 auto;
+  left: 0; }
+
+.double-underline-opening:before {
+  right: 0%;
+  bottom: 10px;
+  margin: 0 auto;
+  left: 0; }
+
+.portfolio-peaks-row {
+  top: 50%;
+  position: relative;
 }
 
 .portfolio-round-circle {
@@ -608,14 +651,11 @@ section {
 
 .fa-external-link {
   font-size: 0.5em;
-}
-
-.about-title-anchor {
-  margin-left: 5px;
   color: #fff;
+  margin-left: 20px;
 }
 
-.about-title-anchor:hover {
+.fa-external-link:hover {
   color: #039be5;
   -webkit-transition: all .5s ease;
      -moz-transition: all .5s ease;
@@ -696,28 +736,30 @@ section {
 /* footer */
 
 footer {
-  height: 15%;
+  height: auto;
   background: #000;
   border-top: 1px solid rgba(255, 255, 255, 0.25);
   position: relative;
   font-size: 0.7em;
+  padding: 20px;
 }
 
 .footer-link {
-  color: #039be5;
+  color: #fff;
   display: block;
-  position: absolute;
-  left: 20px;
-  font-size: 1em;
+  font-size: 1.5em;
+  margin: 10px 0;
 }
 
-.twitter {
-  bottom: 20px;
+.footer-link:hover {
+  color: #039be5;
+  -webkit-transition: all 1s ease;
+     -moz-transition: all 1s ease;
+      -ms-transition: all 1s ease;
+       -o-transition: all 1s ease;
+          transition: all 1s ease;
 }
 
-.mail {
-  bottom: 35px;
-}
 /* typed.js */
 
 .typed-cursor {
@@ -783,11 +825,11 @@ footer {
   bottom: 0;
   width: 1px;
   position: absolute;
-  -webkit-transition: all 0.5s ease;
-  -moz-transition: all 0.5s ease;
-  -ms-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
-  transition: all 0.5s ease;
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  transition: all 1s ease;
   z-index: -1;
   background: transparent;
   right: 0;
@@ -799,11 +841,11 @@ footer {
 .work-heading:hover {
   border-bottom: 0px;
   color: #039be5;
-  -webkit-transition: all 0.5s ease;
-  -moz-transition: all 0.5s ease;
-  -ms-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
-  transition: all 0.5s ease;
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  transition: all 1s ease;
 }
 
 .work-anchor:hover:after {
@@ -856,6 +898,10 @@ footer {
   .work-anchor:hover:after {
     width: 50%;
   }
+
+  .portfolio-title {
+    font-size: 4em;
+  }
 }
 
 @media (min-width: 600px) {
@@ -899,12 +945,7 @@ footer {
   .portfolio-about-row {
     padding: 200px 0;
   }
-  .footer-link {
-    font-size: 1.5em;
-  }
-  .mail {
-    bottom: 50px;
-  }
+
   .skills-info {
     font-size: 2em;
   }
