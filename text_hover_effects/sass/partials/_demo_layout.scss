@@ -2,7 +2,7 @@ html,
 body {
   padding: 0;
   margin: 0;
-  background-color: #1BA39C;
+  background-color: #E8F1F2;
   font-family: 'Source Sans Pro', Arial;
 }
 
@@ -210,7 +210,7 @@ aside {
     
      &:hover,
     &:focus {
-      color: #1BA39C;
+      color: #E8F1F2;
       -webkit-transition: color 1s ease; 
       -moz-transition: color 1s ease; 
       -ms-transition: color 1s ease; 
@@ -220,7 +220,7 @@ aside {
 }
 
 .item-active {
-   color: #1BA39C !important;
+   color: $hover-color !important;
      -webkit-transition: all 1s ease; 
      -moz-transition: all 1s ease; 
      -ms-transition: all 1s ease; 

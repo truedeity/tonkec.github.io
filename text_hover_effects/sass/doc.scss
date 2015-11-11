@@ -85,8 +85,8 @@
 	}
 }
 
-.pseudo-em {
-	color: #3FC380;
+.pseudoem {
+	color:$hover-color;
 }
 
 .effect-em {
@@ -150,7 +150,7 @@
 
 pre {
 	text-align: left; 
-	background: #f5f5f5;
+	background-color: $color;
 	margin: 20px; 
 	display: block;
 	
@@ -173,9 +173,10 @@ pre {
 	width: 100%;
 	display: inline-block; 
 	text-align: center; 
-	margin-left: 20px;
+	
 	@media (min-width: 768px) {
 		width: 50%; 
+		margin-left: 20px;
 		display: table-cell;
 		vertical-align: middle;
 	}
@@ -183,7 +184,7 @@ pre {
 
 .sass {
 	font-size: 1em;
-	color:  #2C3E50;
+	color: #fff;
 	font-weight: 500; 
 	
 	@media (min-width: 768px) {
@@ -192,13 +193,21 @@ pre {
 }
 
 .em-git {
-	color: $color;
-	font-size: 1.2em;
-	font-weight: 700;  
+	color: #fff;
+	font-size: 0.8em;
+	font-weight: 300; 
+	
+	@media (min-width: 480px) {
+		font-size: 1em; 
+	}
+	
+	@media (min-width: 768px) {
+		font-size: 1.2em; 
+	} 
 }
 
 .div-git {
-	background: #f5f5f5;
+	background: $color;
 	width: auto;
 	margin: 0 auto;
 	padding: 20px;
@@ -231,11 +240,11 @@ pre {
 }
 
 .property {
-	color: orange;
+	color:#E3B505;
 }
 
 .value {
-	color: #1BA39C;
+	color: #247BA0;
 }
 
 .clone {
@@ -343,7 +352,8 @@ pre {
 }
 
 .comment {
-	color: rgba(0,0,0,0.5);
+	color: #E8F1F2;
+	opacity: .7;
 }
 
 .list-heading {

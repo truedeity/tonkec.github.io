@@ -52,7 +52,7 @@
         </div>
         <br />    
         <h3 class="content-small-heading">1. The Sass Way</h3>
-        <p class="content-paragraph">In order effects to work you need to have partials directory in your project directory on the same level as effect.scss file. Include <em class="effect-em underline-right">effect.scss</em> file. That file imports all of the mixins. If you need only several effects, delete unnecessary imports. All effects must have _base.scss imported because it has <em class="effect-em underline-right">transition-opt</em> and <em class="effect-em underline-right">line-opt</em> mixins mandatory for all effects.</p>
+        <p class="content-paragraph">In order effects to work you need to have partials directory in your project directory on the same level as effect.scss file. Include <em class="effect-em underline-right">effect.scss</em> file. That file imports all of the mixins. If you need only several effects, delete unnecessary imports. All effects must have _base.scss imported because it has <em class="effect-em underline-right">transition-opt</em> and <em class="effect-em underline-right">line-opt</em> mixin mandatory for all effects.</p>
         <div class="content-container">
           <pre class="full-width">
            <code language="sass" data-lang="sass">
@@ -76,7 +76,7 @@
       </pre>
     </div><!--content-container-->
     <h3 class="content-small-heading">2. The CSS Way</h3>
-    <p class="content-paragraph">The effects are also available in CSS code. You can start using them after downloading. The CSS code is in the CSS/effects directory. Choose the effect you would like to apply, then copy and paste the code and you are good to go!</p>
+    <p class="content-paragraph">The effects are also available in CSS code. You can start using them after downloading. The CSS code is in the CSS/effects directory. File <em class="effect-em underline-right">base.css</em> has all the fundamental styles and all the defaults. Effects will not work without that file. Choose the effect you would like to apply, then copy and paste the code and you are good to go!</p>
 
   </div><!--content-->
 
@@ -102,26 +102,27 @@
    <p class="content-paragraph">Be careful with using <em class="effect-em underline-right">CSS #id</em> selector because it will overwrite several styles. It is recommended to use <em class="effect-em underline-right">classes</em> instead. </p>
 
    <h3 class="content-small-heading">2. The CSS Way</h3>
-   <p class="content-paragraph">CSS styles are also available. After you cloned/downloaded repo from Github, you can use them as well. All the CSS files are included in the CSS/effects directory. Choose one you want and copy and paste the code into your project file. Add class to your element and you are good to go!</p>
+   <p class="content-paragraph">The css way is longer way. But worry not! I will take you step by step. <em class="effect-em underline-right">Base.css</em> file has all the defaults and all the basic styles. You can change any of them, but be careful with chaning display property. Read more<a class="anchor underline-right" href="#customize">here</a>. After you copied styles from base.css, you are ready to choose your effect. Let say you picked <em class="effect-em underline-left">underline-left</em>. Go to file underline-right.css in css/effects/underline/ and copy and past code to your element. That is it!</p>
+
     <div class="content-container">
      <pre class="half-width">
        <code language="sass" data-lang="sass">
          <em class="sass">
-          .underline-left:<em class="include">after</em> { 
+          .underline-left:<em class="pseudoem">after</em> { 
              <em class="property">content</em>: <em class="value">""</em>;
              <em class="property">position</em>: <em class="value">absolute</em>;
              <em class="property">z-index</em>: <em class="value">-1</em>;
              <span class="property">width</span>: <em class="value">3px</em>;
           }
 
-          .underline-left:<em class="include">after</em> {
+          .underline-left:<em class="pseudoem">after</em> {
               <em class="property">right</em>: <em class="value">0</em>;
               <em class="property">bottom</em>: <em class="value">0</em>;
           }
 
-          .underline-left:<em class="include">hover</em>:<em class="include">after</em> {
+          .underline-left:<em class="pseudoem">hover</em>:<em class="pseudoem">after</em> {
               <em class="property">width</em>: <em class="value">100%</em>;
-              <em class="property">height</em>: <em class="value">2%</em>;
+              <em class="property">height</em>: <em class="value">3px</em>;
           }
 
         </em>  
@@ -137,6 +138,8 @@
 
 <div class="content" id="customize">
  <h2 class="content-heading">Customize</h2>
+ <h3 class="content-small-heading">1. The Sass Way</h3>
+
  <p class="content-paragraph">Mixin <em class="effect-em underline-right">transition-opt</em> has several options. You can change each of them. These are defaults</p>
  <div class="content-container">
   <pre class="full-width">
@@ -217,6 +220,9 @@
  <em class="effect-demo block half-width underline-right">Result</em>
 </div>
 </div>
+<h3 class="content-small-heading">2. The CSS Way</h3>
+
+<p class="content-paragraph">CSS styles are easy to customize. As it has been said already, <em class="effect-em underline-right">base.css</em> has all the basic styles and all the defaults. Change whichever property you want in, but again be careful with changing display property. If you want to add delays, you will have to add them manually. Comments in base.css will tell you where to add delays. </p>
 </div><!--content-->
 
 <div class="content" id="supported-elements">
@@ -264,11 +270,11 @@
 
 <div class="content" id="under-the-hood">
  <h2 class="content-heading">Under the hood</h2>
- <p class="content-paragraph">All transitions are made with pseudoelements <em class="effect-em underline-opening"> ::before</em> and <em class="effect-em underline-opening">::after</em>. Each element that has transition-opt mixin included will have <em class="effect-em underline-opening"> ::before</em>, <em class="effect-em underline-opening">::after</em> or both of them. Mixin transition-opt sets the base for transition. It allows you to set the options. It triggers hover and focus event. You can see code in <em class="effect-em underline-opening">_base.scss</em>.</p>
- <p class="content-paragraph"> Each transition includes <em class="effect-em underline-right">line-opt</em> mixin, which sets width, transition-width, height, transition-height, position, type of pseudoelements. The default width is 3px, and default height is 2%.
- <p class="content-paragraph"> When hovered or focused, some pseudoelements have only maximum height or maximum width. For example, <em class="effect-em underline-right">underline-right</em> transition has maximum width set to 100%, while height is set to default, that is 2%. Some have maximum height set to 100%, while width is set to default, that is 3px. For example, <em class="effect-em left-up">left-up</em>.</p>
+ <p class="content-paragraph">All transitions are made with pseudoelements <em class="effect-em underline-opening"> ::before</em> and <em class="effect-em underline-opening">::after</em>. Each element that has <em class="effect-em underline-opening">transition-opt</em> mixin included will have <em class="effect-em underline-opening"> ::before</em>, <em class="effect-em underline-opening">::after</em> or both of them. Mixin transition-opt sets the base for transition. It allows you to set the options. It triggers hover and focus event. You can see code in <em class="effect-em underline-opening">_base.scss</em>.</p>
+ <p class="content-paragraph"> Each transition includes <em class="effect-em underline-right">line-opt</em> mixin, which sets width, transition-width, height, transition-height, position of an element and type of pseudoelements. The default width and height is 3px.
+ <p class="content-paragraph"> When hovered or focused, some pseudoelements have only maximum height or maximum width. For example, <em class="effect-em underline-right">underline-right</em> transition has maximum width set to 100%, while height is set to default, that is 3px. Some have maximum height set to 100%, while width is set to default, that is 3px. For example, <em class="effect-em left-up">left-up</em>.</p>
  <p class="content-paragraph">Some effects have maximum height and maximum width. For example, all transition in <em class="effect-em fill-top-left">fill-corners</em> group.</p>
- <p class="content-paragraph"> If you want to change these defaults, go to <em class="effect-em underline-right">_defaults.scss</em> in the partials directory.</p></p>
+ <p class="content-paragraph"> If you want to change these defaults, go to <em class="effect-em underline-right">defaults.scss</em> file in the sass/partials directory.</p>
  <p class="content-paragraph">Line-opt depends on the type of transition. It allows to choose which pseudoelement should be created for particular transition. For example, <em class="effect-em overline-left">overline-left</em> transition is created only with <em class="effect-em overline-left">::after</em> pseudoelement.</p>
  <div class="content-container">
   <pre class="half-width">
@@ -292,7 +298,7 @@
  <em class="effect-demo overline-left">Result</em>          
 </div>
 </div><!--content-container-->
-<p class="content-paragraph">First, we define mixin overline-left. Then we include line-opt mixin and define the type of pseudoelement which is here pseudoafter. After that, we define the transition width. Since the default transition-width in line-opt is 100%, we do not need to set it explicitly. But default transition-height in line-opt is also 100% and we do not want that. We want it to remain the same. That is why we set it to the height of an element which is 2%.</p>
+<p class="content-paragraph">First, we define mixin overline-left. Then we include line-opt mixin and define the type of pseudoelement which is here pseudoafter. After that, we define the transition width. Since the default transition-width in line-opt is 100%, we do not need to set it explicitly. But default transition-height in line-opt is also 100% and we do not want that. We want it to remain the same. That is why we set it to the height of an element which is 3px.</p>
 
 <p class="content-paragraph">Some transitions needs to have both pseudoelements such as<em class="effect-em overline-closing">overline-closing</em>: </p>
 <div class="content-container">

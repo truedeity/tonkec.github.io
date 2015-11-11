@@ -6,7 +6,7 @@ body {
   padding: 0;
   margin: 0;
   width: 100%;
-  background-color: #1BA39C;
+  background-color: #E8F1F2;
   font-family: 'Source Sans Pro', Arial;
 }
 
@@ -45,7 +45,7 @@ main {
 }
 
 .btn {
-  background-color: $color;
+  background-color: #13293D;
   -webkit-box-shadow: none;
   box-shadow: none;  
   width: 80%;
@@ -53,22 +53,37 @@ main {
   color: #fff;
   font-weight: 300;
   font-size: 2em;
-  @include transition-opt(
-    $display:block,
-    $hover-color: $color
-  );
-  
-  @include fill-closing-horizontal;
+  border: none;
+  padding: 0;
+
   @media (min-width: 768px) {
-    width: auto; 
-    margin: 0 10px;
+    width: 50%; 
     font-size: 2em;
-    @include transition-opt(
-     $display: inline-block,
-     $padding: 20px 50px,
-     $hover-color: $color
-     );   
+    margin: 20px;
   }
+
+  @media (min-width: 980px) {
+    width: 20%; 
+    margin: 40px 20px;
+  }
+
+  @media (min-width: 1200px) {
+    width: 15%; 
+  }
+}
+
+.btn-a {
+  width: 100%; 
+  color: #fff;
+  height: 80px;
+  line-height: 80px;  
+  font-weight: 300; 
+  @include transition-opt(
+    $display: block,
+    $padding: 0
+  );
+  @include left-bottom;
+
 }
 
 .main-heading {
@@ -97,7 +112,7 @@ main {
 
 .main-subheading {
   font-size: 1.5em; 
-  margin-top: 40px; 
+  margin: 10px 0; 
   color: $color;
   font-weight: 500; 
   
