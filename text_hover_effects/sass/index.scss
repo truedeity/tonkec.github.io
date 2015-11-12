@@ -55,25 +55,6 @@ main {
   font-size: 2em;
   border: none;
   padding: 0;
-
-  @media (min-width: 768px) {
-    width: 50%; 
-    font-size: 2em;
-    margin: 20px;
-  }
-
-  @media (min-width: 980px) {
-    width: 20%; 
-    margin: 40px 20px;
-  }
-
-  @media (min-width: 1200px) {
-    width: 15%; 
-  }
-}
-
-.btn-a {
-  width: 100%; 
   color: #fff;
   height: 80px;
   line-height: 80px;  
@@ -84,6 +65,24 @@ main {
   );
   @include left-bottom;
 
+  @media (min-width: 768px) {
+    width: 50%; 
+    font-size: 2em;
+    margin: 20px auto;
+  }
+
+  @media (min-width: 980px) {
+    width: 20%; 
+    margin: 40px auto;
+     @include transition-opt(
+    $display: inline-block,
+    $padding: 0
+  );
+  }
+
+  @media (min-width: 1200px) {
+    width: 15%; 
+  }
 }
 
 .main-heading {
