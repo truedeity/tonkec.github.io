@@ -21,4 +21,6 @@ $(document).ready(function(){
       $("body, html").css("overflow", "visible");
     }, 3000)
   }
+
+  $(".btn-apple").click(function(e){e.preventDefault();})
 });
