@@ -3,8 +3,8 @@ body {
 	height: 100%;
 	font-family: 'Source Sans Pro', sans-serif;
 	overflow: hidden;
-	-ms-overflow-x: hidden;
-	overflow-x: hidden;
+	-ms-overflow: hidden;
+	overflow: hidden;
 }
 
 .row {
@@ -51,6 +51,10 @@ body {
 
 .header-main-img {
 	margin: 0 auto; 
+	width: 70%; 
+	@media (min-width: 480px) {
+		width: auto; 
+	}
 	@media (min-width: 992px) {
 		margin-right: 135px; 
 	} 
@@ -114,6 +118,14 @@ body {
 	margin-top: 40px; 
 }
 
+.btn-text {
+	display: none;
+	
+	@media (min-width: 400px) {
+		display: inline-block;
+	}
+}
+
 .btn-apple {
 	background: #000;
 	color: #fff;
@@ -127,7 +139,7 @@ body {
 	     border-radius: 5px;
 	margin: 0 auto;
 	width: 90%; 
-	font-size: 16px; 
+	font-size: 14px; 
 	
 	@media (min-width: 480px) {
 		width: 310px; 
@@ -139,7 +151,9 @@ body {
 }
 
 .btn-logo {
-	margin-right: 18px; 
+	@media (min-width: 400px) {
+		margin-right: 18px; 
+	}
 }
 
 .btn-text {
@@ -163,7 +177,7 @@ section {
 .second-scan {
 	background: -webkit-gradient(linear, 0 50%, 0 100%, from(white), color-stop(0.5, #fff), to(#DD8BBD));
 	background: -webkit-linear-gradient(to top,#fff -50%,#fff,rgba(221, 139, 189, .12));
-	background: -moz-linear-gradient(to top,#fff -50%,#fff,rgba(221, 139, 189, .12));
+	background: -moz-linear-gradient(to top,#fff -55%,#fff,rgba(221, 139, 189, .12));
 	background: -o-linear-gradient(to top,#fff -50%,#fff,rgba(221, 139, 189, .12));
 	background: -ms-linear-gradient(to top,#fff -50%,#fff,rgba(221, 139, 189, .12));
 	background: linear-gradient(to top,#fff -50%,#fff,rgba(221, 139, 189, .12));
@@ -238,6 +252,13 @@ section {
 	}
 }
 
+.stats-img {
+	width: 50%; 
+	@media (min-width: 768px) {
+		width: auto; 
+	}
+}
+
 .stats-box {
 	width: 90%; 
 	height: 310px;
@@ -285,21 +306,6 @@ section {
 .grey {
 	background-color:#e3e4e5; 
 	line-height: initial; 
-}
-
-.stats-span {
-	color: #ffF;
-	position: absolute;
- 	line-height: initial;
- 	bottom: 20px;  
-}
-
-.male {
-	left: 100px;
-}
-
-.female {
-	right: 100px; 
 }
 
 .handle-img {
@@ -395,17 +401,19 @@ section {
 
 .percent {
 	color: #fff;
-	position: absolute; 
+	font-size: 10px;
+	
+	@media (min-width: 480px) {
+		font-size: 12px; 
+	}
 }
 
-.p-left {
-	left: 100px;
-	line-height: initial;
-	top: 220px;   
+.male {
+	margin-right: 20px; 
 }
 
-.p-right {
-	right: 100px; 
+.female {
+	margin-left: 10px; 
 }
 
 .element {
