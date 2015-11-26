@@ -1,0 +1,196 @@
+
+footer {
+	background: $dark-blue-primary;
+	padding-top: 56px;
+	position:relative; 
+	padding-bottom: 50px;
+	height: auto;
+	@media (min-width: 480px) {
+		height: 560px; 
+	}
+	
+	@media (min-width: 980px) {
+		padding-bottom: 0;
+		height: 560px; 
+	}
+}
+
+.footer-right {
+	position: absolute;
+	top: 76px; 
+	right: 5%;
+	
+	@media (min-width: 768px) {
+		right:80px;
+	}
+}
+
+.col-img {
+	display: block;
+	margin: 30px auto 0;
+
+	@media (min-width: 480px) {
+		display: inline-block;
+		margin: 0;
+		margin-right: 2%;
+	}
+	
+	@media (min-width: 980px) {
+		margin-right: 36px; 
+		float:left;
+	}
+}
+
+.icons-container {
+	margin-top: 50px; 
+	text-align: center;
+	@media (min-width: 480px) {
+		margin-top: 0; 
+		text-align: left;
+		margin-left: 50px; 
+	}
+	@media (min-width: 1200px) {
+		margin-left: 100px; 
+	}
+}
+
+.fa-social {
+	color: transparent;
+	background: #fff;
+	-webkit-border-radius: 50%; 
+	border-radius: 50%; 
+	color: $dark-blue-primary;
+	height: 62px;
+	width: 62px;
+	line-height: 62px;
+	text-align: center;
+	font-size: 1.7em;
+	font-weight: 700;
+	position: relative;
+
+	&:hover,
+	&:focus {
+		top: 2px; 
+		background: $red;
+		color: #fff;
+		-webkit-transition: all 1s ease; 
+		-moz-transition: all 1s ease; 
+		-ms-transition: all 1s ease; 
+		-o-transition: all 1s ease; 
+		transition: all 1s ease; 
+	}  
+}
+
+.fa-facebook {
+	&:hover {
+		background: #3B5998; 
+	}
+}
+
+.fa-twitter {
+	&:hover {
+		background: #55ACEE; 
+	}
+}
+
+.fa-google-plus {
+	&:hover {
+		background: #DC4E41; 
+	}
+}
+
+.fa-youtube-play {
+	&:hover {
+		background: #CD201F; 
+	}
+}
+
+.fa-instagram {
+	&:hover {
+		background: #3f729b;
+	}
+}
+
+.footer-anchor {
+	color: #fff;
+	text-decoration: none;
+	font-size: 24px; 
+}
+
+.footer-heading {
+	color: #fff;
+	text-align: center;
+	font-size: 20px;
+	font-weight: 100;  
+	
+	@media (min-width: 768px) {
+		font-size: 24px; 
+	}
+
+	@media (min-width: 980px) {
+		font-size: 28px; 
+	}
+	
+	@media (min-width: 1200px) {
+		font-size: 32px; 
+	} 
+}
+
+.footer-span {
+	font-weight: 700;
+}
+
+.footer-container {
+	@media (min-width: 480px) {
+		position: absolute;
+	bottom: 120px;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	text-align: center; 
+	}	
+}
+
+.footer-logo {
+	margin: 0 auto;
+	width: 120px;
+	height: 21px;  
+	@include bg("../img/ars-logo@2x.png");
+	@include retina("../img/ars-logo@2x.png", 240px 42px);
+}
+
+.ars {
+	font-weight: 900;
+	text-transform: initial;  
+}
+
+.futura {
+	text-transform: initial;  
+	font-weight: 300; 
+	color: #fff;
+	opacity: .9;
+	font-family: Lato; 
+}
+
+.heart {
+	display: inline-block;
+	height: 36px;
+	width: 30px;
+	-webkit-background-size: 100%; 
+	 -o-background-size: 100%; 
+	 background-size: 100%;  
+	background-repeat: no-repeat;
+	background-position: center bottom;
+	background-image: url("../img/love-icon.png"); 
+	@include retina("../img/love-icon@2x.png", 50px 44px);
+}
+
+.vertical-footer-align {
+	@media (min-width: 480px) {
+		width: 100%; 
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%); 
+	} 
+}

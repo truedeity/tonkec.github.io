@@ -1,0 +1,136 @@
+body,
+html {
+	height: 100%;
+	width: 100%;
+	font-family: "Source Sans Pro", sans-serif;
+	overflow: hidden;
+	-ms-overflow-x: hidden;
+	overflow-x: hidden;
+}
+
+* {
+	-webkit-box-sizing: border-box; 
+	-moz-box-sizing: border-box; 
+	box-sizing: border-box; 
+}
+
+.left {
+	float: left; 
+}
+
+.right {
+	float: right; 
+}
+
+.underline-right {
+	display: inline;
+	position: relative;
+	z-index: 2;
+	text-decoration: none;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-webkit-user-select: none; 
+	-moz-user-select: none; 
+	-ms-user-select: none; 
+	user-select: none; 
+	-webkit-touch-callout: none; 
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0); 
+	padding: 10px;
+	white-space: nowrap;
+	overflow: hidden;
+	-webkit-transition: color 1s ease; 
+	-moz-transition: color 1s ease; 
+	-ms-transition: color 1s ease; 
+	-o-transition: color 1s ease; 
+	transition: color 1s ease; 
+}
+
+.underline-right:after {
+	content: "";
+	position: absolute;
+	left: 0;
+	bottom: 0; 
+	height: 2px;
+	background: transparent;   
+	width: 1px;
+	-webkit-transition: all 1s ease; 
+	-moz-transition: all 1s ease; 
+	-ms-transition: all 1s ease; 
+	-o-transition: all 1s ease; 
+	transition: all 1s ease;   
+}
+
+.underline-right:hover:after {
+	width: 100%;
+	-webkit-transition: width 1s ease; 
+	-moz-transition: width 1s ease; 
+	-ms-transition: width 1s ease; 
+	-o-transition: width 1s ease; 
+	transition: width 1s ease;  
+	background: $red;
+}
+
+.list {
+	margin-top: 45px; 
+	display: none;
+	@media (min-width: 980px) {
+		display: block;
+	}
+}
+
+.text-right {
+	text-align: right; 
+}
+
+.text-center {
+	text-align: center;
+}
+
+.text-left {
+	text-align: left;
+}
+
+.clearfix:after { 
+	content: " ";
+	display: block; 
+	height: 0; 
+	clear: both;
+}
+
+.bold {
+	font-weight: 700; 
+}
+
+.img-italic {
+	font-style: italic;
+	font-size: 14px;
+	color: $red;
+	margin-bottom: 26px;
+	font-weight: 300; 
+}
+
+.hr {
+	background: $red;
+	width: 55px;
+	height: 2px;
+	margin: 0 auto 34px;  
+}
+
+.hidden-xs {
+	display: none;
+
+	@media (min-width: 768px) {
+		display: inline;
+
+	}
+}
+
+.vertical-align {
+	@media (min-width: 1200px) {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);  
+	} 
+}

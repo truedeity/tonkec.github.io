@@ -1,0 +1,51 @@
+.preloader-con {
+   position: fixed;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   background-color: #fff;
+   z-index: 999999;
+}
+
+
+/* see original preloader here: 
+http://webdesign.tutsplus.com/tutorials/creating-a-collection-of-css3-animated-pre-loaders--cms-21978
+*/
+#preloader_3{
+    position:absolute;
+    top: 50%;
+    left: 50%; 
+}
+#preloader_3:before{
+    width:20px;
+    height:20px;
+    border-radius:20px;
+    background:blue;
+    content:'';
+    position:absolute;
+    background:$red;
+    animation: preloader_3_before 1.5s infinite ease-in-out;
+}
+
+#preloader_3:after{
+    width:20px;
+    height:20px;
+    border-radius:20px;
+    background: $dark-blue-primary;
+    content:'';
+    position:absolute;
+    left:22px;
+    animation: preloader_3_after 1.5s infinite ease-in-out;
+}
+
+@keyframes preloader_3_before {
+    0% {transform: translateX(0px) rotate(0deg)}
+    50% {transform: translateX(50px) scale(1.2) rotate(260deg); background:$red;border-radius:0px;}
+    100% {transform: translateX(0px) rotate(0deg)}
+}
+@keyframes preloader_3_after {
+    0% {transform: translateX(0px)}
+    50% {transform: translateX(-50px) scale(1.2) rotate(-260deg);background:$dark-blue-primary;border-radius:0px;}
+    100% {transform: translateX(0px)}
+}

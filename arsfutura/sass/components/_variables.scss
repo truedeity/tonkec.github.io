@@ -1,0 +1,24 @@
+$dark-blue-primary: #101724;
+$dark-blue-button: #1E2731;
+$red: #CD5741;
+$white: #FFFFFF;
+
+@mixin retina($img, $size) {
+	@media only screen and (-Webkit-min-device-pixel-ratio: 1.5),
+	only screen and (-moz-min-device-pixel-ratio: 1.5),
+	only screen and (-o-min-device-pixel-ratio: 3/2),
+	only screen and (min-device-pixel-ratio: 1.5) {
+		background-image: url($img);
+		background-size: $size;
+		background-repeat: no-repeat;
+	}
+}
+
+@mixin bg($img) {
+	-webkit-background-size: cover; 
+	-o-background-size: cover; 
+	background-size: cover; 
+	background-image: url($img);
+	background-repeat: no-repeat;
+	background-position: center center;
+}
