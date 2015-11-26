@@ -5,7 +5,7 @@
   <title>Text Hover Effects | Documentation</title>
   <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="css/reset.css">
-  <link rel="stylesheet" href="css/doc.min.css">
+  <link rel="stylesheet" href="css/doc.css">
 </head>
 <body>
   <main>
@@ -40,17 +40,26 @@
 
        <div class="content vertical-align" id="about">
          <h2 class="content-heading">About</h2>
-         <p class="content-paragraph"><em class="effect-em underline-right">Text Hover Effect</em> is a <em class="effect-em underline-right">Sass</em> mixin library that consists of effects for typography that are triggered on hover. Effects are made with pseudoelements <em class="effect-em underline-right">::after</em> and <em class="effect-em underline-right">::before</em>  and <em class="effect-em underline-right">CSS3 </em> transitions. See all of them <a class="anchor underline-right" href="demo.html">here</a>.</p>
+         <p class="content-paragraph"><em class="effect-em underline-right">Text Hover Effect</em> is a <em class="effect-em underline-right">Sass</em> mixin library that consists of effects for typography that are triggered on hover and focus. Effects are made with pseudoelements <em class="effect-em underline-right">::after</em> and <em class="effect-em underline-right">::before</em>  and <em class="effect-em underline-right">CSS3 </em> transitions. See all of them <a class="anchor underline-right" href="demo.html">here</a>.</p>
        </div><!--content-->
 
        <div class="content" id="getting-started">
         <h2 class="content-heading">Getting Started</h2>
-        <p class="content-paragraph">Download or clone repo from<a class="anchor underline-right" href="https://github.com/tonkec/text_hover_effects" target="_blank">Github</a>.</p>
         <br />    
-        <div class="div-git">
-          <em class="em-git">git clone https://github.com/tonkec/text_hover_effects.git</em>
-        </div>
-        <br />    
+        <pre class="info-code">
+          <code language="git" data-lang="git">
+            <em class="code">
+             bower install text-hover-effects
+            </em>
+          </code>
+        </pre>
+        <pre class="info-code">
+          <code language="git" data-lang="git">
+            <em class="code">
+              git clone https://github.com/tonkec/text_hover_effects.git 
+            </em>
+          </code>
+        </pre>   
         <h3 class="content-small-heading">1. The Sass Way</h3>
         <p class="content-paragraph">In order effects to work you need to have partials directory in your project directory on the same level as effect.scss file. Include <em class="effect-em underline-right">effect.scss</em> file. That file imports all of the mixins. If you need only several effects, delete unnecessary imports. All effects must have _base.scss imported because it has <em class="effect-em underline-right">transition-opt</em> and <em class="effect-em underline-right">line-opt</em> mixin mandatory for all effects.</p>
         <div class="content-container">
@@ -106,7 +115,7 @@
 
     <div class="content-container">
      <pre class="half-width">
-       <code language="sass" data-lang="sass">
+       <code language="css" data-lang="css">
          <em class="sass">
           .underline-left:<em class="pseudoem">after</em> { 
              <em class="property">content</em>: <em class="value">""</em>;

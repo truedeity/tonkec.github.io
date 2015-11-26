@@ -72,3 +72,17 @@
 @import 'double-linethrough/double-linethrough-left-right';
 @import 'double-linethrough/double-linethrough-right-left';
 @import 'double-linethrough/double-linethrough-opening';
+
+@import 'moves/move-down';
+@import 'moves/move-up';
+@import 'moves/move-right';
+@import 'moves/move-left';
+@import 'moves/move-vertical';
+@import 'moves/move-horizontal';
+
+@import 'fill-falls/fill-fall-down';
+
+@import 'specials/crossed';
+@import 'specials/crossed-special';
+@import 'specials/special';
+@import 'specials/special-reversed';

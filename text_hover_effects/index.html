@@ -7,25 +7,142 @@
   <title>Text Hover Effects | Home</title>
   <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="css/reset.css">
-  <link rel="stylesheet" href="css/index.min.css">
+  <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
-  <main>
+  <main class="main">
     <div class="main-col">
       <h1 class="main-heading">Text Hover Effects</h1>
+      <h3 class="heading-info">Sass mixin library for typography effects triggered on hover. </h3>
     </div>
+     <div class="col-anchors">
+       <button class="btn-index"><a href="demo.html" class="btn-a">Demo</a></button>
+       <button class="btn-index"><a href="documentation.html" class="btn-a">Docs</a></button>
+       <button class="btn-index"><a href="https://github.com/tonkec/text_hover_effects" target="_blank" class="btn-a">Download</a></button>
+     </div>
+
     <div class="container">
-     <div class="col-anchors">
-     <h5 class="main-subheading"><em class="subheading-em">Sass</em> mixin library.</h5>
-     <h5 class="main-subheading">Collection of effects for typography triggered on <em class="subheading-em">hover</em>.</h5>
-       <h5 class="main-subheading"></h5>
+      <div class="col">
+        <h4 class="heading-about">1. Getting started</h4>
+        <pre class="info-code">
+          <code language="git" data-lang="git">
+            <em class="code">
+             bower install text-hover-effects
+            </em>
+          </code>
+        </pre>
+        <pre class="info-code">
+          <code language="git" data-lang="git">
+            <em class="code">
+              git clone https://github.com/tonkec/text_hover_effects.git 
+            </em>
+          </code>
+        </pre>
+      </div><!--col-->
+      <div class="col">
+       
+        <h4 class="heading-about">2. Simple to use</h4>
+        <pre class="info-code">
+         <code language="sass" data-lang="sass">
+           <em class="sass">
+             .element { 
+
+                 <em class="comment">/* base of transition */</em>
+                 <em class="include">@include</em> transition-opt;
+
+                 <em class="comment">/* name of transition */</em>
+                 <em class="include">@include</em> underline-left;
+
+           }</em> 
+         </code>
+       </pre>
      </div>
-     <div class="col-anchors">
-     <button class="btn"><a href="demo.html" class="btn-a">Demo</a></button>
-     <button class="btn"><a href="documentation.html" class="btn-a">Docs</a></button>
-     <button class="btn"><a href="https://github.com/tonkec/text_hover_effects" target="_blank" class="btn-a">Download</a></button>
+
+     <div class="col">
+       <h4 class="heading-about">3. Many options available</h4>
+       <pre class="full-width info-code">
+         <code language="sass" data-lang="sass">
+           <em class="sass">
+             .element { 
+                 <em class="include">@include</em> transition-opt(
+
+                 <em class="property">$hover-color</em>: <em class="value">#FFF</em>, 
+                 <em class="comment">/* sets color of element when hovered */</em>
+
+                 <em class="property">$display</em>: <em class="value">inline</em>,
+                 <em class="comment">/* sets display property */</em>
+
+                 <em class="property">$transition-color</em>: <em class="value">#FFF</em>,
+                 <em class="comment">/* sets color of transition */</em>
+
+                 <em class="property">$transition-speed</em>: <em class="value">1s</em>,
+                 <em class="comment">/* sets speed of transition */</em>
+
+                 <em class="property">$tranition-easing</em>: <em class="value">ease-in-out</em>,
+                 <em class="comment">/* sets easing of transition */</em>
+
+                 <em class="property">$delay-after</em>: <em class="value">0s</em>,
+                 <em class="comment">/* sets transition delay for ::after */</em>
+
+                 <em class="property">$delay-before</em>: <em class="value">0s</em>,
+                 <em class="comment">/* sets transition delay for ::before */</em>
+
+                 <em class="property">$padding</em>: <em class="value">10px</em>
+                 <em class="comment">/* sets space between transition and element */</em>
+
+             )};
+           </em>
+
+         </code>
+       </pre>
      </div>
+     <div class="col">
+       <h4 class="heading-about">4. Available in CSS</h4>
+        <pre class="half-width info-code">
+          <code language="css" data-lang="css">
+           <em class="sass">
+              .underline-left:<em class="pseudoem">after</em> { 
+                 <em class="property">content</em>: <em class="value">""</em>;
+                 <em class="property">position</em>: <em class="value">absolute</em>;
+                 <em class="property">z-index</em>: <em class="value">-1</em>;
+                 <span class="property">width</span>: <em class="value">3px</em>;
+              }
+
+              .underline-left:<em class="pseudoem">after</em> {
+                  <em class="property">right</em>: <em class="value">0</em>;
+                  <em class="property">bottom</em>: <em class="value">0</em>;
+              }
+
+              .underline-left:<em class="pseudoem">hover</em>:<em class="pseudoem">after</em> {
+                  <em class="property">width</em>: <em class="value">100%</em>;
+                  <em class="property">height</em>: <em class="value">3px</em>;
+              }
+            </em>  
+          </code>
+        </pre>
+     </div>
+     <div class="col">
+       <h4 class="heading-about">5. Over 50 effects to choose from</h4>
+     </div>
+     <div class="col">
+       <h4 class="heading-about">6. Cross-browser and mobile support</h4>
+     </div>
+    </div><!--container-->
+    
+    
+   <a href="https://github.com/tonkec/text_hover_effects" target="_blank"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/38ef81f8aca64bb9a64448d0d70f1308ef5341ab/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png"></a>
+    <div class="col-anchors">
+       <button class="btn-index"><a href="demo.html" class="btn-a">Demo</a></button>
+       <button class="btn-index"><a href="documentation.html" class="btn-a">Docs</a></button>
+       <button class="btn-index"><a href="https://github.com/tonkec/text_hover_effects" target="_blank" class="btn-a">Download</a></button>
+     </div>
+   
+   <div class="github-div">
+     <iframe src="https://ghbtns.com/github-btn.html?user=tonkec&repo=text_hover_effects&type=star&count=true&size=large" frameborder="0" scrolling="0" width="130px" height="50px"></iframe>
+     <iframe src="https://ghbtns.com/github-btn.html?user=tonkec&repo=text_hover_effects&type=watch&count=true&size=large&v=2" frameborder="0" scrolling="0" width="130px" height="50px"></iframe>
+     <iframe src="https://ghbtns.com/github-btn.html?user=tonkec&type=follow&count=true&size=large" frameborder="0" scrolling="0" width="250px" height="50px"></iframe>
    </div>
+
  </main>
 </body>
 </html>

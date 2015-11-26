@@ -234,3 +234,109 @@ aside {
     display: none;
   }
 }
+
+.sass {
+  font-size: 1em;
+  color: #fff;
+  font-weight: 500; 
+  
+  @media (min-width: 768px) {
+    font-size: 1.1em; 
+  }  
+}
+
+.em-git {
+  color: #fff;
+  font-size: 0.8em;
+  font-weight: 300; 
+  
+  @media (min-width: 480px) {
+    font-size: 1em; 
+  }
+  
+  @media (min-width: 768px) {
+    font-size: 1.2em; 
+  } 
+}
+
+.div-git {
+  background: $color;
+  width: auto;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center; 
+  display: block;  
+}
+
+.include {
+  color: #F22613;
+}
+
+.property {
+  color:#E3B505;
+}
+
+.value {
+  color: #247BA0;
+}
+
+.clone {
+  color: $color;
+}
+
+.comment {
+  color: #E8F1F2;
+  opacity: .7;
+}
+
+.code {
+  color: #fff;
+  font-size: .6em;
+  font-weight: 500;
+  
+  @media (min-width: 300px) {
+    font-size: .7em; 
+  }  
+  
+  @media (min-width: 480px) {
+    font-size: 0.9em;
+  }
+
+  @media (min-width: 600px) {
+    font-size: 1em; 
+  }
+  
+  @media(min-width: 768px) {
+    font-size: 1em; 
+  }
+  
+  @media (min-width: 1200px) {
+    font-size: 1.1em; 
+  }
+
+  @media (min-width: 1500px) {
+    font-size: 1.3em; 
+  }
+}
+
+.pseudoem {
+  color:$hover-color;
+}
+.effect-demo {
+  margin: 0 auto;
+  font-size: 3em;
+  color: $color;
+  font-weight: 700; 
+  @include transition-opt;
+  
+  &.block {
+    width: 90%; 
+    @include transition-opt(
+      $display: block
+      );
+    
+    &.half-width {
+      width: 50%;
+    }
+  }
+}

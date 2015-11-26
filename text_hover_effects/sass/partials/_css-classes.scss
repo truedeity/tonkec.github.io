@@ -1,4 +1,48 @@
-@import 'partials/effects';
+@import 'effects';
+
+.move-down {
+  @include move-down;
+}
+
+.move-up {
+  @include move-up;
+}
+
+.move-right {
+  @include move-right;
+}
+
+.move-left {
+  @include move-left;
+}
+
+.move-vertical {
+  @include move-vertical;
+}
+
+.move-horizontal {
+  @include move-horizontal;
+}
+
+.fill-fall-down {
+  @include fill-fall-down;
+}
+
+.crossed {
+  @include crossed;
+}
+
+.crossed-special {
+  @include crossed-special;
+}
+
+.special {
+  @include special;
+}
+
+.special-reversed {
+  @include special-reversed;
+}
 
 .overline-right {
   @include overline-right;
