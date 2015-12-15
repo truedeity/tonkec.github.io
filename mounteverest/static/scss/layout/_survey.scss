@@ -1,0 +1,155 @@
+.survey {
+  position: relative; 
+}
+
+.survey-main-row {
+  margin-top: 250px; 
+  position: relative; 
+  @media (min-width: 980px) {
+    margin-top: 390px;
+  }
+}
+
+.survey-info-col {
+  z-index: 2;
+  padding: 0 50px;
+  @media (min-width: 480px) {
+    margin-left: 40px; 
+  }
+  @media (min-width: 768px) {
+    margin-left: 80px;
+  }
+
+  @media (min-width: 980px) {
+    margin-left: 120px; 
+  }
+  @media (min-width: 1400px) {
+    padding: 0;
+    margin-left: 240px;
+  }
+}
+
+.survey-row {
+  position: absolute;
+  top: -60px;
+  @media (min-width: 480px) {
+   top: -100px; 
+ }
+
+ @media (min-width: 768px) {
+   top: -140px;
+ }
+
+ @media (min-width: 980px) {
+  top: -170px; 
+}
+@media (min-width: 1400px) {
+  top: -215px;
+  z-index: 990;
+}
+}
+
+.survey-info {
+  font-size: 25px;
+  @media (min-width: 480px) {
+    font-size: 35px;
+  }
+  @media (min-width: 768px) {
+    font-size: 50px;
+  }
+  @media (min-width: 980px) {
+    font-size: 60px;
+  }
+  @media (min-width: 1200px) {
+    font-size: 70px;
+    line-height: 85px; 
+
+  }
+}
+
+.survey-img-col {
+  @include overlay(url(../img/img1.jpg));
+  background-position: center left; 
+  height: 914px;
+  float: left;
+  @media (min-width: 1200px) {
+    margin-right: 94px;
+    margin-left: 80px;
+    width: 660px;
+    padding: 0; 
+  }
+
+  @media (min-width: 1400px) {
+    margin-left: 120px;
+  }
+}
+
+.survey-txt-col {
+  margin-top: 50px; 
+  @media (min-width: 1200px) {
+    margin-top: 0; 
+    width: 300px;
+    bottom: 0;
+    position: absolute;
+    padding: 0; 
+    left: 840px;  
+  }
+
+  @media (min-width: 1400px) {
+    left: 860px;
+    width: 350px; 
+  }
+
+  @media (min-width: 1600px) {
+    left: auto;
+    right: 400px;  
+  }
+}
+
+.survey-heading {
+  font-size: 18px;
+  margin: 0;
+  margin-bottom: 40px;
+  line-height: 26px;  
+  
+  @media (min-width: 768px) {
+    font-size: 27px; 
+    line-height: 39px; 
+
+  }
+}
+
+.survey-paragraph {
+  margin-bottom: 40px;
+  line-height: 26px; 
+  font-size: 10px;
+  
+  @media (min-width: 480px){
+    font-size: 12px;
+  } 
+  @media (min-width: 768px) {
+    font-size: 16px;
+  }
+}
+
+.survey-more {
+  margin: 0;
+}
+
+.survey-anchor {
+  font-size: 10px; 
+  color: $black;
+  padding: 10px 0;
+  line-height: 25px; 
+  &:hover,
+  &:focus {
+    color: $blue;
+  }
+  &:hover:after {
+    background-color: $blue;
+  }
+
+  @media (min-width: 768px) {
+    font-size: 14px;
+  }
+}

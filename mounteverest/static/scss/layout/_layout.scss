@@ -1,0 +1,33 @@
+body {
+  font-family: 'Playfair Display', serif;
+  -ms-overflow-y: hidden;
+  overflow-y: hidden;
+  -ms-overflow-x: hidden;
+  overflow-x: hidden;
+  border: 10px solid $white; 
+}
+
+main {
+  position: relative;
+}
+
+a:focus,
+a:hover {
+  text-decoration: none;
+}
+
+.row {
+  margin: 0;
+}
+
+.text-white {
+  color: $white;
+}
+
+.text-black {
+  color: $black;
+}
+
+.text-blue {
+  color: $blue;
+}
