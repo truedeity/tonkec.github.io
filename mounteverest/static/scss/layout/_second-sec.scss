@@ -1,0 +1,78 @@
+.second-section {
+  padding-bottom: 50px;
+  @media (min-width: 1400px) {
+    padding-bottom: 190px;
+  }
+}
+
+.sec-row {
+  margin-top: 100px;
+  @media (min-width: 1400px) {
+    margin-top: 182px;
+  }
+}
+
+.sec-img-vertical {
+  height: 776px;
+  margin-bottom: 100px;
+  @include overlay(url(../img/img2.jpg));
+  @media (min-width: 1200px) {
+    padding: 0; 
+    width: 420px;
+    margin-left: 180px;
+    margin-top: 164px;
+  }
+}
+
+.sec-img-horizontal {
+  height: 310px;
+  @include overlay(url(../img/img3.jpg));
+  @media (min-width: 1200px) {
+    padding: 0; 
+    width: 540px;
+    margin-left: 120px;
+  }
+}
+
+.sec-col-text {
+  float: left;  
+  margin-top: 50px; 
+  @media (min-width: 1200px) {
+    margin-top: 130px;
+    margin-left: 120px;
+    width: 540px;
+    padding: 0; 
+  }
+}
+
+.sec-heading {
+  font-size: 40px;
+  margin-top: 40px;
+  margin-bottom: 50px;
+  line-height: 26px; 
+  @media (min-width: 480px) {
+    font-size: 70px;
+  }
+  @media (min-width: 768px) {
+    font-size: 60px;
+  }
+  @media (min-width: 980px) {
+    font-size: 70px;
+  }
+  @media (min-width: 1200px) {
+    margin-bottom: 74px;
+    margin-top: 0px;
+    font-size: 86px; 
+  }
+}
+
+.sec-paragraph {
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 26px; 
+  margin-bottom: 38px;
+ 
+  @media (min-width: 980px) {
+    font-size: 16px;
+  }
+}
