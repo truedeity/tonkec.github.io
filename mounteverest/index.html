@@ -1,15 +1,15 @@
 <!doctype html>
-<html class="no-js" lang="eng">
+<html class="no-js overflow" lang="eng">
 <head>
   <meta charset="utf-8">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">  
+  <meta http-equiv="X-UA-Compatible" content="IE=9;IE=10;IE=Edge,chrome=1"/>
   <title>Mount Everest</title>
   <meta name="description" content="Selekcija 10/2015">
   <meta meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no'>
 
   <link rel="stylesheet" href="static/css/style.min.css">
 </head>
-<body>
+<body class="overflow">
   <!--[if lt IE 8]>
   <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
   <![endif]-->
@@ -22,25 +22,40 @@
      <span></span>
     </div>
   </div>
+  <nav class="nav">
+    <button class="btn-nav">
+     <span class="sr-only">Toggle navigation</span>
+     <span class="icon-bar top"></span>
+     <span class="icon-bar middle"></span>
+     <span class="icon-bar bottom"></span>
+   </button>
+ </nav>
+  <div class="nav-content closed">
+    <div class="nav-inner">
+      <ul class="nav-content-list">
+        <h6 class="nav-content-heading">Navigation</h6>
+        <li class="nav-content-item"><a href="#red" class="element linethrough-left">News</a></li>
+        <li class="nav-content-item"><a href="#green" class="element linethrough-left">Tours</a></li>
+        <li class="nav-content-item"><a href="#purple" class="element linethrough-left">Locations</a></li>
+        <li class="nav-content-item"><a href="#yellow" class="element linethrough-left">Trips</a></li> 
+      </ul>
+    </div>
+  </div>
 
   <main>
+    <div class="border"></div>
 
     <section id="slide-1" class="homeSlide">
+
       <div class="bcg" 
       data-center="background-position: 50% 0px;" 
       data-top-bottom="background-position: 50% -100px;" 
       data-anchor-target="#slide-1"
       >
+      
       <div class="hsContainer">
-       <nav class="nav">
-        <button class="btn-nav">
-         <span class="sr-only">Toggle navigation</span>
-         <span class="icon-bar"></span>
-         <span class="icon-bar"></span>
-         <span class="icon-bar"></span>
-       </button>
-     </nav>
- 
+        <div class="magic-img" id="red"></div>
+
         <div class="brand-con">
           <span class="brand">00000</span>
         </div>
@@ -60,19 +75,6 @@
           </div>
       </div><!--hs-container-->
     </div><!--bcg-->
-     <div class="nav-content closed">
-      <img src="static/img/close.png" alt="close" class="btn-close">
-
-    <div class="nav-inner">
-      <ul class="nav-content-list">
-        <h6 class="nav-content-heading">Navigation</h6>
-        <li class="nav-content-item"><a href="#survey" class="element linethrough-left">News</a></li>
-        <li class="nav-content-item"><a href="#tours" class="element linethrough-left">Tours</a></li>
-        <li class="nav-content-item"><a href="#locations" class="element linethrough-left">Locations</a></li>
-        <li class="nav-content-item"><a href="#trips" class="element linethrough-left">Trips</a></li> 
-      </ul>
-    </div>
-  </div>
   </section>
 
    <section class="survey">
@@ -85,6 +87,7 @@
     </div>
     <div class="row survey-main-row">
       <div class="col-xs-10 col-xs-offset-1 col-sm-10 col-sm-offset-1 col-lg-offset-0 survey-img-col">
+      <div class="magic-img" id="green"></div>  
       </div>
       <div class="col-xs-10 col-xs-offset-1 col-sm-10 col-sm-offset-1 col-lg-offset-0 survey-txt-col">
         
@@ -100,12 +103,14 @@
       </div>
     </div>
   </section>
-  <section class="second-section" id="tours">
+  <section class="second-section">
     <div class="row sec-row">
       <div class="col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-3 sec-img-vertical">
+      <div class="magic-img" id="purple"></div>
       </div>
 
       <div class="col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-3 sec-img-horizontal">
+      <div class="magic-img" id="yellow"></div>
       </div>
 
       <div class="col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-3 sec-col-text">
@@ -123,9 +128,8 @@
   </section>
 
 </main>
-<script type='text/javascript' id="__bs_script__">//<![CDATA[
-  document.write("<script async src='http://HOST:3002/browser-sync/browser-sync-client.2.10.0.js'><\/script>".replace("HOST", location.hostname));
-  //]]></script>
-  <script src="static/js/frontend.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js"></script>
+<script src="static/js/mounteverest.js"></script> 
 </body>
 </html>

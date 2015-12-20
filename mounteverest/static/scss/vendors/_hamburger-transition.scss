@@ -1,0 +1,57 @@
+/* check out my pen here: http://codepen.io/tonkec/pen/BjKjpV */  
+.animated {
+  display: block;
+  margin: 0 auto;
+  z-index: 99999; 
+}
+.animated:focus {
+  cursor: pointer;
+  z-index: 9999; 
+}
+
+.middle {
+  margin: 0 auto;
+}
+
+.icon-bar {
+  -webkit-transition: all .7s ease;
+  -moz-transition: all .7s ease;
+  -ms-transition: all .7s ease;
+  -o-transition: all .7s ease;
+  transition: all .7s ease;
+      z-index:999999;
+}
+
+.animated .icon-bar {
+  z-index:999999; 
+}
+
+.animated:hover {
+  background-color: transparent !important; 
+}
+
+.animated .top {
+  -webkit-transform: translateY(5px) rotateZ(45deg);
+  -moz-transform: translateY(5px) rotateZ(45deg);
+  -ms-transform: translateY(5px) rotateZ(45deg);
+  -o-transform: translateY(5px) rotateZ(45deg);
+  transform: translateY(5px) rotateZ(45deg);
+
+}
+
+.animated .bottom {
+  -webkit-transform: translateY(-6px) rotateZ(-45deg);
+  -moz-transform: translateY(-6px) rotateZ(-45deg);
+  -ms-transform: translateY(-6px) rotateZ(-45deg);
+  -o-transform: translateY(-6px) rotateZ(-45deg);
+  transform: translateY(-6px) rotateZ(-45deg);
+}
+
+.animated .middle {
+  width: 0;
+}  
+
+
+.blue-btn.animated .icon-bar {
+  background-color: $white; 
+}

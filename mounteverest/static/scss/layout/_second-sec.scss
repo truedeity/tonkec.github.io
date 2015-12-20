@@ -15,6 +15,7 @@
 .sec-img-vertical {
   height: 776px;
   margin-bottom: 100px;
+  position: relative; 
   @include overlay(url(../img/img2.jpg));
   @media (min-width: 1200px) {
     padding: 0; 
@@ -27,6 +28,7 @@
 
 .sec-img-horizontal {
   height: 310px;
+  position: relative; 
   @include overlay(url(../img/img3.jpg));
   @media (min-width: 1200px) {
     padding: 0; 
@@ -40,7 +42,6 @@
 }
 
 .sec-col-text {
-  float: left;  
   margin-top: 50px; 
   @media (min-width: 1200px) {
     margin-top: 130px;

@@ -48,7 +48,8 @@ Features
 - [parallax](https://github.com/Prinzhorn/skrollr)
 - [preloader](http://webdesign.tutsplus.com/tutorials/creating-a-collection-of-css3-animated-pre-loaders--cms-21978)
 - [text-hover-effects](http://tonkec.github.io/text_hover_effects/index.html)
-- custom navbar
+- [custom navbar](http://codepen.io/tonkec/pen/xZVvog)
+- [custom hamburger icon](http://codepen.io/tonkec/pen/BjKjpV)
 - responsive layout
 - pixel perfect
 - cross broswser

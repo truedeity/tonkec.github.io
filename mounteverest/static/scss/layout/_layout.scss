@@ -1,13 +1,30 @@
-body {
+body,html {
   font-family: 'Playfair Display', serif;
-  -ms-overflow-y: hidden;
-  overflow-y: hidden;
+  overflow: auto; 
   -ms-overflow-x: hidden;
   overflow-x: hidden;
-  border: 10px solid $white; 
+  width: 100%; 
 }
 
+.overflow {
+  @media (min-width: 980px) {
+      overflow: hidden; 
+  }
+}
+
+.border {
+  position: fixed;
+  width: 100%;
+  background-color: $white;
+  height: 10px;
+  top: 0;
+  left: 0; 
+  z-index: 9999;   
+}
+
+
 main {
+  border: 10px solid $white;
   position: relative;
 }
 

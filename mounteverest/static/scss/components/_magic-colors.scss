@@ -1,0 +1,39 @@
+.magic-img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 0%;
+	-webkit-transition: height 3s ease-in-out; 
+	-moz-transition: height 3s ease-in-out; 
+	-ms-transition: height 3s ease-in-out; 
+	-o-transition: height 3s ease-in-out; 
+	transition: height 3s ease-in-out; 
+	z-index: 1;
+	opacity: .6;  
+}
+
+.red {
+	background-color: #c0392b; 
+}
+
+.purple {
+	background-color:#9b50ba; 
+}
+
+.green {
+	background-color: #27ae60;
+}
+
+.yellow {
+	background-color: #f1c40f;
+}
+
+.animate-color {
+	width: 100%;
+	-webkit-transition: all 3s ease-in-out; 
+	-moz-transition: all 3s ease-in-out; 
+	-ms-transition: all 3s ease-in-out; 
+	-o-transition: all 3s ease-in-out; 
+	transition: all 3s ease-in-out;  
+}

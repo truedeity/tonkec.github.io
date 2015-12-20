@@ -6,12 +6,14 @@
   right: 20px;
   top: 65px;
   border: none;
-  z-index: 999;
+  z-index: 999999;
+  display: none;
   -webkit-transition: all .5s ease;
   -moz-transition: all .5s ease;
   -ms-transition: all .5s ease;
   -o-transition: all .5s ease;
   transition: all .5s ease;
+  padding: 0;
   @media (min-width: 980px) {
     right: 60px;
   }
@@ -32,40 +34,24 @@
   .icon-bar {
     background-color: $blue;
   }
-  &:hover {
+  &:hover{
     .icon-bar {
       background: $white;
     }
   }
 }
 
-.btn-close {
-  color: $white;
-  position: absolute;
-  opacity: 1;
-  top: 40px;
-  right: 30px;
-  cursor: pointer;
-  opacity: .5;  
-  
-  @media (min-width: 980px) {
-    top: 60px;
-    right: 84px;
-  }
-  &:hover {
-    opacity: 1;
-    -webkit-transition: opacity .5s ease; 
-    -moz-transition: opacity .5s ease; 
-    -ms-transition: opacity .5s ease; 
-    -o-transition: opacity .5s ease; 
-    transition: opacity .5s ease;  
-  }
-}
-
 .icon-bar {
   width: 20px;
-  height: 2.5px;
+  height: 3px;
   margin: 3px auto;
   display: block;
   background-color: $white;
+  z-index: 999999; 
+} 
+
+.btn-opened {
+  .icon-bar {
+    background-color: $white; 
+  }
 }
