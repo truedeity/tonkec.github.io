@@ -37,7 +37,6 @@ $(window).load(function(){
 
     $(".btn-nav, .nav-content-item a").on("click tap", function(){
      navbarMagic();
-     console.log(4)
    });
 
     $(document).keyup(function(e) {
