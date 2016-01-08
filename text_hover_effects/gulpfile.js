@@ -1,20 +1,19 @@
-var gulp = require('gulp'),
-    sass = require('gulp-ruby-sass'),
-    autoprefixer = require('gulp-autoprefixer'),
-    minifycss = require('gulp-minify-css'),
-    rename = require('gulp-rename');
+var gulp = require("gulp");
+var sass = require("gulp-sass");
+var rename = require('gulp-rename');
+var minifycss = require('gulp-minify-css');
 
-
-gulp.task('styles', function() {
-  return sass('sass', { style: 'expanded' })
+gulp.task("sass", function(){ 
+    gulp.src("./sass/*.scss")
+    .pipe(sass({ style: 'expanded' }))
     .pipe(rename({suffix: '.min'}))
     .pipe(minifycss())
-    .pipe(gulp.dest('css'));
+    .pipe(gulp.dest('./css/'));
 });
 
-gulp.task('watch', function() {
-  gulp.watch('sass/*.scss', ['styles']);
-  gulp.watch('sass/partials/*.scss', ['styles']);
-});
 
-gulp.task("default", [ 'styles','watch']);
+gulp.task('watch', function(){
+  gulp.watch('sass/**/*.scss', ['sass']);
+})
+
+gulp.task("default", ['sass', 'watch']);
