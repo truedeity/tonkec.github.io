@@ -1,0 +1,19 @@
+@mixin fill-fall-down {
+	@include line-opt(pseudoafter, $width: $max-width, $transition-height: $default-height);
+
+	&:after {
+		width: 100%;
+		height: 2px;
+		display: block;
+		background-color: #fff;
+		height: 100%;
+		width: 100%;
+		top: 0;
+		left: 0;
+	}
+	
+	&:hover:after {
+		top: 100%;
+		background-color: #fff;  
+	}
+}

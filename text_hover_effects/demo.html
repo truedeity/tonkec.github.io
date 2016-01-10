@@ -2,19 +2,26 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Text Hover Effects | Demo</title>
-  <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
+  <title>Document</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,100,100italic,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/demo.min.css">
 </head>
 <body>
+  <button class="btn-nav">
+    <div class="bar arrow-top-r"></div>
+    <div class="bar arrow-middle-r"></div>
+    <div class="bar arrow-bottom-r"></div>
+  </button>
+  <div class="links-con">
+    <a href="index.html" class="nav">Home</a>
+    <a href="documentation.html" class="nav">Docs</a>
+    <a href="https://github.com/tonkec/text_hover_effects" class="nav" target="_blank">Download</a>
+  </div>
   <main>
-    <div class="overlay"></div>
-    <aside class="left left-demo">
-      <span class="close">x</span>
-      <h2 class="list-heading">Text hover effects</h2>
-      <ul class="styles">
-       <li class="item-divider">Underline</li>
+    <aside class="left-side hidden hideNav">
+      <ul class="effects-list">
+        <li class="item-divider">Underline</li>
        <li class="item item-active">underline-left</li>
        <li class="item">underline-right</li>
        <li class="item">underline-closing</li>
@@ -32,13 +39,6 @@
        <li class="item">overline-right</li>
        <li class="item">overline-closing</li>
        <li class="item">overline-opening</li>
-
-       <li class="item-divider">Double Overline</li>
-       <li class="item">double-overline-left</li>
-       <li class="item">double-overline-right</li>
-       <li class="item">double-overline-opening</li>
-       <li class="item">double-overline-left-right</li>
-       <li class="item">double-overline-right-left</li>
 
        <li class="item-divider">One Side</li>
        <li class="item">left-down</li>
@@ -105,53 +105,25 @@
        <li class="item">double-linethrough-right-left</li>
        <li class="item">double-linethrough-opening</li>
 
-       <li class="item-divider">Specials</li>
-       <li class="item">crossed</li>
-       <li class="item">crossed-special</li>
-       <li class="item">special</li>
-       <li class="item">special-reversed</li>
-
-       <li class="item-divider">Corners Close Delay</li>
-       <li class="item">left-bottom-delay</li>
-       <li class="item">left-top-delay</li>
-       <li class="item">right-top-delay</li>
-       <li class="item">right-bottom-delay</li>
-
-       <li class="item-divider">Corners Expand Delay</li>
-       <li class="item">bottom-right-delay</li>
-       <li class="item">bottom-left-delay</li>
-       <li class="item">top-left-delay</li>
-       <li class="item">top-right-delay</li>
-
-       <li class="item-divider">Other Delay</li>
+       <li class="item-divider">Delays</li>
        <li class="item">double-underline-right-delayed</li>
+       <li class="item">top-left-delay</li>
+       <li class="item">right-bottom-delay</li>
        <li class="item">double-underline-opening-delayed</li>
        <li class="item">double-linethrough-left-delayed</li>
-       <li class="item">double-linethrough-right-delayed</li>
-       <li class="item">double-linethrough-left-right-delayed</li>
-       <li class="item">double-linethrough-right-left-delayed</li>
        <li class="item">double-linethrough-opening-delayed</li>
        <li class="item">fill-closing-horizontal-delayed</li>
-       <li class="item">both-right-delayed</li>
        <li class="item">both-left-delayed</li>
      </ul>
-   </aside>
-   <aside class="right">
-   <div class="nav-container">
-    <a href="" class="nav menu">Menu</a>
-    <div class="container-right">
-      <a href="index.html" class="nav">Home</a>
-      <a href="documentation.html" class="nav">Docs</a>
-      <a href="https://github.com/tonkec/text_hover_effects" class="nav" target="_blank">Download</a>
-    </div>
-  </div>
-    <div class="p-row">
-     <p class="underline-left" id="p">Hover me</p> 
-   </div> 
- </aside>
-</main>
-
+    </aside>
+    <aside class="right-side">
+      <div class="text-con">
+        <span class="underline-left">Hover me</span>
+      </div>
+    </aside>
+  </main>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src="js/demo.js"></script>
+
 </body>
 </html>

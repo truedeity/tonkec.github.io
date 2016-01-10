@@ -1,184 +1,281 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  background-color: #E8F1F2;
-  font-family: 'Source Sans Pro', Arial;
+$demo-main-color: #2C3E50;
+$demo-hover-color: #1B98E0;
+
+body,html {
+  width: 100%;
+  height: 100%;
+  background:  #E8F1F2;
+  font-family: "Lato", sans-serif;   
 }
 
 main {
-  height: 100%;
+  height: 100%; 
+}
+
+.left-side {
+  position: fixed;
+  left: 0;  
+  background: $demo-main-color;
   width: 100%;
-  overflow: hidden;
-  position: relative; 
-}
-
-aside {
-  height: 100%;
+  overflow: auto;
+  height: 100%; 
+  z-index: 1; 
+  left: -100%; 
+  @media (min-width: 1200px) {
+    width: 30%; 
+    left: 0; 
+  }  
   
-  &.left {
-    background: $color;
-    overflow: auto;
-    display: none;  
-    left: -999px;
-    width: 100%;
-    
-    @media (min-width: 700px) {
-      width: 50%; 
-    }
-    
-    @media (min-width: 980px) {
-      width: 40%; 
-    } 
-    @media (min-width: 1200px) {
-      width: 30%; 
-      display: block;
-      left: 0; 
-    }
-
-    @media (min-width: 1400px) {
-      width: 25%; 
-    }
-  }
-
-  &.right {
-   float:right;
-   overflow: auto; 
-   width: 100%; 
-
-   @media(min-width: 1200px) {
-    width: 70%; 
-  }
-
   @media (min-width: 1400px) {
-    width: 75%; 
-  }
-}
-}
-
-.open-menu {
-  display: block !important;
-  position: absolute;
-  width: 30%;  
-  z-index: 9999; 
-  left: 0 !important;
-}
-
-.btn {
-  background-color: $color;
-  -webkit-box-shadow: none;
-  box-shadow: none;  
-  text-decoration: none;  
-  margin: 10px; 
-  display: block;
-  width: 80%;
-  z-index: -1; 
-  color: #fff;
-  font-weight: 300;
-  font-size: 2em;
-  @include transition-opt(
-    $display:block,
-    $hover-color: $color
-    );
-  
-  @include fill-closing-vertical;
-  @media (min-width: 1200px) {
-    display: none;
-  }
-}
-
-.overlay {
- background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3));
- left: 0;
- right: 0;
- top: 0;
- bottom: 0;
- display: none;
- width: 100%;
- height: 100%;
- position: absolute;
- z-index: 9;   
-}
-
-.show-overlay {
-  display: block;
-  @media (min-width: 1200px) {
-    display: none;
+    width: 25%; 
+    left: 0; 
   }  
 }
 
-.close {
-  color: #FFF;
+.right-side {
   position: absolute;
-  left: 20px;
-  top: 20px;
-  cursor: pointer;
-  font-size: 2em;
-  font-weight: 700; 
-  &:hover {
-    color: #1BA39C;
-    -webkit-transition: all 2s ease; 
-    -moz-transition: all 2s ease; 
-    -ms-transition: all 2s ease; 
-    -o-transition: all 2s ease; 
-    transition: all 2s ease; 
-  }
-
+  right: 0;
+  height: 100%;
+  width: 100%;
   @media (min-width: 1200px) {
-    display: none;
-  }
-}
-
-.nav-container {
-  position: relative;
-  width: auto;
-  padding: 20px 30px;
-}
-
-.container-right{
-  float: right; 
-}
-
-.nav {
-  color: $color;
-  top: 10px;
-  font-weight: 700; 
-  font-size: 1em;
-  @include transition-opt;
-  @include underline-right;
-
-  &:focus {
-    outline: none;
-  }
-
-  @media (min-width: 480px) {
-    font-size: 1.2em;
-    @include transition-opt();
-  }
-}
-
-.menu {
-  color: $color;
-  @include transition-opt;
-  @include underline-right;
-  @media (min-width: 1200px) {
-    display: none;
-  }
-}
-
-.list-heading {
-  color: #fff;
-  font-size: 1.4em;  
-  margin: 0 auto; 
-  text-align: center;
-  padding: 20px 0;
-  font-weight: 700;
-  border-bottom: 1px solid rgba(225,225,225,0.5);
+    width: 70%; 
+  }   
   
-  @media (min-width: 980px) {
-    font-size: 2em; 
-  } 
+  @media (min-width: 1400px) {
+    width: 75%; 
+  }   
+
 }
+
+.effects-list {
+  margin: 0 auto;
+  text-align: center; 
+  margin-top: 100px; 
+  padding-bottom: 50px; 
+  list-style: none; 
+  
+  @media (min-width: 1200px) {
+    text-align: left; 
+    padding-left: 30px; 
+  }
+}
+
+.text-con {
+  position: relative;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+}
+
+button {
+   background: none;
+   border: none;
+ }
+ 
+ button::-moz-focus-inner {
+   border: 0;
+ }
+ 
+ :focus {
+   outline: none;
+ }
+ 
+ ::-moz-focus-inner {
+   border: 0;
+ }
+ 
+ .btn-nav:hover {
+   cursor: pointer;
+ }
+ 
+ .btn-nav:hover .bar {
+   background-color: #1B98E0;
+ }
+ 
+ .bar {
+   display: block;
+   height: 5px;
+   width: 50px;
+   background: $demo-main-color;
+   margin: 10px auto;
+ }
+ 
+ .btn-nav {
+   display: block;
+   padding: 15px 0;
+   width: 50px;
+   position: fixed;
+   left: 20px;
+   margin: 0 auto;
+   -webkit-transition: all 1s ease;
+   -moz-transition: all 1s ease;
+   -ms-transition: all 1s ease;
+   -o-transition: all 1s ease;
+   transition: all 1s ease;
+   z-index: 9999; 
+   
+   @media (min-width: 1200px) {
+     display: none;
+   }
+ }
+ 
+ .btn-nav:focus {
+   outline: none;
+ }
+ 
+ .middle {
+   margin: 0 auto;
+ }
+ 
+ .bar {
+   -webkit-transition: all .7s ease;
+   -moz-transition: all .7s ease;
+   -ms-transition: all .7s ease;
+   -o-transition: all .7s ease;
+   transition: all .7s ease;
+ }
+ 
+ .animated {
+   z-index: 9999;
+ }
+
+ .animated .bar {
+   z-index: 9999; 
+  background-color: #fff;
+ }
+ 
+ .animated .arrow-top-r {
+   -webkit-transform: rotateZ(-45deg) translateY(11px);
+   -moz-transform: rotateZ(-45deg) translateY(11px);
+   -ms-transform: rotateZ(-45deg) translateY(11px);
+   -o-transform: rotateZ(-45deg) translateY(11px);
+   transform: rotateZ(-45deg) translateY(11px);
+   width: 25px;
+ }
+ 
+ .animated .arrow-middle-r {
+   -webkit-transform: translateX(25px);
+   -moz-transform: translateX(25px);
+   -ms-transform: translateX(25px);
+   -o-transform: translateX(25px);
+   transform: translateX(25px);
+ }
+ 
+ .animated .arrow-bottom-r {
+   -webkit-transform: rotateZ(45deg) translateY(-11px);
+   -moz-transform: rotateZ(45deg) translateY(-11px);
+   -ms-transform: rotateZ(45deg) translateY(-11px);
+   -o-transform: rotateZ(45deg) translateY(-11px);
+   transform: rotateZ(45deg) translateY(-11px);
+   width: 25px;
+ }
+
+
+ @keyframes showNav {
+   from {
+     left: -100%;
+   }
+   to {
+     left: 0;
+   }
+ }
+ 
+ @-webkit-keyframes showNav {
+   from {
+     left: -100%;
+   }
+   to {
+     left: 0;
+   }
+ }
+ 
+ @-moz-keyframes showNav {
+   from {
+     left: -100%;
+   }
+   to {
+     left: 0;
+   }
+ }
+ 
+ @-o-keyframes showNav {
+   from {
+     left: -100%;
+   }
+   to {
+     left: 0;
+   }
+ }
+ 
+ .showNav {
+   -webkit-animation: showNav .5s ease forwards;
+   -moz-animation: showNav .5s ease forwards;
+   -o-animation: showNav .5s ease forwards;
+   animation: showNav .5s ease forwards;
+     z-index: 999; 
+ }
+ 
+ @keyframes hideNav {
+   from {
+     left: 0;
+   }
+   to {
+     left: -100%;
+   }
+ }
+ 
+ @-webkit-keyframes hideNav {
+   from {
+     left: 0;
+   }
+   to {
+     left: -100%;
+   }
+ }
+ 
+ @-moz-keyframes hideNav {
+   from {
+     left: 0;
+   }
+   to {
+     left: -100%;
+   }
+ }
+ 
+ @-o-keyframes hideNav {
+   from {
+     left: 0;
+   }
+   to {
+     left: -100%;
+   }
+ }
+ 
+ .hideNav {
+   @media (max-width: 1200px) {
+    -webkit-animation: hideNav 1s ease forwards;
+   -moz-animation: hideNav 1s ease forwards;
+   -o-animation: hideNav 1s ease forwards;
+   animation: hideNav 1s ease forwards;
+   }
+ }
+ 
+ .hidden {
+  @media (max-width: 1200px) {
+     display: none;
+
+  }
+ }
+
+
+.links-con {
+  position: absolute;
+  right: 50px;
+  top: 20px;
+  z-index: 1;    
+}
+
+
 
 .item-divider {
   cursor: auto;
@@ -198,15 +295,14 @@ aside {
   padding-bottom: 30px; 
 }
 
-.item {
+.item,
+.item a {
     color: #fff;
     font-weight: 300;
     cursor: pointer; 
-    background: $color;
-    text-align: left;
-    font-size: 1.5em;
+    font-size: 1.4em;
     line-height: 2em;
-    margin-left: 25px;
+    text-decoration: none; 
     
      &:hover,
     &:focus {
@@ -219,19 +315,30 @@ aside {
     }
 }
 
-.item-active {
-   color: $hover-color !important;
-     -webkit-transition: all 1s ease; 
-     -moz-transition: all 1s ease; 
-     -ms-transition: all 1s ease; 
-     -o-transition: all 1s ease; 
-     transition: all 1s ease; 
+.item-active,
+.item-active a {
+ color: $demo-hover-color !important;
+ -webkit-transition: all 1s ease; 
+ -moz-transition: all 1s ease; 
+ -ms-transition: all 1s ease; 
+ -o-transition: all 1s ease; 
+ transition: all 1s ease; 
 }
+.nav {
+  color: $color;
+  top: 10px;
+  font-weight: 700; 
+  font-size: 1em;
+  @include transition-opt;
+  @include underline-right;
 
-.hidden-sm {
-  display: block;
-  @media (min-width: 768px) {
-    display: none;
+  &:focus {
+    outline: none;
+  }
+
+  @media (min-width: 480px) {
+    font-size: 1.2em;
+    @include transition-opt();
   }
 }
 
@@ -320,7 +427,7 @@ aside {
 }
 
 .pseudoem {
-  color:$hover-color;
+  color:red;
 }
 .effect-demo {
   margin: 0 auto;

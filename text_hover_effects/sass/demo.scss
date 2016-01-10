@@ -1,36 +1,12 @@
-@import 'partials/effects';
-@import 'partials/demo_layout';
-@import 'partials/css-classes';
+@import 'bower_components/text-hover-effects/sass/effects';
+@import 'bower_components/text-hover-effects/sass/css-classes';
+@import "demo_layout";
 
-html, body {
-  width: 100%;
-  height: 100%;  
+
+span {
+	font-size: 3em;
+	text-transform: uppercase;
+	font-weight: 700; 
+	cursor: pointer;
+	@include transition-opt();
 }
-
-.left-demo {
-  float: left;
-}
-
-.col {
- position: absolute;
- width: 100%; 
-}
-
-.p-row {
-  height: 90%;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-
-p {
-  font-size: 3em;
-  font-weight: 700;
-  color: $color; 
-  @include transition-opt;
-  @media (min-width: 980px) {
-    font-size: 4em;
-  }
-}  

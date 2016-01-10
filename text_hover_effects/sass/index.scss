@@ -1,6 +1,6 @@
-@import "partials/effects";
-@import "partials/demo_layout";
-@import 'partials/css-classes';
+@import "bower_components/text-hover-effects/sass/effects";
+@import "bower_components/text-hover-effects/sass/css-classes";
+@import "demo_layout";
 
 html,
 body {
@@ -13,13 +13,12 @@ body {
 }
 
 .main {
-  padding-bottom: 200px;
   overflow: initial;
   height: auto;
+  padding-bottom: 120px; 
   
   @media (min-width: 600px) {
-      padding-bottom: 100px;
-
+    padding-bottom: 100px;
   }
 }
 
@@ -42,66 +41,38 @@ body {
   }  
 }
 
-.btn-index {
-  background-color: #13293D;
+.btn-a {
+   background-color: #13293D;
   -webkit-box-shadow: none;
-  box-shadow: none;  
-  width: 30%;
-  margin: 20px auto 0;
+  box-shadow: none;
   color: #fff;
   font-weight: 300;
-  font-size: 1em; 
-  border: none;
+  font-size: 1.5em; 
+  color: #fff;
+  height: 60px;
+  line-height: 40px;  
+  width: 50%;
   padding: 0;
-   @include transition-opt(
-    $display: block,
-    $padding: 0
-  );
-  @include left-bottom;
+  margin: 30px auto; 
+  @include underline-right;
+  @include transition-opt(
+    $display: block
+  );   
   
-  @media (min-width: 480px) {
-    width: 30%;
-    font-size: 1.2em;  
-  }
-
   @media (min-width: 768px) {
-    width: 50%; 
-    font-size: 2em;
-    margin: 20px auto;
-  }
-
-  @media (min-width: 980px) {
     width: 20%; 
-    margin: 40px 20px;
-    font-size: 1.5em;
-    margin: 40px auto;
-     @include transition-opt(
-    $display: inline-block,
-    $padding: 0
-  );
+   @include transition-opt(
+    $display: inline-block
+    );
   }
 
   @media (min-width: 1200px) {
-    width: 15%; 
+    width: 220px; 
   }
 
-  @media (min-width: 1400px) {
-    width: 10%; 
+  @media (min-width: 4200px) {
+    width: 200px; 
   }
-}
-
-.btn-a {
-  width: 100%; 
-  color: #fff;
-  height: 60px;
-  line-height: 60px;  
-  font-weight: 300; 
-  @include transition-opt(
-    $display: block,
-    $padding: 0
-  );
-  @include underline-right;
-
 }
 
 .main-heading {
@@ -129,16 +100,17 @@ body {
 }
 
 .github-div {
-  position: absolute;
-  left: 0;
-  right: 0;
   margin: 0 auto;
-  text-align: center; 
-  bottom: 10px;
-
-  @media (min-width: 980px) {
-    bottom: 15px;
-  }
+  text-align: center;
+  
+  iframe {
+    display: block;
+    margin: 0 auto; 
+    
+    @media (min-width: 480px) {
+      display: inline-block;  
+    }  
+  } 
 }
 
 .heading-info {

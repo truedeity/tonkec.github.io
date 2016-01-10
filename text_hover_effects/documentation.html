@@ -3,40 +3,39 @@
 <head>
   <meta charset="UTF-8">
   <title>Text Hover Effects | Documentation</title>
-  <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,100,100italic,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="css/reset.css">
-  <link rel="stylesheet" href="css/doc.css">
+  <link rel="stylesheet" href="css/doc.min.css">
 </head>
 <body>
+   <button class="btn-nav">
+    <div class="bar arrow-top-r"></div>
+    <div class="bar arrow-middle-r"></div>
+    <div class="bar arrow-bottom-r"></div>
+  </button>
+  <div class="links-con">
+    <a href="index.html" class="nav">Home</a>
+    <a href="demo.html" class="nav">Demo</a>
+    <a href="https://github.com/tonkec/text_hover_effects" class="nav" target="_blank">Download</a>
+  </div>
   <main>
-    <div class="overlay"></div>
-    <aside class="left left-doc">
-      <ul class="styles">
-        <span class="close">x</span>
-        <h2 class="list-heading">Documentation</h2>
-        <li class="item-doc" id="0"><a href="#about">About</a></li>
-        <li class="item-doc" id="1"><a href="#getting-started">Getting Started</a></li>
-        <li class="item-doc" id="2"><a href="#how-to-use">How To Use</a></li>
-        <li class="item-doc" id="3"><a href="#customize">Customize</a></li>
-        <li class="item-doc" id="4"><a href="#supported-elements">Supported Elements</a></li>
-        <li class="item-doc" id="5"><a href="#under-the-hood">Under the hood</a></li>
-        <li class="item-doc" id="6"><a href="#mobile-support">Mobile Support</a></li>
-        <li class="item-doc" id="7"><a href="#browser-support">Browser Suppport</a></li>
-        <li class="item-doc" id="8"><a href="#contributing">Contributing</a></li>
-
-      </ul>
-    </aside>
-    <aside class="right">
-
-      <div class="nav-container">
-        <a href="" class="doc-menu">+</a>
-        <div class="container-right">
-            <a href="index.html" class="nav">Home</a>
-            <a href="demo.html" class="nav">Demo</a>
-            <a href="https://github.com/tonkec/text_hover_effects" class="nav" target="_blank">Download</a>
-        </div>
+    <aside class="left-side hidden hideNav">
+      <div class="effects-list">
+       <li class="item item-active" id="0"><a href="#about">About</a></li>
+       <li class="item" id="1"><a href="#getting-started">Getting Started</a></li>
+       <li class="item" id="2"><a href="#how-to-use">How To Use</a></li>
+       <li class="item" id="3"><a href="#customize">Customize</a></li>
+       <li class="item" id="4"><a href="#supported-elements">Supported Elements</a></li>
+       <li class="item" id="5"><a href="#under-the-hood">Under the hood</a></li>
+       <li class="item" id="6"><a href="#mobile-support">Mobile Support</a></li>
+       <li class="item" id="7"><a href="#browser-support">Browser Suppport</a></li>
+       <li class="item" id="8"><a href="#contributing">Contributing</a></li>
       </div>
-      <div class="main-container">
+
+    </aside>
+
+    <aside class="right-side">
+         <div class="main-container">
 
        <div class="content vertical-align" id="about">
          <h2 class="content-heading">About</h2>
@@ -44,56 +43,63 @@
        </div><!--content-->
 
        <div class="content" id="getting-started">
-        <h2 class="content-heading">Getting Started</h2>
-        <br />    
-        <pre class="info-code">
-          <code language="git" data-lang="git">
-            <em class="code">
-             bower install text-hover-effects
-            </em>
-          </code>
-        </pre>
-        <pre class="info-code">
+         <div class="content-container">
+            <h2 class="content-heading">Getting Started</h2>
+          <br />    
+
+          <pre class="info-code">
+            <code language="git" data-lang="git">
+              <em class="code">
+               bower install text-hover-effects
+             </em>
+           </code>
+         </pre>
+
+         <pre class="info-code">
           <code language="git" data-lang="git">
             <em class="code">
               git clone https://github.com/tonkec/text_hover_effects.git 
             </em>
           </code>
         </pre>   
-        <h3 class="content-small-heading">1. The Sass Way</h3>
-        <p class="content-paragraph">In order effects to work you need to have partials directory in your project directory on the same level as effect.scss file. Include <em class="effect-em underline-right">effect.scss</em> file. That file imports all of the mixins. If you need only several effects, delete unnecessary imports. All effects must have _base.scss imported because it has <em class="effect-em underline-right">transition-opt</em> and <em class="effect-em underline-right">line-opt</em> mixin mandatory for all effects.</p>
-        <div class="content-container">
-          <pre class="full-width">
-           <code language="sass" data-lang="sass">
-             <em class="sass">
-              <em class="comment">/* style.scss */</em>
+         </div>
+      
+       </div><!--content-->
 
-              <em class="include">@import</em> "effects";
-            </em>
-          </code>
-        </pre>
-        <pre class="full-width">
+  <div class="content" id="how-to-use">
+   <h2 class="content-heading">How To Use</h2>
+    <h3 class="content-small-heading">1. The Sass Way</h3>
+        <p class="content-paragraph">After you downloaded bower package or cloned it from git, you will have this file structure:</p>
+       <div class="content-container">
+           <pre class="full-width">
          <code language="sass" data-lang="sass">
            <em class="sass">
             <em class="comment">/* structure */</em>
 
-            |--partials/
-            |--effects.scss
-            |--style.scss
+            |--effects/
+            |--_effects.scss
+            |--_defaults.scss
+            |--_css_classes.scss
+            |--_base.scss
           </em>
         </code>
       </pre>
+       </div>
+        <p class="content-paragraph">Import <em class="effect-em underline-right">effect.scss</em> file. That file imports all of the mixins. If you need only several effects, delete unnecessary imports. 
+        <div class="content-container">
+          <pre class="full-width">
+            <code language="sass" data-lang="sass">
+              <em class="sass">
+                <em class="comment">/* style.scss */</em>
+
+                <em class="include">@import</em> "bower_components/text-hover-effects/sass/effects";
+              </em>
+            </code>
+          </pre>
     </div><!--content-container-->
-    <h3 class="content-small-heading">2. The CSS Way</h3>
-    <p class="content-paragraph">The effects are also available in CSS code. You can start using them after downloading. The CSS code is in the CSS/effects directory. File <em class="effect-em underline-right">base.css</em> has all the fundamental styles and all the defaults. Effects will not work without that file. Choose the effect you would like to apply, then copy and paste the code and you are good to go!</p>
+     <p class="content-paragraph">After you have all the files downloaded, you are ready to use effects. Include <em class="effect-em underline-right">transition-opt</em> to  an element you wish to apply effect to. Then add name of the effect. For example:</p>
+    <div class="content-container">
 
-  </div><!--content-->
-
-  <div class="content" id="how-to-use">
-   <h2 class="content-heading">How To Use</h2>
-   <h3 class="content-small-heading">1. The Sass Way</h3>
-   <p class="content-paragraph">After you have all the files downloaded, you are ready to use effects. Include <em class="effect-em underline-right">transition-opt</em> to  an element you wish to apply effect to. Then add <em class="effect-em underline-right">effect</em>. For example:</p>
-   <div class="content-container">
      <pre class="half-width">
        <code language="sass" data-lang="sass">
          <em class="sass">
@@ -106,13 +112,28 @@
 
      <div class="result">
        <em class="effect-demo underline-left">Result</em>
-     </div>
-   </div>
-   <p class="content-paragraph">Be careful with using <em class="effect-em underline-right">CSS #id</em> selector because it will overwrite several styles. It is recommended to use <em class="effect-em underline-right">classes</em> instead. </p>
+     </div><!--result-->
+   </div><!--content-container-->
+    <p class="content-paragraph">Be careful with using <em class="effect-em underline-right">CSS #id</em> selector because it will overwrite several styles. It is recommended to use <em class="effect-em underline-right">classes</em> instead. </p>
+      <p class="content-paragraph">If you want to apply effects simply with CSS classes, use<em class="effect-em underline-right">_css-classes.scss</em> file. It will import all effects with coresponding class names. For example, <em class="effect-em underline-left">underline-left</em> effect will be available in <em class="effect-em underline-left">underline-left CSS class</em>. After that you can just apply CSS classes to your elements, for example: <em class="effect-em underline-left">element</em> class and <em class="effect-em underline-left">underline-left</em> class. <em class="effect-em underline-left">Element</em> class holds the base of transition and <em class="effect-em underline-left">underline-left</em> is the transition itself: </p>
+      <div class="content-container">
+        <pre class="full-width">
+          <code language="sass" data-lang="sass">
+            <em class="sass">
+              <em class="comment">/* style.scss */</em>
+              <em class="include">@import</em> "bower_components/text-hover-effects/sass/css-classes";
+             
+              <em class="comment">/* index.html */</em>
+              <em class="property">&lt;p class=</em><em class="value">&quot;element underline-left&quot;</em><em class="property">&gt;</em>Your text <em class="property">&lt;/p&gt;</em>
+            </em>
+          </code>
+        </pre>
+      </div>
 
-   <h3 class="content-small-heading">2. The CSS Way</h3>
-   <p class="content-paragraph">The css way is longer way. But worry not! I will take you step by step. <em class="effect-em underline-right">Base.css</em> file has all the defaults and all the basic styles. You can change any of them, but be careful with chaning display property. Read more<a class="anchor underline-right" href="#customize">here</a>. After you copied styles from base.css, you are ready to choose your effect. Let say you picked <em class="effect-em underline-left">underline-left</em>. Go to file underline-right.css in css/effects/underline/ and copy and past code to your element. That is it!</p>
-
+    <h3 class="content-small-heading">2. The CSS Way</h3>
+   <p class="content-paragraph">The css way is longer way. But worry not! I will take you step by step. <em class="effect-em underline-right">Base.css</em> file has all the defaults and all the basic styles. Copy-paste everything from base.css. Now you have <em class="effect-em underline-left">element</em> class available.</p>
+   <p class="content-paragraph">It's time to pick your effect! Let say you picked <em class="effect-em underline-left">underline-left</em>. Go to file underline-left.css in css/effects/underline/ and copy and paste code to your file. Now you have <em class="effect-em underline-left">underline-left</em> class available.</p>
+   <p class="content-paragraph"> Apply those two classes to your element: <em class="effect-em underline-left">element</em> and <em class="effect-em underline-left">underline-left</em>. That is it!</p>
     <div class="content-container">
      <pre class="half-width">
        <code language="css" data-lang="css">
@@ -142,6 +163,7 @@
        <em class="effect-demo underline-left">Result</em>
      </div>
    </div>
+
   </div><!--content-->
 
 
@@ -279,7 +301,10 @@
 
 <div class="content" id="under-the-hood">
  <h2 class="content-heading">Under the hood</h2>
- <p class="content-paragraph">All transitions are made with pseudoelements <em class="effect-em underline-opening"> ::before</em> and <em class="effect-em underline-opening">::after</em>. Each element that has <em class="effect-em underline-opening">transition-opt</em> mixin included will have <em class="effect-em underline-opening"> ::before</em>, <em class="effect-em underline-opening">::after</em> or both of them. Mixin transition-opt sets the base for transition. It allows you to set the options. It triggers hover and focus event. You can see code in <em class="effect-em underline-opening">_base.scss</em>.</p>
+ <p class="content-paragraph">All transitions are made with pseudoelements <em class="effect-em underline-opening"> ::before</em> and <em class="effect-em underline-opening">::after</em>. </p>
+
+   
+ <p class="content-paragraph">Each element that has <em class="effect-em underline-opening">transition-opt</em> mixin included will have <em class="effect-em underline-opening"> ::before</em>, <em class="effect-em underline-opening">::after</em> or both of them. Mixin transition-opt sets the base for transition. It allows you to set the options. It triggers hover and focus event. You can see code in <em class="effect-em underline-opening">_base.scss</em>.</p>
  <p class="content-paragraph"> Each transition includes <em class="effect-em underline-right">line-opt</em> mixin, which sets width, transition-width, height, transition-height, position of an element and type of pseudoelements. The default width and height is 3px.
  <p class="content-paragraph"> When hovered or focused, some pseudoelements have only maximum height or maximum width. For example, <em class="effect-em underline-right">underline-right</em> transition has maximum width set to 100%, while height is set to default, that is 3px. Some have maximum height set to 100%, while width is set to default, that is 3px. For example, <em class="effect-em left-up">left-up</em>.</p>
  <p class="content-paragraph">Some effects have maximum height and maximum width. For example, all transition in <em class="effect-em fill-top-left">fill-corners</em> group.</p>
@@ -309,7 +334,7 @@
 </div><!--content-container-->
 <p class="content-paragraph">First, we define mixin overline-left. Then we include line-opt mixin and define the type of pseudoelement which is here pseudoafter. After that, we define the transition width. Since the default transition-width in line-opt is 100%, we do not need to set it explicitly. But default transition-height in line-opt is also 100% and we do not want that. We want it to remain the same. That is why we set it to the height of an element which is 3px.</p>
 
-<p class="content-paragraph">Some transitions needs to have both pseudoelements such as<em class="effect-em overline-closing">overline-closing</em>: </p>
+<p class="content-paragraph">Some transitions need both pseudoelements. For example: <em class="effect-em overline-closing">overline-closing</em>: </p>
 <div class="content-container">
   <pre class="half-width">
    <code language="sass" data-lang="sass">
@@ -344,8 +369,7 @@
  <em class="effect-demo overline-closing">Result</em>          
 </div>
 </div><!--content-container-->
-
-
+    
 </div><!--content-->
 
 <div class="content" id="mobile-support">
@@ -361,12 +385,12 @@
 </div><!--content-->
 <div class="content" id="contributing">
  <h2 class="content-heading">Contributing</h2>
- <p class="content-paragraph">All contributions are welcome! Feel free to create pull request, add new animations or improve code.</p>
+ <p class="content-paragraph">All contributions are welcome! Feel free to create pull request, add new transitions or improve code.</p>
 
 </div><!--content-->
 </div><!--main-con-->
-</aside>
-</main>
+    </aside>
+  </main>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src="js/demo.js"></script>
 </body>
